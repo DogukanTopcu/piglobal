@@ -2,11 +2,11 @@
 import { useMotionValue, motion } from "framer-motion";
 import React, { useContext, useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
-import { SidebarContext } from "../page";
+import { NavbarContexts } from "../../page";
 
 
 const Menu = () => {
-    const { isOpen } = useContext(SidebarContext);
+    const { isOpen } = useContext(NavbarContexts);
   return (
     <section className={`transition-all duration-300 ease-out bg-neutral-950 p-4 md:py-8 md:px-16 absolute top-0 right-0 h-screen flex flex-col justify-center ${isOpen ? "block" : "-translate-y-[100%]"}`}>
         <div className="mx-auto max-w-5xl">
