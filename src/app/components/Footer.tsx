@@ -34,14 +34,14 @@ const Footer = () => {
             <div className={`flex w-full ${screenWidth > 1024 ? "flex-row items-start justify-between" : "flex-col items-center justify-center text-center"} gap-12`}>
                 {/* Other Columns */}
                 {
-                    allMenuData.map((d) => {
+                    allMenuData.map((d, idx) => {
                         if (d.type > 0) {
                             return (
-                                <div>
+                                <div key={idx}>
                                     <h1 className='font-bold mb-2 text-lg w-full'>{d.mainTitle}</h1>
                                     <ul className='flex flex-col gap-3'>
                                         {
-                                            d.subtitles.map((s) => (<li className='cursor-pointer hover:underline'>{s}</li>))
+                                            d.subtitles.map((s, idx) => (<li key={idx} className='cursor-pointer hover:underline'>{s}</li>))
                                         }
                                     </ul>
                                 </div>
@@ -58,9 +58,9 @@ const Footer = () => {
                 {/* Last Column and Social Media buttons */}
                 <ul className={`flex flex-col gap-3 mb-10 ${screenWidth > 1024 ? "" : "justify-center items-center"}`}>
                     {
-                        allMenuData.map((d) => {
+                        allMenuData.map((d, idx) => {
                             if (d.type == 0) {
-                                return (<li className='cursor-pointer hover:underline font-bold text-lg'>{d.mainTitle}</li>)
+                                return (<li key={idx} className='cursor-pointer hover:underline font-bold text-lg'>{d.mainTitle}</li>)
                             }
                             else null;
                         })
@@ -72,9 +72,9 @@ const Footer = () => {
                     <h1 className='font-bold text-lg mb-2'>FOLLOW US</h1>
                     <ul className='flex flex-col gap-4'>
                         {
-                            socials.map((s) => {
+                            socials.map((s, idx) => {
                                 return (
-                                    <li className='flex justify-start gap-3 items-center'>
+                                    <li key={idx} className='flex justify-start gap-3 items-center'>
                                         {s.icon}
                                         <p className='text-sm'>{s.name}</p>
                                     </li>
@@ -87,7 +87,7 @@ const Footer = () => {
         </div>
         <hr />
         <div className='container mx-auto max-w-7xl w-full flex items-center justify-center py-8'>
-            <p>All rights are reserved © 2024 Pi Global</p>
+            <p className='sm:text-[16px] text-xs'>All rights are reserved © 2024 Pi Global</p>
         </div>
     </footer>
   )

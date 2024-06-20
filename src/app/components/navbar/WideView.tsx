@@ -23,7 +23,7 @@ const WideView = () => {
         <>
             <ul onMouseLeave={() => handleSetSelected(null)} className="flex justify-between items-center gap-6 mix-blend-difference">
                 {
-                    data.map((d, idx) => {
+                    data.map((d) => {
                         return (
                             <FlyoutLink key={d.order} href="" type={d.type} mainTitle={d.mainTitle} >
                                 {d.mainTitle}
@@ -99,9 +99,9 @@ const TypeOneContent = ({ mainTitle } : { mainTitle : string }) => {
     return (
         <ul className="flex flex-col items-start gap-4">
             {
-                data.subtitles.map((sub) => {
+                data.subtitles.map((sub, idx) => {
                     return (
-                        <li className="border-b-2 w-full"><button className="hover:underline hover:border-l-8 border-l-2 border-blue-500 px-6 text-start transition-all duration-300 ease-out w-full">{sub}</button></li>
+                        <li key={idx} className="border-b-2 w-full"><button className="hover:underline hover:border-l-8 border-l-2 border-blue-500 px-6 text-start transition-all duration-300 ease-out w-full">{sub}</button></li>
                     )
                 })
             }

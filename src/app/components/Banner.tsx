@@ -1,9 +1,10 @@
 "use client"
 import { motion, useMotionValue } from "framer-motion";
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { bannerData } from "@/data/data";
+import { Dispatch, SetStateAction, useContext, useEffect, useState } from "react";
+import { bannerData, bannerLogo, bannerLogoTitle } from "@/data/data";
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { ScreenSizeContexts } from "../page";
 
 
 type BannerModel = {
@@ -11,7 +12,8 @@ type BannerModel = {
     desc: String,
     image: string,
     button: String,
-    buttonUrl: String,
+    redirect: String,
+    icon: StaticImport
 };
 
 const SPRING_OPTIONS = {
@@ -29,6 +31,7 @@ const Banner = () => {
     const [imgIndex, setImgIndex] = useState(0);
     const dragX = useMotionValue(0);
 
+    // Otomatik geçiş kodu
     // useEffect(() => {
     //     const intervalRef = setInterval(() => {
     //       const x = dragX.get();
@@ -66,7 +69,10 @@ const Banner = () => {
         animate={{
             translateX: `-${imgIndex * 100}%`,
         }}
-        transition={SPRING_OPTIONS}
+        transition={{
+          type: "tween"
+        }}
+        // transition={SPRING_OPTIONS}
         onDragEnd={onDragEnd}
         className="flex items-center">
             {
@@ -83,10 +89,13 @@ const Banner = () => {
                           backgroundSize: "cover",
                           backgroundPosition: "center",
                         }}
-                        transition={SPRING_OPTIONS}
+                        transition={{
+                          type: "tween"
+                        }}
+                        // transition={SPRING_OPTIONS}
                         className="aspect-video w-screen h-screen shrink-0 bg-neutral-800 flex justify-center items-center"
                         >
-                            <BannerData {...data} />
+                            <BannerData data={data} idx={idx} />
                         </motion.div>
                     );
                 })
@@ -94,18 +103,55 @@ const Banner = () => {
         </motion.div>
 
         <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
-        <GradientEdges />
+        {/* <GradientEdges /> */}
     </div>
   )
 }
 
-const BannerData = (data : BannerModel) => {
+const BannerData = ({data, idx} : { data: BannerModel, idx: number}) => {
+  const { screenWidth } = useContext(ScreenSizeContexts);
+
     return (
-        <div className="h-full w-full">
-            {/* <Image src={data.image} alt="carousel-img" className="relative z-0 w-full pointer-events-none object-cover object-contain" /> */}
-            <p className="relative z-10">{data.title}</p>
-        </div>
+    <div className="container max-w-6xl mx-auto w-full h-2/3 grid lg:grid-cols-2 flex justify-between items-center px-6">
+      {
+        idx === 0 && screenWidth < 1024 ?  (
+          <div className="h-full">
+            <EfectedLogo />
+          </div>
+        ) : null
+      }
+      <div className="text-white">
+        {/* Text */}
+        <h1 className="sm:text-2xl text-lg font-bold sm:mb-8 mb-4">{data.title}</h1>
+        <p className="sm:text-md text-sm">{data.desc}</p>
+      </div>
+      <div className="flex justify-end items-end w-full h-full">
+        {
+          idx === 0 && screenWidth > 1024 ?  (
+            <div className="h-full">
+              <EfectedLogo key={idx} />
+            </div>
+          ) : null
+        }
+        {/* Button */}
+        <button className="sm:px-10 px-8 sm:py-4 py-2 sm:text-md text-sm rounded font-bold bg-[#90302d] text-white w-fit transition-all shadow-[3px_3px_0px_white] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]">
+          {data.button}
+        </button>
+      </div>
+    </div>
     );
+}
+
+const EfectedLogo = () => {
+  return (
+    <div className="relative top-0 right-0 w-full h-full flex flex-col justify-start items-center gap-10 lg:mt-20 mt-0">
+      <div>
+        <Image src={bannerLogo} alt="Logo" className="relative z-10 pointer-events-none sm:w-40 sm:h-40 w-20 h-20 sm:min-w-40" />
+        <div className="absolute z-0 top-0 animate-ping sm:w-40 sm:h-40 w-20 h-20 rounded-full border-2 border-white bg-sky-400 opacity-75" />
+      </div>
+      <Image src={bannerLogoTitle} alt="Logo" className="relative z-10 pointer-events-none sm:w-100 w-48 brightness-200 -mt-4 sm:mt-0" />
+    </div>
+  );
 }
 
 
@@ -118,18 +164,22 @@ const Dots = ({
   setImgIndex: Dispatch<SetStateAction<number>>;
 }) => {
   return (
-    <div className="mt-4 flex w-full justify-center gap-2 absolute z-20 bottom-10">
-      {bannerData.map((_, idx) => {
-        return (
-          <button
-            key={idx}
-            onClick={() => setImgIndex(idx)}
-            className={`h-3 w-3 rounded-full transition-colors ${
-              idx === imgIndex ? "bg-neutral-50" : "bg-neutral-500"
-            }`}
-          />
-        );
-      })}
+    <div className="mt-4 w-full sm:h-12 h-5 absolute z-20 bottom-10 flex justify-center items-center ">
+      <div className="flex w-full justify-center items-center gap-6">
+        {bannerData.map((d, idx) => {
+          return (
+            <button
+              key={idx}
+              onClick={() => setImgIndex(idx)}
+              className={`sm:hover:p-4 hover:p-1.5 rounded-full transition-all ${
+                idx === imgIndex ? "bg-neutral-50 p-4" : "bg-neutral-500 grayscale"
+              }`}
+            >
+              <Image src={d.icon} alt="icon" className="sm:h-8 sm:w-8 h-3 w-3 " />
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 };
@@ -138,8 +188,8 @@ const Dots = ({
 const GradientEdges = () => {
   return (
     <>
-      <div className="pointer-events-none absolute bottom-0 left-0 top-0 w-[70vw]  bg-gradient-to-r from-neutral-950/50 to-neutral-950/0" />
-      <div className="pointer-events-none absolute bottom-0 right-0 top-0 w-[70vw]  bg-gradient-to-l from-neutral-950/50 to-neutral-950/0" />
+      <div className="pointer-events-none absolute bottom-0 left-0 top-0 w-[70vw] bg-gradient-to-r from-neutral-950/50 to-neutral-950/0" />
+      <div className="pointer-events-none absolute bottom-0 right-0 top-0 w-[70vw] bg-gradient-to-l from-neutral-950/50 to-neutral-950/0" />
     </>
   );
 };

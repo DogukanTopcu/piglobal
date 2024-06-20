@@ -19,6 +19,7 @@ const Menu = () => {
             data.map((d, idx) => {
               return (
                 <Link
+                    key={idx}
                     heading = {d.mainTitle}
                     href="#"
                     type={d.type}
@@ -140,7 +141,7 @@ const SubsideMenu = ({ selected, setSelected, subtitles, subtitleLinks } : { sel
       {
         subtitles.map((s, idx) => {
           return (
-            <Link heading={s} href={subtitleLinks[idx]} type={0} idx={idx} setSelected={setSelected} />
+            <Link key={idx} heading={s} href={subtitleLinks[idx]} type={0} idx={idx} setSelected={setSelected} />
           )
         })
       }
