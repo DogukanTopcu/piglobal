@@ -13,7 +13,7 @@ type BannerModel = {
     image: string,
     button: String,
     redirect: String,
-    icon: StaticImport
+    icon: String
 };
 
 const SPRING_OPTIONS = {
@@ -56,7 +56,7 @@ const Banner = () => {
         }
       };
   return (
-    <div className="relative h-screen overflow-hidden bg-neutral-950">
+    <div className="relative h-[calc(100dvh)] transition-all duration-300 overflow-hidden bg-neutral-950">
         <motion.div 
         drag="x" 
         dragConstraints={{
@@ -93,7 +93,7 @@ const Banner = () => {
                           type: "tween"
                         }}
                         // transition={SPRING_OPTIONS}
-                        className="aspect-video w-screen h-screen shrink-0 bg-neutral-800 flex justify-center items-center"
+                        className="aspect-video bg-blend-overlay w-screen h-[calc(100dvh)] transition-all duration-300 shrink-0 bg-neutral-800 flex justify-center items-center"
                         >
                             <BannerData data={data} idx={idx} />
                         </motion.div>
@@ -164,18 +164,33 @@ const Dots = ({
   setImgIndex: Dispatch<SetStateAction<number>>;
 }) => {
   return (
-    <div className="mt-4 w-full sm:h-12 h-5 absolute z-20 bottom-10 flex justify-center items-center ">
-      <div className="flex w-full justify-center items-center gap-6">
+    <div className="mt-4 w-full sm:h-12 h-5 absolute z-20 bottom-12 flex justify-center items-center ">
+      <div className="flex w-full justify-center items-center sm:gap-12 gap-6">
         {bannerData.map((d, idx) => {
+          const [isHovered, setIsHovered] = useState(false);
           return (
             <button
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
               key={idx}
               onClick={() => setImgIndex(idx)}
-              className={`sm:hover:p-4 hover:p-1.5 rounded-full transition-all ${
-                idx === imgIndex ? "bg-neutral-50 p-4" : "bg-neutral-500 grayscale"
+              className={`sm:hover:p-4 hover:p-1.5 rounded-full transition-all 
+                ${
+                  isHovered ? "border-2 border-white rounded-full" : ""
+                }
+              ${
+                idx === imgIndex ? "bg-neutral-50 p-4" : "grayscale"
               }`}
             >
-              <Image src={d.icon} alt="icon" className="sm:h-8 sm:w-8 h-3 w-3 " />
+              <div
+                style={{
+                  backgroundImage: `url(${d.icon})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+                className={`sm:h-10 sm:w-10 h-6 w-6 ${idx !== imgIndex ? "invert" : ""}`}
+              />
+              {/* <Image src={d.icon} alt="icon" className="sm:h-8 sm:w-8 h-3 w-3 " /> */}
             </button>
           );
         })}
