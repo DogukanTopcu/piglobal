@@ -6,6 +6,7 @@ import { createContext, useEffect, useState } from "react";
 import Popup from "./components/Popup";
 import { ScreenSizeContext, ScreenSizeContextState, TypeNavbarContext, TypeNavbarContextState } from "@/types/ContextTypes";
 import WhatsApp from "./components/WhatsApp";
+import Footer from "./components/Footer";
 
 
 
@@ -74,6 +75,8 @@ export default function Home() {
         <p>a</p>
         <p>a</p>
         <p>a</p>
+
+        <Footer />
       </ScreenSizeContexts.Provider>
     </main>
   );

@@ -1,40 +1,36 @@
 "use client"
 import { useMotionValue, motion } from "framer-motion";
-import React, { useContext, useRef } from "react";
-import { FiArrowRight } from "react-icons/fi";
+import React, { Dispatch, SetStateAction, useContext, useRef, useState } from "react";
+import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { NavbarContexts } from "../../page";
+import { menuData } from "@/data/data";
 
 
 const Menu = () => {
     const { isOpen } = useContext(NavbarContexts);
+
+    const [selected, setSelected] = useState(-1);
+    const data = menuData.sort((x, y) => x.order > y.order ? 1 : -1);
+
   return (
-    <section className={`transition-all duration-300 ease-out bg-neutral-950 p-4 md:py-8 md:px-16 absolute top-0 right-0 h-screen flex flex-col justify-center ${isOpen ? "block" : "-translate-y-[100%]"}`}>
-        <div className="mx-auto max-w-5xl">
-        <Link
-            heading="Corporate"
-            href="#"
-        />
-        <Link
-            heading="Areas of Activity"
-            href="#"
-        />
-        <Link
-            heading="Media"
-            href="#"
-        />
-        <Link
-            heading="Human Resources"
-            href="#"
-        />
-        <Link
-            heading="Sustainability"
-            href="#"
-        />
-        <Link
-            heading="Communication"
-            href="#"
-        />
+    <section className={`fixed transition-all duration-300 ease-out bg-neutral-950 p-4 md:py-8 md:px-16 top-0 right-0 h-screen w-screen flex flex-col justify-center z-20 ${isOpen ? "block" : "-translate-y-[100%]"}`}>
+        <div className="mx-auto max-w-5xl w-full">
+          {
+            data.map((d, idx) => {
+              return (
+                <Link
+                    heading = {d.mainTitle}
+                    href="#"
+                    type={d.type}
+                    idx={idx}
+                    setSelected={setSelected}
+                />
+              )
+            })
+          }
         </div>
+
+        <SubsideMenu selected={selected} setSelected={setSelected} subtitles={data[selected] == null ? [] : data[selected].subtitles} subtitleLinks={data[selected] == null ? [] : data[selected].subtitleUrls} />
     </section>
   )
 }
@@ -42,9 +38,12 @@ const Menu = () => {
 interface LinkProps {
   heading: string;
   href: string;
+  type: number;
+  setSelected: Dispatch<SetStateAction<number>>;
+  idx: number;
 }
 
-const Link = ({ heading, href }: LinkProps) => {
+const Link = ({ heading, href, type, setSelected, idx }: LinkProps) => {
     const ref = useRef<HTMLAnchorElement | null>(null);
     
     const x = useMotionValue(0);
@@ -71,12 +70,17 @@ const Link = ({ heading, href }: LinkProps) => {
 
     return (
         <motion.a
+          onClick={() => {
+            if (type > 0) {
+              setSelected(idx);
+            }
+          }}
           href={href}
           ref={ref}
           onMouseMove={handleMouseMove}
           initial="initial"
           whileHover="whileHover"
-          className="group relative flex items-center justify-between border-b-2 border-neutral-700 transition-colors duration-500 hover:border-neutral-50"
+          className="group relative flex items-center justify-between border-b-2 border-neutral-700 transition-colors duration-500 hover:border-neutral-50 p-4"
         >
             <div>
             <motion.span
@@ -91,39 +95,55 @@ const Link = ({ heading, href }: LinkProps) => {
                 }}
                 className="relative z-10 block text-xl font-bold text-neutral-500 transition-colors duration-500 group-hover:text-neutral-50 md:text-2xl"
             >
-                {heading.split("").map((l, i) => (
-                    <motion.span
-                      variants={{
-                        initial: { x: 0 },
-                        whileHover: { x: 16 },
-                      }}
-                      transition={{ type: "spring" }}
-                      className="inline-block"
-                      key={i}
-                    >
-                      {l == " " ? (<span>&nbsp;</span>) : l}
-                    </motion.span>
-                    ))}
-                </motion.span>
+                <p>{heading}</p>
+            </motion.span>
             </div>
           
-            <motion.div
-              variants={{
-                initial: {
-                  x: "25%",
-                  opacity: 0,
-                },
-                whileHover: {
-                  x: "0%",
-                  opacity: 1,
-                },
-              }}
-              transition={{ type: "spring" }}
-              className="relative z-10 p-4"
-            >
-                <FiArrowRight className="text-5xl text-neutral-50" />
-            </motion.div>
+            {
+              type > 0 ? 
+              (
+                <motion.div
+                  variants={{
+                    initial: {
+                      x: "25%",
+                      opacity: 1,
+                    },
+                    whileHover: {
+                      x: "0%",
+                      opacity: 1,
+                    },
+                  }}
+                  transition={{ type: "spring" }}
+                  className="relative z-10"
+                >
+                    <FiArrowRight size={32} className="text-5xl text-neutral-50" />
+                </motion.div>
+              ) : null
+            }
         </motion.a>
     );
 };
+
+
+const SubsideMenu = ({ selected, setSelected, subtitles, subtitleLinks } : { selected: number; setSelected: Dispatch<SetStateAction<number>>; subtitles: string[]; subtitleLinks: string[] }) => {
+  return (
+    <div className={`fixed transition-all duration-300 ease-out bg-neutral-950 p-4 md:py-8 md:px-16 top-0 right-0 h-screen w-screen flex flex-col justify-center z-20
+    ${selected != -1 ? "translate-x-0" : "translate-x-[100%]"}`}>
+      
+      <button className="fixed left-10 top-20" onClick={() => setSelected(-1)}>
+        <FiArrowLeft size={36} color="white" />
+      </button>
+
+      {
+        subtitles.map((s, idx) => {
+          return (
+            <Link heading={s} href={subtitleLinks[idx]} type={0} idx={idx} setSelected={setSelected} />
+          )
+        })
+      }
+    </div>
+  )
+}
+
+
 export default Menu;

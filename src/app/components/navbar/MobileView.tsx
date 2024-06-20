@@ -1,11 +1,25 @@
-import { NavbarContexts } from "@/app/page";
-import { useContext } from "react";
+import { NavbarContexts, ScreenSizeContexts } from "@/app/page";
+import { useContext, useEffect, useState } from "react";
 
 const MobileView = () => {
+    const [tempScrollY, setTempScrollY] = useState(0);
     const { isOpen, setIsOpen } = useContext(NavbarContexts);
+    const { scrollY } = useContext(ScreenSizeContexts);
     const handleMenuClick = () => {
         setIsOpen(!isOpen);
     }
+
+    useEffect(() => {
+        if (isOpen) {
+            document.getElementById("body")?.classList.add("fixed");
+            console.log(document.getElementById("body"));
+            setTempScrollY(scrollY);
+        }
+        else {
+            document.getElementById("body")?.classList.remove("fixed");
+            window.scrollTo(0, tempScrollY);
+        }
+    }, [isOpen])
     return(
         <>
             <button onClick={handleMenuClick} className="flex justify-around items-center gap-4 mix-blend-difference">

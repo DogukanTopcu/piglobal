@@ -2,6 +2,7 @@ import { menuData } from "@/data/data";
 import { ReactNode, useEffect, useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
+import { LanguageButton } from "./Navbar";
 
 const WideView = () => {
     const [selected, setSelected] = useState<number | null>(null);
@@ -22,7 +23,7 @@ const WideView = () => {
         <>
             <ul onMouseLeave={() => handleSetSelected(null)} className="flex justify-between items-center gap-6 mix-blend-difference">
                 {
-                    data.map((d, key) => {
+                    data.map((d, idx) => {
                         return (
                             <FlyoutLink key={d.order} href="" type={d.type} mainTitle={d.mainTitle} >
                                 {d.mainTitle}
@@ -31,12 +32,13 @@ const WideView = () => {
                     })
                 }
             </ul>
+            <LanguageButton />
         </>
     )
 }
 
 
-const FlyoutLink = ({ children, href, type, mainTitle } : { children : ReactNode; href : string; type : number | null; mainTitle : string }) => {
+const FlyoutLink = ({ children, href, type, mainTitle } : { children : ReactNode; href : string; type : number | null; mainTitle : string; }) => {
     const [open, setOpen] = useState(false);
 
     return (
@@ -46,7 +48,16 @@ const FlyoutLink = ({ children, href, type, mainTitle } : { children : ReactNode
             className="relative w-fit h-fit"
         >
             <button className="relative text-white">
-                {children}
+                <div className="flex items-center justify-center gap-2">
+                    {children}
+                    {
+                        type! > 0 ? (
+                            <FiChevronDown className={`transition-transform ${
+                                open ? "rotate-180" : ""
+                            }`} />
+                        ) : null
+                    }
+                </div>
                 <span
                     style={{
                         transform: open ? "scaleX(1)" : "scaleX(0)",
