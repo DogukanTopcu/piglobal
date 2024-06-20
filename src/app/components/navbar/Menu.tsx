@@ -126,8 +126,11 @@ const Link = ({ heading, href, type, setSelected, idx }: LinkProps) => {
 
 
 const SubsideMenu = ({ selected, setSelected, subtitles, subtitleLinks } : { selected: number; setSelected: Dispatch<SetStateAction<number>>; subtitles: string[]; subtitleLinks: string[] }) => {
+  const { isOpen } = useContext(NavbarContexts);
   return (
-    <div className={`fixed transition-all duration-300 ease-out bg-neutral-950 p-4 md:py-8 md:px-16 top-0 right-0 h-screen w-screen flex flex-col justify-center z-20
+    <div className={`
+      ${isOpen ? "block" : "hidden"}
+      fixed transition-all duration-300 ease-out bg-neutral-950 p-4 md:py-8 md:px-16 top-0 right-0 h-screen w-screen flex flex-col justify-center z-20
     ${selected != -1 ? "translate-x-0" : "translate-x-[100%]"}`}>
       
       <button className="fixed left-10 top-20" onClick={() => setSelected(-1)}>

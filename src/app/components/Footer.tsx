@@ -1,15 +1,19 @@
 import { logoData, menuData, socialMedias } from '@/data/data'
 import Image from 'next/image'
+import { useContext } from 'react';
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
+import { ScreenSizeContexts } from '../page';
 
 const Footer = () => {
+    const { screenWidth } = useContext(ScreenSizeContexts);
+
     const allMenuData = menuData.sort((x, y) => x.order > y.order ? 1 : -1);
     const socials = socialMedias;
   return (
     <footer className='w-screen pt-12 bg-[#efefef]'>
-        <div className='container max-w-7xl mx-auto flex flex-row justify-between items-start my-10 px-10 gap-10'>
+        <div className={`container max-w-7xl mx-auto flex ${screenWidth > 1024 ? "flex-row" : "flex-col"} justify-between items-start my-10 px-10 gap-10`}>
             
-            <div className='max-w-[250px]'>
+            <div className={`max-w-[250px] ${screenWidth > 1024 ? "" : "mx-auto"}`}>
                 {/* Logo and Communication */}
                 <Image src={logoData} alt="logo" className="w-full h-auto rounded-xl mb-10" />
                 <div>
@@ -27,14 +31,14 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className='flex flex-row justify-between items-start gap-12'>
+            <div className={`flex w-full ${screenWidth > 1024 ? "flex-row items-start justify-between" : "flex-col items-center justify-center text-center"} gap-12`}>
                 {/* Other Columns */}
                 {
                     allMenuData.map((d) => {
                         if (d.type > 0) {
                             return (
                                 <div>
-                                    <h1 className='font-bold mb-2 text-lg'>{d.mainTitle}</h1>
+                                    <h1 className='font-bold mb-2 text-lg w-full'>{d.mainTitle}</h1>
                                     <ul className='flex flex-col gap-3'>
                                         {
                                             d.subtitles.map((s) => (<li className='cursor-pointer hover:underline'>{s}</li>))
@@ -50,13 +54,13 @@ const Footer = () => {
                 }
             </div>
 
-            <div>
+            <div className={`${screenWidth > 1024 ? "" : "w-full flex flex-col justify-center items-center"}`}>
                 {/* Last Column and Social Media buttons */}
-                <ul className='flex flex-col gap-3 mb-10'>
+                <ul className={`flex flex-col gap-3 mb-10 ${screenWidth > 1024 ? "" : "justify-center items-center"}`}>
                     {
                         allMenuData.map((d) => {
                             if (d.type == 0) {
-                                return (<li className='cursor-pointer hover:underline'>{d.mainTitle}</li>)
+                                return (<li className='cursor-pointer hover:underline font-bold text-lg'>{d.mainTitle}</li>)
                             }
                             else null;
                         })
