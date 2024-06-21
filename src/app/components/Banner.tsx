@@ -167,7 +167,6 @@ const Dots = ({
     <div className="mt-4 w-full sm:h-12 h-5 absolute z-20 bottom-12 flex justify-center items-center ">
       <div className="flex w-full justify-center items-center sm:gap-12 gap-6">
         {bannerData.map((d, idx) => {
-          const [isHovered, setIsHovered] = useState(false);
           return (
             <Dot key={idx} idx={idx} imgIndex={imgIndex} icon={d.icon} setImgIndex={setImgIndex} />
           );
@@ -178,17 +177,11 @@ const Dots = ({
 };
   
 const Dot = ( { idx, imgIndex, icon, setImgIndex } : { idx: number, imgIndex: number, icon: string, setImgIndex: Dispatch<SetStateAction<number>> }) => {
-  const [isHovered, setIsHovered] = useState(false);
   return (
     <button
-    onMouseEnter={() => setIsHovered(true)}
-    onMouseLeave={() => setIsHovered(false)}
       key={idx}
       onClick={() => setImgIndex(idx)}
-      className={`sm:hover:p-4 hover:p-1.5 rounded-full transition-all 
-        ${
-          isHovered ? "border-2 border-white rounded-full" : ""
-        }
+      className={`sm:hover:p-4 hover:p-1.5 rounded-full transition-all hover:border-2 hover:border-white hover:rounded-full
       ${
         idx === imgIndex ? "bg-neutral-50 p-4" : "grayscale"
       }`}
