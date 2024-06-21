@@ -7,13 +7,6 @@ export type TypeNavbarContext = {
   isPopUpOpen: Boolean,
   setIsPopUpOpen: Dispatch<SetStateAction<Boolean>>
 };
-export const TypeNavbarContextState = {
-  isOpen: false,
-  setIsOpen: () => false,
-
-  isPopUpOpen: true,
-  setIsPopUpOpen: () => true
-};
 
 
 export type ScreenSizeContext = {
@@ -28,17 +21,4 @@ export type ScreenSizeContext = {
 
     screenHeight: number,
     setScreenHeight: Dispatch<SetStateAction<number>>
-}
-export const ScreenSizeContextState = {
-    isTop: true,
-    setIsTop: () => true,
-
-    scrollY: 0,
-    setScrollY: () => 0,
-
-    screenWidth: 0,
-    setScreenWidth: () => 0,
-
-    screenHeight: 0,
-    setScreenHeight: () => 0
 }

@@ -2,13 +2,13 @@
 import Image from "next/image";
 
 import { logoData } from "@/data/data";
-import { useContext, useState } from "react";
-import { NavbarContexts, ScreenSizeContexts } from "../../page";
+import { useContext } from "react";
 
 
 import { TR } from 'country-flag-icons/react/3x2';
 import WideView from "./WideView";
 import MobileView from "./MobileView";
+import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
 
 const Navbar = () => {
     const { scrollY, screenWidth } = useContext(ScreenSizeContexts);

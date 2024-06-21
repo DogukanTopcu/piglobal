@@ -2,18 +2,15 @@
 import Navbar from "./components/navbar/Navbar";
 import Banner from "./components/Banner";
 import Menu from "./components/navbar/Menu";
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Popup from "./components/Popup";
-import { ScreenSizeContext, ScreenSizeContextState, TypeNavbarContext, TypeNavbarContextState } from "@/types/ContextTypes";
 import WhatsApp from "./components/WhatsApp";
 import Footer from "./components/Footer";
 import AboutUs from "./components/home/AboutUs";
 import OurProducts from "./components/home/OurProducts";
+import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
+import { NavbarContexts } from "@/contexts/NavbarContext";
 
-
-
-export const NavbarContexts = createContext<TypeNavbarContext>(TypeNavbarContextState);
-export const ScreenSizeContexts = createContext<ScreenSizeContext>(ScreenSizeContextState);
 
 
 export default function Home() {

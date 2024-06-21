@@ -1,10 +1,10 @@
 "use client"
 import React, { useContext } from 'react'
-import { NavbarContexts } from '../page';
 import { popupData } from '@/data/data';
 import Image from 'next/image';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import { MdOutlineClose } from "react-icons/md";
+import { NavbarContexts } from '@/contexts/NavbarContext';
 
 
 type PopUpType = {

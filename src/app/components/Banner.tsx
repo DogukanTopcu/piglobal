@@ -4,7 +4,7 @@ import { Dispatch, SetStateAction, useContext, useEffect, useState } from "react
 import { bannerData, bannerLogo, bannerLogoTitle } from "@/data/data";
 import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import { ScreenSizeContexts } from "../page";
+import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
 
 
 type BannerModel = {

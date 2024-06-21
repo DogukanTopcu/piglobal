@@ -1,8 +1,8 @@
+import { ScreenSizeContexts } from '@/contexts/ScreenSizeContext';
 import { logoData, menuData, socialMedias } from '@/data/data'
 import Image from 'next/image'
 import { useContext } from 'react';
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
-import { ScreenSizeContexts } from '../page';
 
 const Footer = () => {
     const { screenWidth } = useContext(ScreenSizeContexts);

@@ -2,8 +2,8 @@
 import { useMotionValue, motion } from "framer-motion";
 import React, { Dispatch, SetStateAction, useContext, useRef, useState } from "react";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
-import { NavbarContexts } from "../../page";
 import { menuData } from "@/data/data";
+import { NavbarContexts } from "@/contexts/NavbarContext";
 
 
 const Menu = () => {

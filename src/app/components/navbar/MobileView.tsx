@@ -1,4 +1,5 @@
-import { NavbarContexts, ScreenSizeContexts } from "@/app/page";
+import { NavbarContexts } from "@/contexts/NavbarContext";
+import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
 import { useContext, useEffect, useState } from "react";
 
 const MobileView = () => {
