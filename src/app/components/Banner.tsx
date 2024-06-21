@@ -149,7 +149,7 @@ const EfectedLogo = () => {
         <Image src={bannerLogo} alt="Logo" className="relative z-10 pointer-events-none sm:w-40 sm:h-40 w-20 h-20 sm:min-w-40" />
         <div className="absolute z-0 top-0 animate-ping sm:w-40 sm:h-40 w-20 h-20 rounded-full border-2 border-white bg-sky-400 opacity-75" />
       </div>
-      <Image src={bannerLogoTitle} alt="Logo" className="relative z-10 pointer-events-none sm:w-100 w-48 brightness-200 -mt-4 sm:mt-0" />
+      <Image src={bannerLogoTitle} alt="Logo" className="relative z-10 pointer-events-none sm:w-100 w-48 -mt-4 sm:mt-0" />
     </div>
   );
 }

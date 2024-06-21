@@ -49,7 +49,7 @@ export const menuData = [
     {
         order: 5,
         type: 0, // type = 0, means has no subtitle, has a url
-        mainTitle: "Communication",
+        mainTitle: "Contact",
         url: "",
 
         subtitles: [],
