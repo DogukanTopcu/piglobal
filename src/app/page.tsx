@@ -8,6 +8,7 @@ import WhatsApp from "./components/WhatsApp";
 import Footer from "./components/Footer";
 import AboutUs from "./components/home/AboutUs";
 import OurProducts from "./components/home/OurProducts";
+import Services from "./components/home/Services"
 import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
 import { NavbarContexts } from "@/contexts/NavbarContext";
 
@@ -57,6 +58,7 @@ export default function Home() {
         </NavbarContexts.Provider>
         <AboutUs />
         <OurProducts />
+        <Services />
         <WhatsApp />
 
         <Footer />

@@ -10,7 +10,7 @@ const OurProducts = () => {
     <section className='sm:py-24 py-16 bg-[#25456c] text-white'>
         <div className='container max-w-7xl mx-auto flex flex-col sm:gap-16 gap-10 px-6'>
             {/* title */}
-            <h1 className='sm:text-4xl text-xlx font-extrabold tracking-wide'>PRODUCTS</h1>
+            <h1 className='sm:text-4xl text-2xl text-center font-extrabold tracking-wide'>PRODUCTS</h1>
 
             {/* Categories */}
             <div className='flex justify-center items-center flex-wrap sm:h-36 h-24'>
