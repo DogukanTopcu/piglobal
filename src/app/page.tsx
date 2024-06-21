@@ -7,6 +7,8 @@ import Popup from "./components/Popup";
 import { ScreenSizeContext, ScreenSizeContextState, TypeNavbarContext, TypeNavbarContextState } from "@/types/ContextTypes";
 import WhatsApp from "./components/WhatsApp";
 import Footer from "./components/Footer";
+import AboutUs from "./components/home/AboutUs";
+import OurProducts from "./components/home/OurProducts";
 
 
 
@@ -56,6 +58,8 @@ export default function Home() {
           <Banner />
           <Menu />
         </NavbarContexts.Provider>
+        <AboutUs />
+        <OurProducts />
         <WhatsApp />
         <p>a</p>
         <p>a</p>
