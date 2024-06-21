@@ -169,29 +169,7 @@ const Dots = ({
         {bannerData.map((d, idx) => {
           const [isHovered, setIsHovered] = useState(false);
           return (
-            <button
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-              key={idx}
-              onClick={() => setImgIndex(idx)}
-              className={`sm:hover:p-4 hover:p-1.5 rounded-full transition-all 
-                ${
-                  isHovered ? "border-2 border-white rounded-full" : ""
-                }
-              ${
-                idx === imgIndex ? "bg-neutral-50 p-4" : "grayscale"
-              }`}
-            >
-              <div
-                style={{
-                  backgroundImage: `url(${d.icon})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-                className={`sm:h-10 sm:w-10 h-6 w-6 ${idx !== imgIndex ? "invert" : ""}`}
-              />
-              {/* <Image src={d.icon} alt="icon" className="sm:h-8 sm:w-8 h-3 w-3 " /> */}
-            </button>
+            <Dot key={idx} idx={idx} imgIndex={imgIndex} icon={d.icon} setImgIndex={setImgIndex} />
           );
         })}
       </div>
@@ -199,14 +177,33 @@ const Dots = ({
   );
 };
   
-  
-const GradientEdges = () => {
+const Dot = ( { idx, imgIndex, icon, setImgIndex } : { idx: number, imgIndex: number, icon: string, setImgIndex: Dispatch<SetStateAction<number>> }) => {
+  const [isHovered, setIsHovered] = useState(false);
   return (
-    <>
-      <div className="pointer-events-none absolute bottom-0 left-0 top-0 w-[70vw] bg-gradient-to-r from-neutral-950/50 to-neutral-950/0" />
-      <div className="pointer-events-none absolute bottom-0 right-0 top-0 w-[70vw] bg-gradient-to-l from-neutral-950/50 to-neutral-950/0" />
-    </>
-  );
-};
+    <button
+    onMouseEnter={() => setIsHovered(true)}
+    onMouseLeave={() => setIsHovered(false)}
+      key={idx}
+      onClick={() => setImgIndex(idx)}
+      className={`sm:hover:p-4 hover:p-1.5 rounded-full transition-all 
+        ${
+          isHovered ? "border-2 border-white rounded-full" : ""
+        }
+      ${
+        idx === imgIndex ? "bg-neutral-50 p-4" : "grayscale"
+      }`}
+    >
+      <div
+        style={{
+          backgroundImage: `url(${icon})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className={`sm:h-10 sm:w-10 h-6 w-6 ${idx !== imgIndex ? "invert" : ""}`}
+      />
+      {/* <Image src={d.icon} alt="icon" className="sm:h-8 sm:w-8 h-3 w-3 " /> */}
+    </button>
+  )
+}
 
 export default Banner

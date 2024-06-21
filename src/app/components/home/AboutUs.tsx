@@ -20,9 +20,9 @@ const AboutUs = () => {
         {/* Data */}
         <div className='grid grid-cols-3 mt-20 gap-y-20'>
             {
-                data.numerics.map((d) => {
+                data.numerics.map((d, idx) => {
                     return (
-                        <DataCard data={d} />
+                        <DataCard key={idx} data={d} />
                     )
                 })
             }
@@ -76,9 +76,9 @@ const References = () => {
 
             <div className='flex justify-center items-center gap-x-10 pt-12'>
                 {
-                    references.map((r) => {
+                    references.map((r, idx) => {
                         return (
-                            <ReferenceCard reference={r} />
+                            <ReferenceCard key={idx} reference={r} />
                         )
                     })
                 }
