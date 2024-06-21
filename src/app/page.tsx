@@ -58,24 +58,6 @@ export default function Home() {
         <AboutUs />
         <OurProducts />
         <WhatsApp />
-        <p>a</p>
-        <p>a</p>
-        <p>a</p>
-        <p>a</p>
-        <p>a</p>
-        <p>a</p>
-        <p>a</p>
-        <p>a</p>
-        <p>a</p>
-        <p>a</p>
-        <p>a</p>
-        <p>a</p>
-        <p>a</p>
-        <p>a</p>
-        <p>a</p>
-        <p>a</p>
-        <p>a</p>
-        <p>a</p>
 
         <Footer />
       </ScreenSizeContexts.Provider>
