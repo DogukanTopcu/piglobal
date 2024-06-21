@@ -53,7 +53,6 @@ const Link = ({ heading, href, type, setSelected, idx }: LinkProps) => {
     const handleMouseMove = (
       e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
     ) => {
-        console.log(heading.split(""));
       const rect = ref.current!.getBoundingClientRect();
 
       const width = rect.width;

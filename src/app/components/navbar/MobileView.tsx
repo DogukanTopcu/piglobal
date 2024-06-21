@@ -13,7 +13,6 @@ const MobileView = () => {
     useEffect(() => {
         if (isOpen) {
             document.getElementById("body")?.classList.add("fixed");
-            console.log(document.getElementById("body"));
             setTempScrollY(scrollY);
         }
         else {

@@ -31,7 +31,7 @@ export default function Home() {
     else setIsTop(true);
 
     return () => window.removeEventListener("scroll", scroll, false);
-  }, []);
+  }, [scrollY]);
 
   useEffect(() => {
     setScreenWidth(window.innerWidth);
