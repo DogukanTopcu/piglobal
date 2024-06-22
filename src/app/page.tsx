@@ -52,9 +52,9 @@ export default function Home() {
       <ScreenSizeContexts.Provider value={{ isTop, setIsTop, scrollY, setScrollY, screenWidth, setScreenWidth, screenHeight, setScreenHeight }}>
         <NavbarContexts.Provider value={{ isOpen, setIsOpen, isPopUpOpen, setIsPopUpOpen }}>
           <Navbar />
+          <Menu />
           <Popup />
           <Banner />
-          <Menu />
         </NavbarContexts.Provider>
         <AboutUs />
         <OurProducts />

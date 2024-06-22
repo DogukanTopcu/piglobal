@@ -6,6 +6,7 @@ import { menuData } from "@/app/eng/data/data";
 import { NavbarContexts } from "@/contexts/NavbarContext";
 import { useRouter } from "next/navigation";
 import { TR } from "country-flag-icons/react/3x2";
+import { LanguageButton } from "./Navbar";
 
 
 const Menu = () => {
@@ -36,7 +37,7 @@ const Menu = () => {
         </div>
 
         <button onClick={() => router.push("/tr")} className="text-white group relative flex items-center justify-between border-b-2 border-neutral-700 transition-colors duration-500 hover:border-neutral-50 p-4">
-          <div className="font-bold flex items-center justify-center gap-2"><p className="mix-blend-difference sm:text-lg text-xs">TR</p><TR title="United States" className="w-5" /></div>
+          <LanguageButton />
           <FiArrowRight size={32} className="text-5xl text-neutral-50" />
         </button>
 

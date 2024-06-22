@@ -24,13 +24,14 @@ const PopupTR = () => {
           <div
             style={{
               backgroundImage: `url(${data.image})`,
-              backgroundSize: "cover",
+              backgroundSize: "contain",
               backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
             }}
-           className='container max-w-[700px] w-[95vw] h-[95vw] max-h-[700px] border-white border-2 flex justify-end items-start'>
-          <button className='relative top-5 right-5 ' onClick={() => setIsPopUpOpen(false)}>
-            <MdOutlineClose style={{color: 'white'}} size={32} className='cursor-pointer' />
-          </button>
+           className='container bg-[#e9e9e9] bg-blend-darken max-w-[700px] w-[95vw] h-[95vw] max-h-[700px] border-white border-2 flex justify-end items-start'>
+            <button className='relative top-5 right-5 ' onClick={() => setIsPopUpOpen(false)}>
+              <MdOutlineClose style={{color: 'white'}} size={32} className='cursor-pointer invert' />
+            </button>
           </div>
         </div>
       )

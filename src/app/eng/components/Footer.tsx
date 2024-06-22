@@ -87,7 +87,7 @@ const Footer = () => {
         </div>
         <hr />
         <div className='container mx-auto max-w-7xl w-full flex items-center justify-center py-8'>
-            <p className='sm:text-[16px] text-xs'>All rights are reserved © 2024 Pi Global</p>
+            <p className='sm:text-[16px] text-xs'>All rights are reserved © 2024 Pi Global Co.</p>
         </div>
     </footer>
   )

@@ -9,7 +9,7 @@ import { TR } from 'country-flag-icons/react/3x2';
 import WideView from "./WideView";
 import MobileView from "./MobileView";
 import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = () => {
     const { scrollY, screenWidth } = useContext(ScreenSizeContexts);
@@ -40,8 +40,9 @@ const Navbar = () => {
 
 export const LanguageButton = () => {
     const router = useRouter();
+    const location = usePathname();
     return (
-        <button onClick={() => router.push("/tr")} className="font-bold flex items-center justify-center gap-2"><p className="mix-blend-difference sm:text-lg text-xs">TR</p><TR title="Türkiye" className="w-5" /></button>
+        <button onClick={() => location == "/" ? router.push("/tr") : router.push(`${location.replace("en", "tr")}`)} className="font-bold flex items-center justify-center gap-2"><p className="mix-blend-difference sm:text-lg text-xs">TR</p><TR title="Türkiye" className="w-5" /></button>
     )
 }
 

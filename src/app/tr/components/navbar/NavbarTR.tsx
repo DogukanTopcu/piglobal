@@ -9,7 +9,7 @@ import { US } from 'country-flag-icons/react/3x2';
 import WideViewTR from "./WideViewTR";
 import MobileViewTR from "./MobileViewTR";
 import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const NavbarTR = () => {
     const { scrollY, screenWidth } = useContext(ScreenSizeContexts);
@@ -39,8 +39,9 @@ const NavbarTR = () => {
 
 export const LanguageButton = () => {
     const router = useRouter();
+    const location = usePathname();
     return (
-        <button onClick={() => router.push("/")} className="font-bold flex items-center justify-center gap-2"><p className="mix-blend-difference sm:text-lg text-xs">EN</p><US title="United States" className="w-5" /></button>
+        <button onClick={() => location == "/tr" ? router.push("/") : router.push(`${location.replace("tr", "en")}`)} className="font-bold flex items-center justify-center gap-2"><p className="mix-blend-difference sm:text-lg text-xs">EN</p><US title="United States" className="w-5" /></button>
     )
 }
 
