@@ -1,5 +1,5 @@
 import { ScreenSizeContexts } from '@/contexts/ScreenSizeContext';
-import { logoData, menuData, socialMedias } from '@/data/data'
+import { logoData, menuData, socialMedias } from '@/app/eng/data/data'
 import Image from 'next/image'
 import { useContext } from 'react';
 import { FaLocationDot, FaPhone } from "react-icons/fa6";

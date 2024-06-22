@@ -1,10 +1,10 @@
 "use client"
 import { motion, useMotionValue } from "framer-motion";
 import { Dispatch, SetStateAction, useContext, useEffect, useState } from "react";
-import { bannerData, bannerLogo, bannerLogoTitle } from "@/data/data";
+import { bannerLogo, bannerLogoTitle } from "@/app/eng/data/data";
 import Image from "next/image";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
+import { bannerDataTR } from "../data/dataTR";
 
 
 type BannerModel = {
@@ -27,7 +27,8 @@ const ONE_SECOND = 1000;
 const AUTO_DELAY = ONE_SECOND * 10;
 const DRAG_BUFFER = 50;
 
-const Banner = () => {
+const BannerTR = () => {
+    const bannerData = bannerDataTR;
     const [imgIndex, setImgIndex] = useState(0);
     const dragX = useMotionValue(0);
 
@@ -49,7 +50,7 @@ const Banner = () => {
 
     const onDragEnd = () => {
         const x = dragX.get();
-        if (x <= -DRAG_BUFFER && imgIndex < bannerData.length - 1) {
+        if (x <= -DRAG_BUFFER && imgIndex < bannerDataTR.length - 1) {
           setImgIndex((pv) => pv + 1);
         } else if (x >= DRAG_BUFFER && imgIndex > 0) {
           setImgIndex((pv) => pv - 1);
@@ -166,7 +167,7 @@ const Dots = ({
   return (
     <div className="mt-4 w-full sm:h-12 h-5 absolute z-20 bottom-12 flex justify-center items-center ">
       <div className="flex w-full justify-center items-center sm:gap-12 gap-6">
-        {bannerData.map((d, idx) => {
+        {bannerDataTR.map((d, idx) => {
           return (
             <Dot key={idx} idx={idx} imgIndex={imgIndex} icon={d.icon} setImgIndex={setImgIndex} />
           );
@@ -199,4 +200,4 @@ const Dot = ( { idx, imgIndex, icon, setImgIndex } : { idx: number, imgIndex: nu
   )
 }
 
-export default Banner
+export default BannerTR

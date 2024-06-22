@@ -1,5 +1,5 @@
-import { menuData } from "@/data/data";
-import { ReactNode, useEffect, useState } from "react";
+import { menuData } from "@/app/eng/data/data";
+import { ReactNode, useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 import { LanguageButton } from "./Navbar";

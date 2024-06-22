@@ -1,16 +1,16 @@
 "use client"
-import { productsData } from '@/data/contentData';
 import React, { Dispatch, SetStateAction, useState } from 'react';
 import { FaArrowRight } from "react-icons/fa";
+import { productsDataTR } from '../../data/contentDataTR';
 
-const OurProducts = () => {
-    const products = productsData;
+const OurProductsTR = () => {
+    const products = productsDataTR;
     const [selectedCategory, setSelectedCategory] = useState(0);
   return (
     <section className='sm:py-24 py-16 bg-[#25456c] text-white'>
         <div className='container max-w-7xl mx-auto flex flex-col sm:gap-16 gap-10 px-6'>
             {/* title */}
-            <h1 className='sm:text-4xl text-2xl text-center font-extrabold tracking-wide'>PRODUCTS</h1>
+            <h1 className='sm:text-4xl text-2xl text-center font-extrabold tracking-wide'>ÜRÜNLERİMİZ</h1>
 
             {/* Categories */}
             <div className='flex justify-center items-center flex-wrap sm:h-36 h-24'>
@@ -35,7 +35,7 @@ const OurProducts = () => {
                 <div className='flex justify-center items-center h-full sm:col-span-2 lg:col-span-1'>
                     <button className='border-2 border-white px-6 py-3 font-semibold text-lg flex items-center gap-2
                     hover:bg-white hover:text-black transition-color duration-300 ease'>
-                        More Products
+                        Daha Fazla
                         <FaArrowRight />
                     </button>
                 </div>
@@ -94,4 +94,4 @@ const Product = ({ product } : { product : ProductInterface}) => {
     )
 }
 
-export default OurProducts
+export default OurProductsTR

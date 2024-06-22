@@ -1,4 +1,4 @@
-import { aboutUsData, referenceData } from '@/data/contentData'
+import { aboutUsData, referenceData } from '@/app/eng/data/contentData'
 import { motion } from "framer-motion";
 import { useState } from 'react';
 

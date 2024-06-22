@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 
-import { logoData } from "@/data/data";
+import { logoData } from "@/app/eng/data/data";
 import { useContext } from "react";
 
 
@@ -9,6 +9,7 @@ import { TR } from 'country-flag-icons/react/3x2';
 import WideView from "./WideView";
 import MobileView from "./MobileView";
 import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
     const { scrollY, screenWidth } = useContext(ScreenSizeContexts);
@@ -36,6 +37,12 @@ const Navbar = () => {
   )
 }
 
-export const LanguageButton = () => (<button className="font-bold flex items-center justify-center gap-2"><p className="mix-blend-difference sm:text-lg text-xs">TR</p><TR title="Türkiye" className="w-5" /></button>)
+
+export const LanguageButton = () => {
+    const router = useRouter();
+    return (
+        <button onClick={() => router.push("/tr")} className="font-bold flex items-center justify-center gap-2"><p className="mix-blend-difference sm:text-lg text-xs">TR</p><TR title="Türkiye" className="w-5" /></button>
+    )
+}
 
 export default Navbar

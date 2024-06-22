@@ -1,7 +1,6 @@
 "use client"
 import React, { useContext } from 'react'
-import { popupData } from '@/data/data';
-import Image from 'next/image';
+import { popupData } from '@/app/eng/data/data';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import { MdOutlineClose } from "react-icons/md";
 import { NavbarContexts } from '@/contexts/NavbarContext';

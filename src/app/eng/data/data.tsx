@@ -1,7 +1,7 @@
-import Logo from "../images/piglobal-logo.png";
-import Logo2 from "../images/piglobal-logo-2.png";
-import BannerLogo from "../images/svg-logos/logo-circular.svg";
-import BannerLogoTitle from "../images/svg-logos/name-logo-white.svg";
+import Logo from "@/images/piglobal-logo.png";
+import Logo2 from "@/images/piglobal-logo-2.png";
+import BannerLogo from "@/images/svg-logos/logo-circular.svg";
+import BannerLogoTitle from "@/images/svg-logos/name-logo-white.svg";
 
 import { FaInstagram, FaFacebook, FaReddit, FaDiscord, FaSnapchat, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaSquareXTwitter, FaSquareThreads } from "react-icons/fa6";

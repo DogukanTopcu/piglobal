@@ -2,18 +2,22 @@
 import { useMotionValue, motion } from "framer-motion";
 import React, { Dispatch, SetStateAction, useContext, useRef, useState } from "react";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
-import { menuData } from "@/data/data";
+import { menuData } from "@/app/eng/data/data";
 import { NavbarContexts } from "@/contexts/NavbarContext";
+import { useRouter } from "next/navigation";
+import { TR } from "country-flag-icons/react/3x2";
 
 
 const Menu = () => {
     const { isOpen } = useContext(NavbarContexts);
+    const router = useRouter();
 
     const [selected, setSelected] = useState(-1);
     const data = menuData.sort((x, y) => x.order > y.order ? 1 : -1);
 
   return (
-    <section className={`fixed transition-all duration-300 ease-out bg-neutral-950 p-4 md:py-8 md:px-16 top-0 right-0 h-screen w-screen flex flex-col justify-center z-20 ${isOpen ? "block" : "-translate-y-[100%]"}`}>
+    <section className={`fixed transition-all duration-300 ease-out bg-neutral-950 p-4 md:py-8 md:px-16 top-0 right-0 h-screen w-screen flex flex-col justify-between z-20 ${isOpen ? "block" : "-translate-y-[100%]"}`}>
+      <div></div>
         <div className="mx-auto max-w-5xl w-full">
           {
             data.map((d, idx) => {
@@ -30,6 +34,11 @@ const Menu = () => {
             })
           }
         </div>
+
+        <button onClick={() => router.push("/tr")} className="text-white group relative flex items-center justify-between border-b-2 border-neutral-700 transition-colors duration-500 hover:border-neutral-50 p-4">
+          <div className="font-bold flex items-center justify-center gap-2"><p className="mix-blend-difference sm:text-lg text-xs">TR</p><TR title="United States" className="w-5" /></div>
+          <FiArrowRight size={32} className="text-5xl text-neutral-50" />
+        </button>
 
         <SubsideMenu selected={selected} setSelected={setSelected} subtitles={data[selected] == null ? [] : data[selected].subtitles} subtitleLinks={data[selected] == null ? [] : data[selected].subtitleUrls} />
     </section>
