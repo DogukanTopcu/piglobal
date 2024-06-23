@@ -5,6 +5,7 @@ import { bannerLogo, bannerLogoTitle } from "@/app/en/data/data";
 import Image from "next/image";
 import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
 import { bannerDataTR } from "../data/dataTR";
+import { useRouter } from "next/navigation";
 
 
 type BannerModel = {
@@ -110,6 +111,7 @@ const BannerTR = () => {
 }
 
 const BannerData = ({data, idx} : { data: BannerModel, idx: number}) => {
+  const router = useRouter();
   const { screenWidth } = useContext(ScreenSizeContexts);
 
     return (
@@ -135,7 +137,7 @@ const BannerData = ({data, idx} : { data: BannerModel, idx: number}) => {
           ) : null
         }
         {/* Button */}
-        <button className="sm:px-10 px-8 sm:py-4 py-2 sm:text-md text-sm rounded font-bold bg-[#90302d] text-white w-fit transition-all shadow-[3px_3px_0px_white] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]">
+        <button onClick={() => router.push(`${data.redirect}`)} className="sm:px-10 px-8 sm:py-4 py-2 sm:text-md text-sm rounded font-bold bg-[#90302d] text-white w-fit transition-all shadow-[3px_3px_0px_white] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]">
           {data.button}
         </button>
       </div>

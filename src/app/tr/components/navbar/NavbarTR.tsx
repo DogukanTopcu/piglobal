@@ -14,11 +14,12 @@ import { tr_to_en_dict } from "@/app/languageSupport";
 
 const NavbarTR = () => {
     const { scrollY, screenWidth } = useContext(ScreenSizeContexts);
+    const router = useRouter();
 
   return (
     <nav className={`fixed w-screen ${scrollY > 200 ? "lg:h-20 h-14 bg-[#efefef]" : "lg:h-28 sm:h-20 h-16"} z-30 transition-all duration-300 ease-out flex items-center`}>
         <div className='flex justify-between items-center bg-transparent h-full w-full lg:py-5 py-2 lg:px-16 px-8 max-w-screen'>
-            <Image src={logoData} alt="logo" className="h-full w-auto rounded-xl" />
+            <Image onClick={() => router.push("/tr")} src={logoData} alt="logo" className="h-full w-auto rounded-xl cursor-pointer" />
 
             <div className="text-white flex justify-center items-center sm:gap-12 gap-6">
                 {
