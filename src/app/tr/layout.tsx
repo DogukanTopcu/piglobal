@@ -1,21 +1,20 @@
 "use client"
-import { NavbarContexts } from '@/contexts/NavbarContext';
-import { ScreenSizeContexts } from '@/contexts/ScreenSizeContext';
 import React, { useEffect, useState } from 'react'
-import WhatsAppTR from './components/WhatsAppTR';
-import FooterTR from './components/FooterTR';
-import ServicesTR from './components/home/ServicesTR';
-import OurProductsTR from './components/home/OurProductsTR';
-import AboutUsTR from './components/home/AboutUsTR';
-import MenuTR from './components/navbar/MenuTR';
-import BannerTR from './components/BannerTR';
-import PopupTR from './components/PopupTR';
+import { NavbarContexts } from '@/contexts/NavbarContext';
 import NavbarTR from './components/navbar/NavbarTR';
+import { ScreenSizeContexts } from '@/contexts/ScreenSizeContext';
+import MenuTR from './components/navbar/MenuTR';
+import FooterTR from './components/FooterTR';
 
-const HomePageTR = () => {
+export default function RootLayout({
+    children,
+  }: Readonly<{
+    children: React.ReactNode;
+  }>) {
+
   const [isOpen, setIsOpen] = useState<Boolean>(false);
-  const [isPopUpOpen, setIsPopUpOpen] = useState<Boolean>(true);
-  
+  const [isPopUpOpen, setIsPopUpOpen] = useState<Boolean>(false);
+
   const [isTop, setIsTop] = useState<Boolean>(true);
   const [scrollY, setScrollY] = useState<number>(0);
   const [screenWidth, setScreenWidth] = useState<number>(0);
@@ -44,16 +43,48 @@ const HomePageTR = () => {
     window.addEventListener("resize", height, false);
     return () => window.addEventListener("resize", height, false);
   }, []);
-  return (
-    <main>
-        <BannerTR />
-        <PopupTR />
-        <AboutUsTR />
-        <OurProductsTR />
-        <ServicesTR />
-        <WhatsAppTR />
-    </main>
-  )
-}
 
-export default HomePageTR
+
+    return (
+      <main>
+        <ScreenSizeContexts.Provider value={{ isTop, setIsTop, scrollY, setScrollY, screenWidth, setScreenWidth, screenHeight, setScreenHeight }}>
+        <NavbarContexts.Provider value={{ isOpen, setIsOpen, isPopUpOpen, setIsPopUpOpen }}>
+          <NavbarTR />
+          <MenuTR />
+        </NavbarContexts.Provider>
+        
+        {children}
+
+
+        
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <p>a</p>
+        <FooterTR />
+
+      </ScreenSizeContexts.Provider>
+      </main>
+    );
+  }

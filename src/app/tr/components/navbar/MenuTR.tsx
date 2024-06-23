@@ -4,13 +4,15 @@ import React, { Dispatch, SetStateAction, useContext, useRef, useState } from "r
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { NavbarContexts } from "@/contexts/NavbarContext";
 import { menuDataTR } from "../../data/dataTR";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { LanguageButton } from "./NavbarTR";
+import { US } from "country-flag-icons/react/3x2";
 
 
 const MenuTR = () => {
     const { isOpen } = useContext(NavbarContexts);
     const router = useRouter();
+    const location = usePathname();
 
     const [selected, setSelected] = useState(-1);
     const data = menuDataTR.sort((x, y) => x.order > y.order ? 1 : -1);
@@ -35,10 +37,16 @@ const MenuTR = () => {
           }
         </div>
 
-        <button onClick={() => router.push("/")} className="text-white group relative flex items-center justify-between border-b-2 border-neutral-700 transition-colors duration-500 hover:border-neutral-50 p-4">
-          <LanguageButton />
+        <div className="w-full mb-24">
+        <button onClick={() => location == "/tr" ? router.push("/") : router.push(`${location.replace("tr", "en")}`)} 
+        className="border-2 text-white 
+        flex items-center justify-between w-full
+        border-neutral-700 
+        p-4">
+          <div className="font-bold flex items-center justify-center gap-2"><p className="sm:text-lg text-xs">TR</p><US title="Türkiye" className="w-5" /></div>
           <FiArrowRight size={32} className="text-5xl text-neutral-50" />
         </button>
+      </div>
 
         <SubsideMenu selected={selected} setSelected={setSelected} subtitles={data[selected] == null ? [] : data[selected].subtitles} subtitleLinks={data[selected] == null ? [] : data[selected].subtitleUrls} />
     </section>

@@ -1,5 +1,5 @@
 "use client"
-import { productsData } from '@/app/eng/data/contentData';
+import { productsData } from '@/app/en/data/contentData';
 import React, { Dispatch, SetStateAction, useState } from 'react';
 import { FaArrowRight } from "react-icons/fa";
 

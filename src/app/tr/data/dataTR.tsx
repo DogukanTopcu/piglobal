@@ -50,7 +50,7 @@ export const menuDataTR = [
         order: 5,
         type: 0, // type = 0, means has no subtitle, has a url
         mainTitle: "İletişim",
-        url: "",
+        url: "/tr/iletisim",
 
         subtitles: [],
         subtitleUrls: [],

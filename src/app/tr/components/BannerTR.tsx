@@ -1,7 +1,7 @@
 "use client"
 import { motion, useMotionValue } from "framer-motion";
 import { Dispatch, SetStateAction, useContext, useEffect, useState } from "react";
-import { bannerLogo, bannerLogoTitle } from "@/app/eng/data/data";
+import { bannerLogo, bannerLogoTitle } from "@/app/en/data/data";
 import Image from "next/image";
 import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
 import { bannerDataTR } from "../data/dataTR";

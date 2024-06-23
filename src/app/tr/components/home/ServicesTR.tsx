@@ -2,7 +2,7 @@ import { Dispatch, SetStateAction, useContext, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { IconType } from "react-icons";
 import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
-import { ourServicesData } from "@/app/eng/data/contentData";
+import { ourServicesData } from "@/app/en/data/contentData";
 
 const ServicesTR = () => {
   const items = ourServicesData;

@@ -50,7 +50,7 @@ export const menuData = [
         order: 5,
         type: 0, // type = 0, means has no subtitle, has a url
         mainTitle: "Contact",
-        url: "",
+        url: "/en/contact",
 
         subtitles: [],
         subtitleUrls: [],
@@ -62,7 +62,7 @@ export const menuData = [
         order: 4,
         type: 0, // type = 0, means has no subtitle, has a url
         mainTitle: "Human Resources",
-        url: "",
+        url: "/en/human-resources",
 
         subtitles: [],
         subtitleUrls: [],
@@ -77,7 +77,7 @@ export const menuData = [
         url: "",
         
         subtitles: ["About Us", "Our Technologies", "Sustainability", "Social Responsibility", "Board Members"],
-        subtitleUrls: [],
+        subtitleUrls: ["/en/corporate/about-us", "/en/corporate/our-technologies", "/en/corporate/sustainability", "/en/corporate/social-responsibility", "/en/corporate/board-members"],
 
         subsubtitles: [],
         subsubtitlesUrls: []
@@ -89,7 +89,7 @@ export const menuData = [
         url: "",
         
         subtitles: ["News & Announcements & Events", "Gallery"],
-        subtitleUrls: [],
+        subtitleUrls: ["/en/media/news", "/en/media/gallery"],
 
         subsubtitles: [],
         subsubtitlesUrls: []
@@ -101,7 +101,7 @@ export const menuData = [
         url: "",
         
         subtitles: ["Plastic Products and Production", "Food and Agriculture", "Automative and Sub-Industry"],
-        subtitleUrls: [],
+        subtitleUrls: ["/en/products/plastic-products-and-production", "/en/products/food-and-agriculture", "/en/products/automative-and-sub-industry"],
 
         subsubtitles: [],
         subsubtitlesUrls: []

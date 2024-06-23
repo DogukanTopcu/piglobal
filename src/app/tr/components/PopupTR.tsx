@@ -1,6 +1,6 @@
 "use client"
-import React, { useContext } from 'react'
-import { popupData } from '@/app/eng/data/data';
+import React, { useContext, useState } from 'react'
+import { popupData } from '@/app/en/data/data';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import { MdOutlineClose } from "react-icons/md";
 import { NavbarContexts } from '@/contexts/NavbarContext';
@@ -12,7 +12,7 @@ type PopUpType = {
 }
 
 const PopupTR = () => {
-  const { isPopUpOpen, setIsPopUpOpen } = useContext(NavbarContexts);
+  const [isPopUpOpen, setIsPopUpOpen] = useState<Boolean>(true);
   const data : PopUpType = popupData;
 
   return (

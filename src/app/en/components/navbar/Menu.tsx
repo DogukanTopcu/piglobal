@@ -2,22 +2,23 @@
 import { useMotionValue, motion } from "framer-motion";
 import React, { Dispatch, SetStateAction, useContext, useRef, useState } from "react";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
-import { menuData } from "@/app/eng/data/data";
+import { menuData } from "@/app/en/data/data";
 import { NavbarContexts } from "@/contexts/NavbarContext";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { LanguageButton, MobileLanguageButton } from "./Navbar";
 import { TR } from "country-flag-icons/react/3x2";
-import { LanguageButton } from "./Navbar";
 
 
 const Menu = () => {
     const { isOpen } = useContext(NavbarContexts);
     const router = useRouter();
+    const location = usePathname();
 
     const [selected, setSelected] = useState(-1);
     const data = menuData.sort((x, y) => x.order > y.order ? 1 : -1);
 
   return (
-    <section className={`fixed transition-all duration-300 ease-out bg-neutral-950 p-4 md:py-8 md:px-16 top-0 right-0 h-screen w-screen flex flex-col justify-between z-20 ${isOpen ? "block" : "-translate-y-[100%]"}`}>
+    <section className={`fixed transition-all duration-300 ease-out bg-neutral-950 p-4 md:px-16 h-[calc(100dvh)] w-screen flex flex-col justify-between z-20 ${isOpen ? "block" : "-translate-y-[100%]"}`}>
       <div></div>
         <div className="mx-auto max-w-5xl w-full">
           {
@@ -26,7 +27,7 @@ const Menu = () => {
                 <Link
                     key={idx}
                     heading = {d.mainTitle}
-                    href="#"
+                    href={d.url}
                     type={d.type}
                     idx={idx}
                     setSelected={setSelected}
@@ -36,10 +37,16 @@ const Menu = () => {
           }
         </div>
 
-        <button onClick={() => router.push("/tr")} className="text-white group relative flex items-center justify-between border-b-2 border-neutral-700 transition-colors duration-500 hover:border-neutral-50 p-4">
-          <LanguageButton />
+      <div className="w-full mb-24">
+        <button onClick={() => location == "/" ? router.push("/tr") : router.push(`${location.replace("en", "tr")}`)} 
+        className="border-2 text-white 
+        flex items-center justify-between w-full
+        border-neutral-700 
+        p-4">
+          <div className="font-bold flex items-center justify-center gap-2"><p className="sm:text-lg text-xs">TR</p><TR title="Türkiye" className="w-5" /></div>
           <FiArrowRight size={32} className="text-5xl text-neutral-50" />
         </button>
+      </div>
 
         <SubsideMenu selected={selected} setSelected={setSelected} subtitles={data[selected] == null ? [] : data[selected].subtitles} subtitleLinks={data[selected] == null ? [] : data[selected].subtitleUrls} />
     </section>
@@ -56,27 +63,6 @@ interface LinkProps {
 
 const Link = ({ heading, href, type, setSelected, idx }: LinkProps) => {
     const ref = useRef<HTMLAnchorElement | null>(null);
-    
-    const x = useMotionValue(0);
-    const y = useMotionValue(0);
-
-    const handleMouseMove = (
-      e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-    ) => {
-      const rect = ref.current!.getBoundingClientRect();
-
-      const width = rect.width;
-      const height = rect.height;
-
-      const mouseX = e.clientX - rect.left;
-      const mouseY = e.clientY - rect.top;
-
-      const xPct = mouseX / width - 0.5;
-      const yPct = mouseY / height - 0.5;
-
-      x.set(xPct);
-      y.set(yPct);
-    };
 
     return (
         <motion.a
@@ -87,7 +73,6 @@ const Link = ({ heading, href, type, setSelected, idx }: LinkProps) => {
           }}
           href={href}
           ref={ref}
-          onMouseMove={handleMouseMove}
           initial="initial"
           whileHover="whileHover"
           className="group relative flex items-center justify-between border-b-2 border-neutral-700 transition-colors duration-500 hover:border-neutral-50 p-4"

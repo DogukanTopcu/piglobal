@@ -1,8 +1,11 @@
-import { menuData } from "@/app/eng/data/data";
+"use client"
+import { menuData } from "@/app/en/data/data";
 import { ReactNode, useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
 import { LanguageButton } from "./Navbar";
+import { useRouter } from "next/navigation";
+import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 
 const WideView = () => {
     const [selected, setSelected] = useState<number | null>(null);
@@ -25,7 +28,7 @@ const WideView = () => {
                 {
                     data.map((d) => {
                         return (
-                            <FlyoutLink key={d.order} href="" type={d.type} mainTitle={d.mainTitle} >
+                            <FlyoutLink key={d.order} href={d.url} type={d.type} mainTitle={d.mainTitle} >
                                 {d.mainTitle}
                             </FlyoutLink>
                         )
@@ -40,9 +43,11 @@ const WideView = () => {
 
 const FlyoutLink = ({ children, href, type, mainTitle } : { children : ReactNode; href : string; type : number | null; mainTitle : string; }) => {
     const [open, setOpen] = useState(false);
+    const router = useRouter();
 
     return (
         <div
+            onClick={() => { type == 0 ? router.push(href) : null}}
             onMouseEnter={() => setOpen(true)}
             onMouseLeave={() => setOpen(false)}
             className="relative w-fit h-fit"
@@ -82,7 +87,7 @@ const FlyoutLink = ({ children, href, type, mainTitle } : { children : ReactNode
                                 <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
                                 
                                 {/* Content */}
-                                <TypeOneContent mainTitle={mainTitle} />
+                                <TypeOneContent mainTitle={mainTitle} router={router} />
 
                             </motion.div>
                         )}
@@ -94,14 +99,14 @@ const FlyoutLink = ({ children, href, type, mainTitle } : { children : ReactNode
 }
 
 
-const TypeOneContent = ({ mainTitle } : { mainTitle : string }) => {
+const TypeOneContent = ({ mainTitle, router } : { mainTitle : string, router: AppRouterInstance }) => {
     const data = menuData.filter((x) => x.mainTitle == mainTitle)[0];
     return (
         <ul className="flex flex-col items-start gap-4">
             {
                 data.subtitles.map((sub, idx) => {
                     return (
-                        <li key={idx} className="border-b-2 w-full"><button className="hover:underline hover:border-l-8 border-l-2 border-blue-500 px-6 text-start transition-all duration-300 ease-out w-full">{sub}</button></li>
+                        <li key={idx} className="border-b-2 w-full"><button onClick={() => router.push(data.subtitleUrls[idx])} className="hover:underline hover:border-l-8 border-l-2 border-blue-500 px-6 text-start transition-all duration-300 ease-out w-full">{sub}</button></li>
                     )
                 })
             }

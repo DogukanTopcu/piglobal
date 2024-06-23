@@ -1,14 +1,14 @@
 "use client"
-import Navbar from "./eng/components/navbar/Navbar";
-import Banner from "./eng/components/Banner";
-import Menu from "./eng/components/navbar/Menu";
+import Navbar from "./en/components/navbar/Navbar";
+import Banner from "./en/components/Banner";
+import Menu from "./en/components/navbar/Menu";
 import { useEffect, useState } from "react";
-import Popup from "./eng/components/Popup";
-import WhatsApp from "./eng/components/WhatsApp";
-import Footer from "./eng/components/Footer";
-import AboutUs from "./eng/components/home/AboutUs";
-import OurProducts from "./eng/components/home/OurProducts";
-import Services from "./eng/components/home/Services"
+import Popup from "./en/components/Popup";
+import WhatsApp from "./en/components/WhatsApp";
+import Footer from "./en/components/Footer";
+import AboutUs from "./en/components/home/AboutUs";
+import OurProducts from "./en/components/home/OurProducts";
+import Services from "./en/components/home/Services"
 import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
 import { NavbarContexts } from "@/contexts/NavbarContext";
 

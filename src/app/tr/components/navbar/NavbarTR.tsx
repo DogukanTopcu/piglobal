@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
 
-import { logoData } from "@/app/eng/data/data";
+import { logoData } from "@/app/en/data/data";
 import { useContext } from "react";
 
 
@@ -10,6 +10,7 @@ import WideViewTR from "./WideViewTR";
 import MobileViewTR from "./MobileViewTR";
 import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
 import { usePathname, useRouter } from "next/navigation";
+import { tr_to_en_dict } from "@/app/languageSupport";
 
 const NavbarTR = () => {
     const { scrollY, screenWidth } = useContext(ScreenSizeContexts);
@@ -41,7 +42,7 @@ export const LanguageButton = () => {
     const router = useRouter();
     const location = usePathname();
     return (
-        <button onClick={() => location == "/tr" ? router.push("/") : router.push(`${location.replace("tr", "en")}`)} className="font-bold flex items-center justify-center gap-2"><p className="mix-blend-difference sm:text-lg text-xs">EN</p><US title="United States" className="w-5" /></button>
+        <button onClick={() => location == "/tr" ? router.push("/") : router.push(`${tr_to_en_dict[location]}`)} className="font-bold flex items-center justify-center gap-2"><p className="mix-blend-difference sm:text-lg text-xs">EN</p><US title="United States" className="w-5" /></button>
     )
 }
 
