@@ -7,10 +7,11 @@ import { NavbarContexts } from "@/contexts/NavbarContext";
 import { usePathname, useRouter } from "next/navigation";
 import { LanguageButton, MobileLanguageButton } from "./Navbar";
 import { TR } from "country-flag-icons/react/3x2";
+import { en_to_tr_dict } from "@/app/languageSupport";
 
 
 const Menu = () => {
-    const { isOpen } = useContext(NavbarContexts);
+    const { isOpen, setIsOpen } = useContext(NavbarContexts);
     const router = useRouter();
     const location = usePathname();
 
@@ -37,8 +38,11 @@ const Menu = () => {
           }
         </div>
 
-      <div className="w-full mb-24">
-        <button onClick={() => location == "/" ? router.push("/tr") : router.push(`${location.replace("en", "tr")}`)} 
+      <div className="w-full">
+        <button onClick={() => {
+          location == "/" ? router.push("/tr") : router.push(`${en_to_tr_dict[location]}`);
+          setIsOpen(false);
+        }} 
         className="border-2 text-white 
         flex items-center justify-between w-full
         border-neutral-700 
@@ -63,6 +67,8 @@ interface LinkProps {
 
 const Link = ({ heading, href, type, setSelected, idx }: LinkProps) => {
     const ref = useRef<HTMLAnchorElement | null>(null);
+    const router = useRouter();
+    const { setIsOpen } = useContext(NavbarContexts);
 
     return (
         <motion.a
@@ -70,8 +76,11 @@ const Link = ({ heading, href, type, setSelected, idx }: LinkProps) => {
             if (type > 0) {
               setSelected(idx);
             }
+            else {
+              setIsOpen(false);
+              router.push(href);
+            }
           }}
-          href={href}
           ref={ref}
           initial="initial"
           whileHover="whileHover"

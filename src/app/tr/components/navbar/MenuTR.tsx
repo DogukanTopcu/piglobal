@@ -7,10 +7,11 @@ import { menuDataTR } from "../../data/dataTR";
 import { usePathname, useRouter } from "next/navigation";
 import { LanguageButton } from "./NavbarTR";
 import { US } from "country-flag-icons/react/3x2";
+import { tr_to_en_dict } from "@/app/languageSupport";
 
 
 const MenuTR = () => {
-    const { isOpen } = useContext(NavbarContexts);
+    const { isOpen, setIsOpen } = useContext(NavbarContexts);
     const router = useRouter();
     const location = usePathname();
 
@@ -18,7 +19,7 @@ const MenuTR = () => {
     const data = menuDataTR.sort((x, y) => x.order > y.order ? 1 : -1);
 
   return (
-    <section className={`fixed transition-all duration-300 ease-out bg-neutral-950 p-4 md:py-8 md:px-16 top-0 right-0 h-screen w-screen flex flex-col justify-between z-20 ${isOpen ? "block" : "-translate-y-[100%]"}`}>
+    <section className={`fixed transition-all duration-300 ease-out bg-neutral-950 p-4 md:px-16 h-[calc(100dvh)] w-screen flex flex-col justify-between z-20 ${isOpen ? "block" : "-translate-y-[100%]"}`}>
         <div></div>
         <div className="mx-auto max-w-5xl w-full">
           {
@@ -27,7 +28,7 @@ const MenuTR = () => {
                 <Link
                     key={idx}
                     heading = {d.mainTitle}
-                    href="#"
+                    href={d.url}
                     type={d.type}
                     idx={idx}
                     setSelected={setSelected}
@@ -37,13 +38,16 @@ const MenuTR = () => {
           }
         </div>
 
-        <div className="w-full mb-24">
-        <button onClick={() => location == "/tr" ? router.push("/") : router.push(`${location.replace("tr", "en")}`)} 
+        <div className="w-full">
+        <button onClick={() => {
+          location == "/tr" ? router.push("/") : router.push(`${tr_to_en_dict[location]}`);
+          setIsOpen(false);
+        }} 
         className="border-2 text-white 
         flex items-center justify-between w-full
         border-neutral-700 
         p-4">
-          <div className="font-bold flex items-center justify-center gap-2"><p className="sm:text-lg text-xs">TR</p><US title="Türkiye" className="w-5" /></div>
+          <div className="font-bold flex items-center justify-center gap-2"><p className="sm:text-lg text-xs">EN</p><US title="Türkiye" className="w-5" /></div>
           <FiArrowRight size={32} className="text-5xl text-neutral-50" />
         </button>
       </div>
@@ -63,27 +67,8 @@ interface LinkProps {
 
 const Link = ({ heading, href, type, setSelected, idx }: LinkProps) => {
     const ref = useRef<HTMLAnchorElement | null>(null);
-    
-    const x = useMotionValue(0);
-    const y = useMotionValue(0);
-
-    const handleMouseMove = (
-      e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-    ) => {
-      const rect = ref.current!.getBoundingClientRect();
-
-      const width = rect.width;
-      const height = rect.height;
-
-      const mouseX = e.clientX - rect.left;
-      const mouseY = e.clientY - rect.top;
-
-      const xPct = mouseX / width - 0.5;
-      const yPct = mouseY / height - 0.5;
-
-      x.set(xPct);
-      y.set(yPct);
-    };
+    const router = useRouter();
+    const { setIsOpen } = useContext(NavbarContexts);
 
     return (
         <motion.a
@@ -91,10 +76,12 @@ const Link = ({ heading, href, type, setSelected, idx }: LinkProps) => {
             if (type > 0) {
               setSelected(idx);
             }
+            else {
+              setIsOpen(false);
+              router.push(href);
+            }
           }}
-          href={href}
           ref={ref}
-          onMouseMove={handleMouseMove}
           initial="initial"
           whileHover="whileHover"
           className="group relative flex items-center justify-between border-b-2 border-neutral-700 transition-colors duration-500 hover:border-neutral-50 p-4"
