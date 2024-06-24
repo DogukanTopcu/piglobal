@@ -3,9 +3,12 @@ import { logoData, menuData, socialMedias } from '@/app/en/data/data'
 import Image from 'next/image'
 import { useContext } from 'react';
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
+import { useRouter } from 'next/navigation';
 
 const Footer = () => {
     const { screenWidth } = useContext(ScreenSizeContexts);
+
+    const router = useRouter();
 
     const allMenuData = menuData.sort((x, y) => x.order > y.order ? 1 : -1);
     const socials = socialMedias;
@@ -39,11 +42,11 @@ const Footer = () => {
                             return (
                                 <div key={idx}>
                                     <h1 className='font-bold mb-2 text-lg w-full'>{d.mainTitle}</h1>
-                                    <ul className='flex flex-col gap-3'>
+                                    <div className='flex flex-col gap-3'>
                                         {
-                                            d.subtitles.map((s, idx) => (<li key={idx} className='cursor-pointer hover:underline'>{s}</li>))
+                                            d.subtitles.map((s, idx) => (<button onClick={() => router.push(d.subtitleUrls[idx])} key={idx} className='cursor-pointer hover:underline text-left'>{s}</button>))
                                         }
-                                    </ul>
+                                    </div>
                                 </div>
                             );
                         }
@@ -56,16 +59,16 @@ const Footer = () => {
 
             <div className={`${screenWidth > 1024 ? "" : "w-full flex flex-col justify-center items-center"}`}>
                 {/* Last Column and Social Media buttons */}
-                <ul className={`flex flex-col gap-3 mb-10 ${screenWidth > 1024 ? "" : "justify-center items-center"}`}>
+                <div className={`flex flex-col gap-3 mb-10 ${screenWidth > 1024 ? "" : "justify-center items-center"}`}>
                     {
                         allMenuData.map((d, idx) => {
                             if (d.type == 0) {
-                                return (<li key={idx} className='cursor-pointer hover:underline font-bold text-lg'>{d.mainTitle}</li>)
+                                return (<button onClick={() => router.push(d.url)} key={idx} className='cursor-pointer hover:underline font-bold text-lg text-left'>{d.mainTitle}</button>)
                             }
                             else null;
                         })
                     }
-                </ul>
+                </div>
 
                 <div>
                     {/* Social Media */}
