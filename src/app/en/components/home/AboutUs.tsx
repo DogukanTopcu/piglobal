@@ -95,7 +95,9 @@ interface ReferenceCardInterface {
 const ReferenceCard = ( { reference } : { reference : ReferenceCardInterface }) => {
     const [isHovered, setIsHovered] = useState(false);
     return (
-        <div
+        <a
+            href={reference.referenceUrl}
+            target='_blank'
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             className='flex flex-col items-center cursor-pointer'
@@ -110,10 +112,10 @@ const ReferenceCard = ( { reference } : { reference : ReferenceCardInterface }) 
                 className={`sm:w-32 sm:h-32 w-16 h-16 transition-all duration-300 ease ${isHovered ? "-translate-y-4" : "grayscale"}`}
             />
 
-            <p className={`transition-all duration-300 ease ${isHovered ? "opacity-100" : "opacity-0"}`}>
+            <p className={`transition-all text-sm duration-300 ease ${isHovered ? "opacity-100" : "opacity-0"}`}>
                 {reference.referenceName}
             </p>
-        </div>
+        </a>
     )
 }
 
