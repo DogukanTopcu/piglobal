@@ -2,10 +2,12 @@ import { Dispatch, SetStateAction, useContext, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { IconType } from "react-icons";
 import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
-import { ourServicesData } from "@/app/en/data/contentData";
+import { ourServicesDataTR } from "../../data/contentDataTR";
+
+import { FaArrowRight } from "react-icons/fa";
 
 const ServicesTR = () => {
-  const items = ourServicesData;
+  const items = ourServicesDataTR;
   const [open, setOpen] = useState(items[0].id);
 
   return (
@@ -69,14 +71,6 @@ const Panel = ({
           transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse justify-end items-center gap-4 relative group`}
         onClick={() => setOpen(id)}
       >
-        {/* <span
-          style={{
-            writingMode: "vertical-lr",
-          }}
-          className="hidden text-xl font-light rotate-180"
-        >
-          {title}
-        </span> */}
         <span className="block text-white text-xl font-light">{title}</span>
         <div className="w-6 aspect-square bg-indigo-600 text-white grid place-items-center">
           <Icon />
@@ -104,9 +98,10 @@ const Panel = ({
               initial="closed"
               animate="open"
               exit="closed"
-              className="px-4 py-2 bg-black/40 backdrop-blur-sm text-white"
+              className="px-4 py-2 bg-black/40 backdrop-blur-sm text-white w-full flex flex-col gap-4"
             >
               <p>{description}</p>
+              <a href="/tr/iletisim" className="underline">İletişime Geçin</a>
             </motion.div>
           </motion.div>
         )}

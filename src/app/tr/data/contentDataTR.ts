@@ -1,4 +1,9 @@
-import { FiBarChart, FiBell, FiDollarSign, FiPlay } from "react-icons/fi";
+import { MdOutlineImportExport, 
+    MdOutlineHealthAndSafety, 
+    MdConstruction,
+    MdTireRepair,
+    MdDesignServices,
+    MdOutlineAgriculture } from "react-icons/md";
 
 
 // About Us
@@ -136,41 +141,59 @@ export const productsDataTR = [
 
 
 
-export const ourServicesData = [
+export const ourServicesDataTR = [
     {
-      id: 1,
-      title: "Earn more",
-      Icon: FiDollarSign,
-      imgSrc:
-        "https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
-    },
-    {
-      id: 2,
-      title: "Play more",
-      Icon: FiPlay,
-      imgSrc:
-        "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
-    },
-    {
-      id: 3,
-      title: "Keep track",
-      Icon: FiBell,
-      imgSrc:
-        "https://images.unsplash.com/photo-1578450671530-5b6a7c9f32a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
-    },
-    {
-      id: 4,
-      title: "Grow faster",
-      Icon: FiBarChart,
-      imgSrc:
-        "https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
-    },
+        id: 1,
+        title: "İthalat ve İhracat",
+        Icon: MdOutlineImportExport,
+        imgSrc:
+          "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description:
+          "Yüksek kalite standartlarına uygun ürünleri uluslararası piyasalara taşırken, çevresel etkileri minimize eden yöntemler kullanarak sürdürülebilir ticaret yaparız.",
+      },
+      {
+        id: 2,
+        title: "Sağlık ve Medikal Hizmetler",
+        Icon: MdOutlineHealthAndSafety,
+        imgSrc:
+          "https://plus.unsplash.com/premium_photo-1658506952749-8df0057c5c03?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description:
+          "İnsan sağlığını ön planda tutarak, çevre dostu malzemeler ve süreçlerle üstün teknoloji ile donatılmış medikal ürünler ve sağlık hizmetleri sunarız.",
+      },
+      {
+        id: 3,
+        title: "İnşaat ve Emlak",
+        Icon: MdConstruction,
+        imgSrc:
+          "https://images.unsplash.com/photo-1536895058696-a69b1c7ba34f?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description:
+          "Modern, çevre dostu ve enerji verimli yapı projeleri geliştirerek, sürdürülebilir yaşam alanları oluştururuz.",
+      },
+      {
+        id: 4,
+        title: "Otomotiv ve Yan Sanayi",
+        Icon: MdTireRepair,
+        imgSrc:
+          "https://plus.unsplash.com/premium_photo-1682144902947-15e40263746b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description:
+          "Güvenilir ve kaliteli otomotiv ürünleri ile sektörde fark yaratır; yakıt verimli ve düşük emisyonlu çözümler sunarak çevreyi koruruz.",
+      },
+      {
+        id: 5,
+        title: "Gümrük Hizmetleri",
+        Icon: MdDesignServices,
+        imgSrc:
+          "https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+        description:
+          "Uluslararası ticaretin tüm aşamalarında profesyonel ve çevre dostu gümrük hizmetleri sunarak, işlemlerinizi hızlı ve sorunsuz bir şekilde gerçekleştiririz.",
+      },
+      {
+        id: 6,
+        title: "Gıda ve Tarım",
+        Icon: MdOutlineAgriculture,
+        imgSrc:
+          "https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        description:
+          "Doğal ve sağlıklı gıda ürünlerini en iyi koşullarda üretir ve sunar; tarım sektöründe sürdürülebilirlik ve verimlilik hedefleri doğrultusunda çalışırız. Toprağı ve doğal kaynakları koruyacak yöntemler geliştiririz.",
+      },
   ];

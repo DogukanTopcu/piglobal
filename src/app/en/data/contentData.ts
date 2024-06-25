@@ -1,4 +1,9 @@
-import { FiBarChart, FiBell, FiDollarSign, FiPlay } from "react-icons/fi";
+import { MdOutlineImportExport, 
+    MdOutlineHealthAndSafety, 
+    MdConstruction,
+    MdTireRepair,
+    MdDesignServices,
+    MdOutlineAgriculture } from "react-icons/md";
 
 
 // About Us
@@ -139,38 +144,56 @@ export const productsData = [
 export const ourServicesData = [
     {
       id: 1,
-      title: "Earn more",
-      Icon: FiDollarSign,
+      title: "Import and Export",
+      Icon: MdOutlineImportExport,
       imgSrc:
-        "https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+        "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
+        "We conduct sustainable trade by delivering products that meet high-quality standards to international markets using methods that minimize environmental impacts.",
     },
     {
       id: 2,
-      title: "Play more",
-      Icon: FiPlay,
+      title: "Health and Medical Services",
+      Icon: MdOutlineHealthAndSafety,
       imgSrc:
-        "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80",
+        "https://plus.unsplash.com/premium_photo-1658506952749-8df0057c5c03?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
+        "Prioritizing human health, we offer medical products and health services equipped with superior technology, using eco-friendly materials and processes.",
     },
     {
       id: 3,
-      title: "Keep track",
-      Icon: FiBell,
+      title: "Construction and Real Estate",
+      Icon: MdConstruction,
       imgSrc:
-        "https://images.unsplash.com/photo-1578450671530-5b6a7c9f32a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+        "https://images.unsplash.com/photo-1536895058696-a69b1c7ba34f?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
+        "We create sustainable living spaces by developing modern, eco-friendly, and energy-efficient construction projects.",
     },
     {
       id: 4,
-      title: "Grow faster",
-      Icon: FiBarChart,
+      title: "Automotive and Supplier Industry",
+      Icon: MdTireRepair,
+      imgSrc:
+        "https://plus.unsplash.com/premium_photo-1682144902947-15e40263746b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description:
+        "Setting ourselves apart in the industry with reliable and quality automotive products, we protect the environment by providing fuel-efficient and low-emission solutions.",
+    },
+    {
+      id: 5,
+      title: "Customs Services",
+      Icon: MdDesignServices,
       imgSrc:
         "https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum eius deserunt quia consectetur aliquid obcaecati voluptatibus quos distinctio natus! Tenetur.",
+        "By providing professional and eco-friendly customs services at all stages of international trade, we ensure your transactions are carried out quickly and smoothly.",
+    },
+    {
+      id: 6,
+      title: "Food and Agriculture",
+      Icon: MdOutlineAgriculture,
+      imgSrc:
+        "https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description:
+        "We produce and offer natural and healthy food products under the best conditions; we work towards sustainability and efficiency goals in the agriculture sector, developing methods that preserve the soil and natural resources.",
     },
   ];

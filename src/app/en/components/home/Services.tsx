@@ -69,19 +69,10 @@ const Panel = ({
           transition-colors p-3 border-r-[1px] border-b-[1px] border-slate-200 flex flex-row-reverse justify-end items-center gap-4 relative group`}
         onClick={() => setOpen(id)}
       >
-        {/* <span
-          style={{
-            writingMode: "vertical-lr",
-          }}
-          className="hidden text-xl font-light rotate-180"
-        >
-          {title}
-        </span> */}
         <span className="block text-white text-xl font-light">{title}</span>
         <div className="w-6 aspect-square bg-indigo-600 text-white grid place-items-center">
           <Icon />
         </div>
-        {/* <span className="w-4 h-4 bg-white group-hover:bg-slate-50 transition-colors border-r-[1px] border-b-[1px] border-slate-200 rotate-45 absolute bottom-0 right-[50%] translate-y-[50%] translate-x-[50%] z-20" /> */}
       </button>
 
       <AnimatePresence>
@@ -107,6 +98,7 @@ const Panel = ({
               className="px-4 py-2 bg-black/40 backdrop-blur-sm text-white"
             >
               <p>{description}</p>
+              <a href="/en/contact" className="underline">Conact Us</a>
             </motion.div>
           </motion.div>
         )}
