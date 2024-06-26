@@ -28,7 +28,7 @@ const ContactFormTR = () => {
                 checked={isChecked}
                 onChange={() => setIsChecked(!isChecked)}
                 type="checkbox" name="accept" required />
-                Kişisel Verilerin Korunması ve İşlenmesi Genel Aydınlatma Bildirimi&apos;nde belirtilen kişisel verilerimin işlenmesine, Pi Global Co.'nun duyuru, reklam, kampanya vb. konularda şahsıma ticari elektronik ileti göndermesine, bilgilerimin bu amaçla kullanılmasına, saklanmasına ve hizmet sağlayıcı üçüncü kişilerle paylaşılmasına açık bir şekilde rıza veriyorum. 
+                Kişisel Verilerin Korunması ve İşlenmesi Genel Aydınlatma Bildirimi&apos;nde belirtilen kişisel verilerimin işlenmesine, Pi Global Co.&apos;nun duyuru, reklam, kampanya vb. konularda şahsıma ticari elektronik ileti göndermesine, bilgilerimin bu amaçla kullanılmasına, saklanmasına ve hizmet sağlayıcı üçüncü kişilerle paylaşılmasına açık bir şekilde rıza veriyorum. 
             </p>
 
             <button className='w-full py-4 bg-[#3694ff] text-white font-bold tracking-wider rounded'
