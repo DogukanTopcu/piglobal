@@ -3,7 +3,6 @@ import mongoose, { Schema } from "mongoose";
 import { NextRequest, NextResponse } from "next/server";
 
 export const POST = async (request: NextRequest, response: NextResponse) => {
-    console.log("here");
     try {
         const data = await request.json();
         await ConnectDB();

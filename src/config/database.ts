@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
+import env from "dotenv";
+
+env.config();
 
 const ConnectDB = async () => {
+    console.log(process.env.MONGODB_URL);
     if (mongoose.connections[0].readyState) {
         return true;
     }

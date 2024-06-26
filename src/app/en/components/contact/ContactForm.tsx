@@ -7,6 +7,7 @@ const ContactForm = () => {
     
     
     const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
         const formData = new FormData(event.currentTarget);
         console.log(formData.get("name"));
         console.log("Hello");
@@ -18,7 +19,7 @@ const ContactForm = () => {
             message: formData.get("message"),
         }
 
-        await axios.post(`${process.env.BASE_URL}/api/contact-us`, data).then((res) => {
+        await axios.post("../api/contact-us", data).then((res) => {
             console.log(res.data);
         }).catch((err) => console.log(err.message));
         
