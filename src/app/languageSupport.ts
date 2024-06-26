@@ -13,7 +13,11 @@ export const en_to_tr_dict: { [id : string ] : string } = {
     "/en/media/gallery": "/tr/medya/galeri",
 
     "/en/human-resources": "/tr/insan-kaynaklari",
-    "/en/contact": "/tr/iletisim"
+    "/en/contact": "/tr/iletisim",
+
+    "/en/products/plastic-products-and-production/flexible-packaging-films": "/tr/urunlerimiz/plastik-urunler-ve-uretimi/esnek-ambalaj-filmleri",
+    "/en/products/food-and-agriculture/foods": "/tr/urunlerimiz/gida-ve-tarim/gidalar",
+    "/en/products/automative-and-sub-industry/tires" : "/tr/urunlerimiz/otomotiv-ve-yan-sanayi/tekerlekler"
 }
 
 
@@ -33,5 +37,10 @@ export const tr_to_en_dict: { [id : string ] : string } = {
     "/tr/medya/galeri": "/en/media/gallery",
 
     "/tr/insan-kaynaklari": "/en/human-resources",
-    "/tr/iletisim": "/en/contact"
+    "/tr/iletisim": "/en/contact",
+
+
+    "/tr/urunlerimiz/plastik-urunler-ve-uretimi/esnek-ambalaj-filmleri": "/en/products/plastic-products-and-production/flexible-packaging-films",
+    "/tr/urunlerimiz/gida-ve-tarim/gidalar": "/en/products/food-and-agriculture/foods",
+    "/tr/urunlerimiz/otomotiv-ve-yan-sanayi/tekerlekler": "/en/products/automative-and-sub-industry/tires"
 }

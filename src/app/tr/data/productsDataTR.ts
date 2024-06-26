@@ -5,7 +5,7 @@ export const plasticProductsDataTR = [
         productDesc: "Her iki tarafı Isıl Yapışmalı, Şeffaf POF ambalaj için shrink film, baskı ve laminasyon için uygundur. Parlaklık, Yüksek Mukavemet ile termoplastikten üretilmiştir.",
         productDetailedDesc: "",
         isShowInHomePage: true,
-        productUrl: "",
+        productUrl: "/tr/urunlerimiz/plastik-urunler-ve-uretimi/esnek-ambalaj-filmleri",
         productImg: "https://www.maripak.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2019/11/shrink-film-768x551.jpg.webp",
     },
     {
@@ -13,7 +13,7 @@ export const plasticProductsDataTR = [
         productDesc: "Her iki tarafı ısıl yapışmalı, esnek ambalajlar için Şeffaf BOPP Film, HFFS ve VFFS makinelerinde uygulamalar. Baskı ve laminasyon için uygundur.",
         productDetailedDesc: "",
         isShowInHomePage: true,
-        productUrl: "",
+        productUrl: "/tr/urunlerimiz/plastik-urunler-ve-uretimi/esnek-ambalaj-filmleri",
         productImg: "https://image.chukouplus.com/upload/C_3833/file/20240308/ae4a8c1a5c9c82c3020cb48ee1f112e5.jpg?x-oss-process=image/format,webp,image/resize,m_pad,h_400,w_400,color_FFFFFF",
     },
 ]
@@ -25,7 +25,7 @@ export const foodAndAgricultureProductsDataTR = [
         productDesc: "Mutfağınıza benzersiz lezzet ve sağlık faydaları getirmek için en iyi zeytinlerle hazırlanmış birinci sınıf zeytinyağımızla doğanın saf özünü keşfedin.",
         productDetailedDesc: "",
         isShowInHomePage: true,
-        productUrl: "",
+        productUrl: "/tr/urunlerimiz/gida-ve-tarim/gidalar",
         productImg: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?q=80&w=2036&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
@@ -33,7 +33,7 @@ export const foodAndAgricultureProductsDataTR = [
         productDesc: "Atıştırmak veya favori tariflerinizi zenginleştirmek için mükemmel olan birinci sınıf Antep fıstığımızın enfes çıtırlığını ve zengin lezzetini deneyimleyin.",
         productDetailedDesc: "",
         isShowInHomePage: true,
-        productUrl: "",
+        productUrl: "/tr/urunlerimiz/gida-ve-tarim/gidalar",
         productImg: "https://images.unsplash.com/photo-1502825751399-28baa9b81efe?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
@@ -77,7 +77,7 @@ export const automativeProductsDataTR = [
         productDesc: "Her koşulda dayanıklılık ve optimum performans için tasarlanmış Atire RunnerSolid lastiklerle en zorlu arazileri fethedin.",
         productDetailedDesc: "",
         isShowInHomePage: true,
-        productUrl: "",
+        productUrl: "/tr/urunlerimiz/otomotiv-ve-yan-sanayi/tekerlekler",
         productImg: "https://assets-global.website-files.com/64f8065a81be9734043da10e/65ec816fd13fe37e87ebf4f0_Rocksolid-1-p-500.png"
     },
     {
@@ -85,7 +85,7 @@ export const automativeProductsDataTR = [
         productDesc: "Her yolculukta olağanüstü performans için tasarlanan Atire Achiever serisi ile üstün yol tutuşu ve konforu yaşayın.",
         productDetailedDesc: "",
         isShowInHomePage: true,
-        productUrl: "",
+        productUrl: "/tr/urunlerimiz/otomotiv-ve-yan-sanayi/tekerlekler",
         productImg: "https://assets-global.website-files.com/64f8065a81be9734043da10e/65eca565823b2294e12911c4_Achiever-1-p-500.png"
     },
 ]

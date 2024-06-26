@@ -77,14 +77,15 @@ interface ProductInterface {
 }
 const Product = ({ product } : { product : ProductInterface}) => {
     return (
-        <div
+        <a
+            href={product.productUrl}
             style={{
                 backgroundImage: `url(${product.productImg})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center"
             }}
 
-            className='aspect-video shrink-0 bg-neutral-700 bg-blend-overlay w-full h-96 border-2'
+            className='aspect-video shrink-0 bg-neutral-700 bg-blend-overlay w-full h-96 border-2 cursor-pointer'
         >
             <div className='flex flex-col justify-end items-end w-full h-full'>
                 <div className='bg-gradient-to-r from-[#90302d] p-4'>
@@ -92,7 +93,7 @@ const Product = ({ product } : { product : ProductInterface}) => {
                     <p className='w-full text-left '>{product.productDesc}</p>
                 </div>
             </div>
-        </div>
+        </a>
     )
 }
 
