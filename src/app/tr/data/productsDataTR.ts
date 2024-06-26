@@ -1,23 +1,23 @@
 
-export const plasticProductsData = [
+export const plasticProductsDataTR = [
     {
 
     }
 ]
 
 
-export const foodAndAgricultureProductsData = [
+export const foodAndAgricultureProductsDataTR = [
     {
-        productName: "Olive Oil",
-        productDesc: "Discover the pure essence of nature with our premium olive oil, crafted with the finest olives to bring unparalleled flavor and health benefits to your kitchen.",
+        productName: "Zeytin Yağı",
+        productDesc: "Mutfağınıza benzersiz lezzet ve sağlık faydaları getirmek için en iyi zeytinlerle hazırlanmış birinci sınıf zeytinyağımızla doğanın saf özünü keşfedin.",
         productDetailedDesc: "",
         isShowInHomePage: true,
         productUrl: "",
         productImg: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?q=80&w=2036&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-        productName: "Pistachio",
-        productDesc: "Experience the delightful crunch and rich flavor of our premium pistachios, perfect for snacking or enhancing your favorite recipes.",
+        productName: "Antep Fıstığı",
+        productDesc: "Atıştırmak veya favori tariflerinizi zenginleştirmek için mükemmel olan birinci sınıf Antep fıstığımızın enfes çıtırlığını ve zengin lezzetini deneyimleyin.",
         productDetailedDesc: "",
         isShowInHomePage: true,
         productUrl: "",
@@ -58,10 +58,10 @@ export const foodAndAgricultureProductsData = [
 ]
 
 
-export const automativeProductsData = [
+export const automativeProductsDataTR = [
     {
         productName: "Atire RunnerSolid",
-        productDesc: "Conquer the toughest terrains with Atire RunnerSolid tires, designed for durability and optimal performance in all conditions.",
+        productDesc: "Her koşulda dayanıklılık ve optimum performans için tasarlanmış Atire RunnerSolid lastiklerle en zorlu arazileri fethedin.",
         productDetailedDesc: "",
         isShowInHomePage: true,
         productUrl: "",
@@ -69,7 +69,7 @@ export const automativeProductsData = [
     },
     {
         productName: "Atire Achiever",
-        productDesc: "Experience superior handling and comfort with the Atire Achiever series, engineered for exceptional performance on every journey.",
+        productDesc: "Her yolculukta olağanüstü performans için tasarlanan Atire Achiever serisi ile üstün yol tutuşu ve konforu yaşayın.",
         productDetailedDesc: "",
         isShowInHomePage: true,
         productUrl: "",

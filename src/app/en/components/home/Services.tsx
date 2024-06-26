@@ -98,7 +98,7 @@ const Panel = ({
               className="px-4 py-2 bg-black/40 backdrop-blur-sm text-white"
             >
               <p>{description}</p>
-              <a href="/en/contact" className="underline">Conact Us</a>
+              <a href="/en/contact" className="underline">Contact Us</a>
             </motion.div>
           </motion.div>
         )}
