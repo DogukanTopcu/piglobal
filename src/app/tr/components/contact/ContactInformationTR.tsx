@@ -10,9 +10,9 @@ const ContactInformationTR = () => {
         <h1 className='text-2xl font-bold leading-10 my-8'>Contact</h1>
 
         {
-            data.map((d) => {
+            data.map((d, idx) => {
                 return (
-                    <ContactCard data={d} />
+                    <ContactCard key={idx} data={d} />
                 )
             })
         }
@@ -45,9 +45,9 @@ const ContactCard = ({ data } : { data : IContactInfoData }) => {
             </div>
 
             {
-                data.otherInfos.map((o) => {
+                data.otherInfos.map((o, idx) => {
                     return(
-                        <p>{o}</p>
+                        <p key={idx}>{o}</p>
                     )
                 })
             }

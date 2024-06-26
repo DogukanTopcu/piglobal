@@ -7,7 +7,7 @@ const ConnectDB = async () => {
 
     try {
         await mongoose.connect(process.env.MONGODB_URL!, {
-            dbName: 'Contact-Us',
+            dbName: 'PiGlobalCo.',
         });
         console.log("Mongodb connected.");
         return true;

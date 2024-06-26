@@ -45,9 +45,9 @@ const ContactCard = ({ data } : { data : IContactInfoData }) => {
             </div>
 
             {
-                data.otherInfos.map((o) => {
+                data.otherInfos.map((o, idx) => {
                     return(
-                        <p>{o}</p>
+                        <p key={idx}>{o}</p>
                     )
                 })
             }
