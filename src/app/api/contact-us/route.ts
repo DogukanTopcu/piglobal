@@ -10,13 +10,12 @@ export const POST = async (request: NextRequest, response: NextResponse) => {
         await ConnectDB();
 
         await MessageModel.create(data);
-        console.log("mail saved");
         
         await sendMail({
-            to: "dogukantopcu35@gmail.com", 
-            subject: "s", 
-            name: data["name"], 
-            surname: data["surname"], 
+            to: process.env.NEXT_PUBLIC_RECEIVER_EMAIL_ADDRESS!, 
+            subject: data["subject"], 
+            email: data["email"], 
+            fullName: data["fullName"], 
             phone: data["phone"], 
             message: data["message"]
         });
@@ -31,7 +30,7 @@ export const POST = async (request: NextRequest, response: NextResponse) => {
 
 
 
-const sendMail = async ({to, subject, name, surname, phone, message} : {to: string, subject: string, name: string, surname: string, phone: string, message: string}) => {
+const sendMail = async ({to, subject, email, fullName, phone, message} : {to: string, subject: string, email: string, fullName: string, phone: string, message: string}) => {
     const transport = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -66,9 +65,9 @@ const sendMail = async ({to, subject, name, surname, phone, message} : {to: stri
 
 
 const messageSchema= new Schema({
-    // subject: {type: String, required: true},
-    name: {type: String, required: true},
-    surname: {type: String, required: true},
+    subject: {type: String, required: true},
+    email: {type: String, required: true},
+    fullName: {type: String, required: true},
     phone: {type: String, required: true},
     message: {type: String, required: true},
 
