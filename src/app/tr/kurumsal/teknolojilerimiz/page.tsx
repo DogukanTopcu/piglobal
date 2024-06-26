@@ -1,12 +1,14 @@
 import React from 'react'
 import { OurTechHeroDataTR } from '../../data/heroDataTR'
 import Hero from '@/app/common/Hero';
+import UnderConstruction from '@/app/common/UnderConstruction';
 
 const Teknolojilerimiz = () => {
     const data = OurTechHeroDataTR;
   return (
     <div>
-        <Hero img={data.image} title={data.title} />
+        {/* <Hero img={data.image} title={data.title} /> */}
+        <UnderConstruction />
     </div>
   )
 }

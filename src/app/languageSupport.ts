@@ -7,7 +7,7 @@ export const en_to_tr_dict: { [id : string ] : string } = {
 
     "/en/products/plastic-products-and-production": "/tr/urunlerimiz/plastik-urunler-ve-uretimi",
     "/en/products/food-and-agriculture": "/tr/urunlerimiz/gida-ve-tarim",
-    "/en/products/automative-and-sub-industry": "/tr/urunlerimiz/otomativ-ve-yan-sanayi",
+    "/en/products/automative-and-sub-industry": "/tr/urunlerimiz/otomotiv-ve-yan-sanayi",
 
     "/en/media/news": "/tr/medya/haberler",
     "/en/media/gallery": "/tr/medya/galeri",
@@ -27,7 +27,7 @@ export const tr_to_en_dict: { [id : string ] : string } = {
 
     "/tr/urunlerimiz/plastik-urunler-ve-uretimi": "/en/products/plastic-products-and-production",
     "/tr/urunlerimiz/gida-ve-tarim": "/en/products/food-and-agriculture",
-    "/tr/urunlerimiz/otomativ-ve-yan-sanayi": "/en/products/automative-and-sub-industry",
+    "/tr/urunlerimiz/otomotiv-ve-yan-sanayi": "/en/products/automative-and-sub-industry",
 
     "/tr/medya/haberler": "/en/media/news",
     "/tr/medya/galeri": "/en/media/gallery",

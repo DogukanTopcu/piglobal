@@ -1,8 +1,21 @@
 
 export const plasticProductsData = [
     {
-
-    }
+        productName: "Polyolefin Shrink Film",
+        productDesc: "Both sides Heat Sealable, Transparent POF shrink film for packaging, suitable for printing and lamination. Produced from thermoplastic with Brightness, High Strength.",
+        productDetailedDesc: "",
+        isShowInHomePage: true,
+        productUrl: "",
+        productImg: "https://www.maripak.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2019/11/shrink-film-768x551.jpg.webp",
+    },
+    {
+        productName: "Transparent BOPP Film",
+        productDesc: "Both sides heat sealable, Transparent BOPP Film for flexible packaging, applications on HFFS and VFFS machines. Suitable for printing and lamination",
+        productDetailedDesc: "",
+        isShowInHomePage: true,
+        productUrl: "",
+        productImg: "https://image.chukouplus.com/upload/C_3833/file/20240308/ae4a8c1a5c9c82c3020cb48ee1f112e5.jpg?x-oss-process=image/format,webp,image/resize,m_pad,h_400,w_400,color_FFFFFF",
+    },
 ]
 
 

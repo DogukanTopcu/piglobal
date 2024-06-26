@@ -2,9 +2,11 @@
 import React, { Dispatch, SetStateAction, useState } from 'react';
 import { FaArrowRight } from "react-icons/fa";
 import { productsDataTR } from '../../data/contentDataTR';
+import { useRouter } from 'next/navigation';
 
 const OurProductsTR = () => {
     const products = productsDataTR;
+    const router = useRouter();
     const [selectedCategory, setSelectedCategory] = useState(0);
   return (
     <section className='sm:py-24 py-16 bg-[#25456c] text-white'>
@@ -33,7 +35,7 @@ const OurProductsTR = () => {
                     })
                 }
                 <div className='flex justify-center items-center h-full sm:col-span-2 lg:col-span-1'>
-                    <button className='border-2 border-white px-6 py-3 font-semibold text-lg flex items-center gap-2
+                    <button onClick={() => router.push(products[selectedCategory].productsURL) } className='border-2 border-white px-6 py-3 font-semibold text-lg flex items-center gap-2
                     hover:bg-white hover:text-black transition-color duration-300 ease'>
                         Daha Fazla
                         <FaArrowRight />
