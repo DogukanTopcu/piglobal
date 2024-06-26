@@ -1,11 +1,14 @@
 "use client"
 import { productsData } from '@/app/en/data/contentData';
+import { useRouter } from 'next/navigation';
 import React, { Dispatch, SetStateAction, useState } from 'react';
 import { FaArrowRight } from "react-icons/fa";
 
 const OurProducts = () => {
     const products = productsData;
     const [selectedCategory, setSelectedCategory] = useState(0);
+
+    const router = useRouter();
   return (
     <section className='sm:py-24 py-16 bg-[#25456c] text-white'>
         <div className='container max-w-7xl mx-auto flex flex-col sm:gap-16 gap-10 px-6'>
@@ -33,7 +36,7 @@ const OurProducts = () => {
                     })
                 }
                 <div className='flex justify-center items-center h-full sm:col-span-2 lg:col-span-1'>
-                    <button className='border-2 border-white px-6 py-3 font-semibold text-lg flex items-center gap-2
+                    <button onClick={() => router.push(products[selectedCategory].productsURL) } className='border-2 border-white px-6 py-3 font-semibold text-lg flex items-center gap-2
                     hover:bg-white hover:text-black transition-color duration-300 ease'>
                         More Products
                         <FaArrowRight />

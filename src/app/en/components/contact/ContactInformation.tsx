@@ -10,9 +10,9 @@ const ContactInformation = () => {
         <h1 className='text-2xl font-bold leading-10 my-8'>Contact</h1>
 
         {
-            data.map((d) => {
+            data.map((d, idx) => {
                 return (
-                    <ContactCard data={d} />
+                    <ContactCard key={idx} data={d} />
                 )
             })
         }

@@ -1,16 +1,33 @@
 "use client"
-import React, { useState } from 'react'
+import axios from 'axios';
+import React, { FormEvent, useState } from 'react'
 
 const ContactForm = () => {
     const [isChecked, setIsChecked] = useState(false);
-    const onSubmit = () => {
+    
+    
+    const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+        const formData = new FormData(event.currentTarget);
+        console.log(formData.get("name"));
 
+        const data = {
+            name: formData.get("name"),
+            surname: formData.get("surname"),
+            phone: formData.get("phone"),
+            message: formData.get("message"),
+        }
+
+        await axios.post(`${process.env.BASE_URL}/api/contact-us`, data).
+        then((res) => {
+            console.log(res.data);
+        })
+        
     }
   return (
     <div className='px-8 py-6 shadow-2xl mb-20'>
         <h1 className='mb-7 font-bold text-2xl leading-10'>Contact Form</h1>
 
-        <form onSubmit={() => onsubmit} className='flex flex-col w-full gap-4'>
+        <form onSubmit={onSubmit} className='flex flex-col w-full gap-4' method='POST'>
             <CInput type="name" name="name" placeholder="Name*" />
             <CInput type="surname" name="surname" placeholder="Surame*" />
             <CInput type="phone" name="phone" placeholder="Phone Number*" />
@@ -23,9 +40,10 @@ const ContactForm = () => {
             />
 
                 
-            <p onClick={() => setIsChecked(!isChecked)} className='text-sm leading-7 text-[#4b506b] my-6 cursor-default'>
+            <p onClick={() => setIsChecked(true)} className='text-sm leading-7 text-[#4b506b] my-6 cursor-default'>
                 <input className='mr-4'
                 checked={isChecked}
+                onChange={() => setIsChecked(!isChecked)}
                 type="checkbox" name="accept" required />
                 Kişisel Verilerin Korunması ve İşlenmesi Genel Aydınlatma Bildirimi’nde belirtilen kişisel verilerimin işlenmesine, Süper Film Ambalaj San. ve Tic. A.Ş.’nin duyuru, reklam, kampanya vb. konularda şahsıma ticari elektronik ileti göndermesine, bilgilerimin bu amaçla kullanılmasına, saklanmasına ve hizmet sağlayıcı üçüncü kişilerle paylaşılmasına açık bir şekilde rıza veriyorum. 
             </p>
