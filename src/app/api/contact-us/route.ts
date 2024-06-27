@@ -12,7 +12,7 @@ export const POST = async (request: NextRequest, response: NextResponse) => {
         await MessageModel.create(data);
         
         await sendMail({
-            to: process.env.NEXT_PUBLIC_RECEIVER_EMAIL_ADDRESS!, 
+            to: process.env.RECEIVER_EMAIL_ADDRESS!, 
             subject: data["subject"], 
             email: data["email"], 
             fullName: data["fullName"], 
@@ -34,8 +34,8 @@ const sendMail = async ({to, subject, email, fullName, phone, message} : {to: st
     const transport = nodemailer.createTransport({
         service: "gmail",
         auth: {
-            user: process.env.NEXT_PUBLIC_EMAIL,
-            pass: process.env.NEXT_PUBLIC_SMTP_PASSWORD
+            user: process.env.EMAIL,
+            pass: process.env.SMTP_PASSWORD
         },
     });
 
@@ -50,7 +50,7 @@ const sendMail = async ({to, subject, email, fullName, phone, message} : {to: st
 
     try {
         const sendResult = await transport.sendMail({
-            from: process.env.NEXT_PUBLIC_EMAIL,
+            from: process.env.EMAIL,
             to,
             subject,
             html: message,

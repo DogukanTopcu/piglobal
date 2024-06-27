@@ -5,7 +5,7 @@ import WP from "@/images/WhatsApp.svg.webp";
 const WhatsApp = () => {
   return (
     <button onClick={() => {
-      window.open(`https://web.whatsapp.com/send?phone${process.env.NEXT_PUBLIC_WHATSAPP_PHONE}`)
+      window.open(`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_PHONE}`)
     }} className='fixed sm:left-10 sm:bottom-10 left-4 bottom-4 p-3 rounded-full sm:w-24 sm:h-24 w-16 h-16 bg-green-500'>
         <Image src={WP} alt='whatsapp' />
     </button>
