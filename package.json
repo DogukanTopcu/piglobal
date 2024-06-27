@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/nodemailer": "^6.4.15",
+    "@vercel/speed-insights": "^1.0.12",
     "axios": "^1.7.2",
     "country-flag-icons": "^1.5.12",
     "dotenv": "^16.4.5",

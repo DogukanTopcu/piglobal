@@ -5,8 +5,10 @@ const ConnectDB = async () => {
         return true;
     }
 
+    const connectionURI = await process.env.MONGO_CONN_URL;
+
     try {
-        await mongoose.connect(process.env.MONGO_CONN_URL!, {
+        await mongoose.connect(connectionURI!, {
             dbName: 'PiGlobalCo',
         });
         console.log("Mongodb connected.");
