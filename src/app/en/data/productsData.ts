@@ -74,7 +74,7 @@ export const foodAndAgricultureProductsData = [
 export const automativeProductsData = [
     {
         productName: "Atire Rocksolid",
-        productDesc: "Conquer the toughest terrains with Atire Rocksolid tires, designed for durability and optimal performance in all conditions.",
+        productDesc: "Conquer the toughest terrains with Atire Rocksolid forklift tires, designed for durability and optimal performance in all conditions.",
         productDetailedDesc: "",
         isShowInHomePage: true,
         productUrl: "/en/products/automative-and-sub-industry/tires",
@@ -82,7 +82,7 @@ export const automativeProductsData = [
     },
     {
         productName: "Achiever",
-        productDesc: "Experience superior handling and comfort with the Achiever series, engineered for exceptional performance on every journey.",
+        productDesc: "Experience superior handling and comfort with the Achiever series forklift tires, engineered for exceptional performance on every journey.",
         productDetailedDesc: "",
         isShowInHomePage: true,
         productUrl: "/en/products/automative-and-sub-industry/tires",

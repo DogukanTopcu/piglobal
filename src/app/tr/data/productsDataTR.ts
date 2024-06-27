@@ -74,7 +74,7 @@ export const foodAndAgricultureProductsDataTR = [
 export const automativeProductsDataTR = [
     {
         productName: "Atire Rocksolid",
-        productDesc: "Her koşulda dayanıklılık ve optimum performans için tasarlanmış Atire Rocksolid lastiklerle en zorlu arazileri fethedin.",
+        productDesc: "Her koşulda dayanıklılık ve optimum performans için tasarlanmış Atire Rocksolid forklift lastikleri ile en zorlu arazileri fethedin.",
         productDetailedDesc: "",
         isShowInHomePage: true,
         productUrl: "/tr/urunlerimiz/otomotiv-ve-yan-sanayi/tekerlekler",
@@ -82,7 +82,7 @@ export const automativeProductsDataTR = [
     },
     {
         productName: "Achiever",
-        productDesc: "Her yolculukta olağanüstü performans için tasarlanan Achiever serisi ile üstün yol tutuşu ve konforu yaşayın.",
+        productDesc: "Her yolculukta olağanüstü performans için tasarlanan Achiever serisi forklift lastikleri ile üstün yol tutuşu ve konforu yaşayın.",
         productDetailedDesc: "",
         isShowInHomePage: true,
         productUrl: "/tr/urunlerimiz/otomotiv-ve-yan-sanayi/tekerlekler",
