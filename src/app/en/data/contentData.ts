@@ -117,7 +117,7 @@ export const ourServicesData = [
       imgSrc:
         "https://plus.unsplash.com/premium_photo-1682144452272-9e52253e53c5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGxhc3RpYyUyMHByb2R1Y3Rpb258ZW58MHx8MHx8fDA%3D",
       description:
-        "We manufacture high-quality, durable plastic products using sustainable materials and eco-friendly processes to minimize environmental impact.",
+        "We supply high-quality, durable plastic products using sustainable materials and eco-friendly processes to minimize environmental impact.",
     },
     {
       id: 2,
