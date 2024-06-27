@@ -73,8 +73,8 @@ export const foodAndAgricultureProductsData = [
 
 export const automativeProductsData = [
     {
-        productName: "Atire RunnerSolid",
-        productDesc: "Conquer the toughest terrains with Atire RunnerSolid tires, designed for durability and optimal performance in all conditions.",
+        productName: "Atire Rocksolid",
+        productDesc: "Conquer the toughest terrains with Atire Rocksolid tires, designed for durability and optimal performance in all conditions.",
         productDetailedDesc: "",
         isShowInHomePage: true,
         productUrl: "/en/products/automative-and-sub-industry/tires",

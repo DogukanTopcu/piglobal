@@ -73,8 +73,8 @@ export const foodAndAgricultureProductsDataTR = [
 
 export const automativeProductsDataTR = [
     {
-        productName: "Atire RunnerSolid",
-        productDesc: "Her koşulda dayanıklılık ve optimum performans için tasarlanmış Atire RunnerSolid lastiklerle en zorlu arazileri fethedin.",
+        productName: "Atire Rocksolid",
+        productDesc: "Her koşulda dayanıklılık ve optimum performans için tasarlanmış Atire Rocksolid lastiklerle en zorlu arazileri fethedin.",
         productDetailedDesc: "",
         isShowInHomePage: true,
         productUrl: "/tr/urunlerimiz/otomotiv-ve-yan-sanayi/tekerlekler",
