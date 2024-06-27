@@ -19,7 +19,7 @@ const Menu = () => {
     const data = menuData.sort((x, y) => x.order > y.order ? 1 : -1);
 
   return (
-    <section className={`fixed transition-all duration-300 ease-out bg-neutral-950 p-4 md:px-16 h-[calc(100dvh)] w-screen flex flex-col justify-between z-20 ${isOpen ? "block" : "-translate-y-[100%]"}`}>
+    <section className={`fixed transition-all duration-300 ease-out bg-neutral-950 p-4 md:px-16 h-[calc(100dvh)] w-screen flex flex-col justify-between z-30 ${isOpen ? "block" : "-translate-y-[100%]"}`}>
       <div></div>
         <div className="mx-auto max-w-5xl w-full">
           {
