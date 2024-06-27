@@ -1,8 +1,8 @@
 export const contactInfoData = [
     {
         title: "Head Office & Factory",
-        address: "Batıkent mahallesi 09083 nolu sk. Şehzade evleri C blok kat 5 daire 10 Şehitkaml/Gaziantep",
-        phone: "03423424200",
+        address: "İNCİLİPINAR MAH. MUAMMER AKSOY BULVARI 11 NOLU SOKAK AYINTAP İŞ MERKEZİ KAT.4 NO.401 ŞEHİTKAMİL GAZİANTEP",
+        phone: "+905458191292",
         otherInfos: []
     },
 ]

@@ -4,6 +4,8 @@ import { MdOutlineImportExport,
     MdTireRepair,
     MdDesignServices,
     MdOutlineAgriculture } from "react-icons/md";
+import { FaSheetPlastic } from "react-icons/fa6";
+
 import { automativeProductsDataTR, foodAndAgricultureProductsDataTR, plasticProductsDataTR } from "./productsDataTR";
 
 
@@ -109,6 +111,15 @@ export const productsDataTR = [
 export const ourServicesDataTR = [
     {
         id: 1,
+        title: "Plastik Ürünler ve Üretimi",
+        Icon: FaSheetPlastic,
+        imgSrc:
+          "https://plus.unsplash.com/premium_photo-1682144452272-9e52253e53c5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGxhc3RpYyUyMHByb2R1Y3Rpb258ZW58MHx8MHx8fDA%3D",
+        description:
+          "Çevresel etkiyi en aza indirmek için sürdürülebilir malzemeler ve çevre dostu süreçler kullanarak yüksek kaliteli, dayanıklı plastik ürünler üretiyoruz.",
+    },
+    {
+        id: 2,
         title: "İthalat ve İhracat",
         Icon: MdOutlineImportExport,
         imgSrc:
@@ -117,7 +128,7 @@ export const ourServicesDataTR = [
           "Yüksek kalite standartlarına uygun ürünleri uluslararası piyasalara taşırken, çevresel etkileri minimize eden yöntemler kullanarak sürdürülebilir ticaret yaparız.",
       },
       {
-        id: 2,
+        id: 3,
         title: "Sağlık ve Medikal Hizmetler",
         Icon: MdOutlineHealthAndSafety,
         imgSrc:
@@ -126,7 +137,7 @@ export const ourServicesDataTR = [
           "İnsan sağlığını ön planda tutarak, çevre dostu malzemeler ve süreçlerle üstün teknoloji ile donatılmış medikal ürünler ve sağlık hizmetleri sunarız.",
       },
       {
-        id: 3,
+        id: 4,
         title: "İnşaat ve Emlak",
         Icon: MdConstruction,
         imgSrc:
@@ -135,7 +146,7 @@ export const ourServicesDataTR = [
           "Modern, çevre dostu ve enerji verimli yapı projeleri geliştirerek, sürdürülebilir yaşam alanları oluştururuz.",
       },
       {
-        id: 4,
+        id: 5,
         title: "Otomotiv ve Yan Sanayi",
         Icon: MdTireRepair,
         imgSrc:
@@ -144,7 +155,7 @@ export const ourServicesDataTR = [
           "Güvenilir ve kaliteli otomotiv ürünleri ile sektörde fark yaratır; yakıt verimli ve düşük emisyonlu çözümler sunarak çevreyi koruruz.",
       },
       {
-        id: 5,
+        id: 6,
         title: "Gümrük Hizmetleri",
         Icon: MdDesignServices,
         imgSrc:
@@ -153,7 +164,7 @@ export const ourServicesDataTR = [
           "Uluslararası ticaretin tüm aşamalarında profesyonel ve çevre dostu gümrük hizmetleri sunarak, işlemlerinizi hızlı ve sorunsuz bir şekilde gerçekleştiririz.",
       },
       {
-        id: 6,
+        id: 7,
         title: "Gıda ve Tarım",
         Icon: MdOutlineAgriculture,
         imgSrc:

@@ -16,6 +16,10 @@ const ContactInformationTR = () => {
                 )
             })
         }
+
+        <div className='md:col-span-2 h-[250px] md:h-[40vh] lg:h-[50vh] mt-12 shadow-xl rounded-[12px]'>
+            <iframe title='Map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3183.5363705241875!2d37.36672178322874!3d37.0685301807913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1531e14584438515%3A0xef07bb3d93b00b2e!2s%C4%B0ncilip%C4%B1nar%20Mah%2C%20Prof.%20Muammer%20Aksoy%20Blv.%20No%3A11%2C%2027090%20%C5%9Eehitkamil%2FGaziantep!5e0!3m2!1str!2str!4v1719497380596!5m2!1str!2str" width="100%" height="100%" style={{ border:0, borderRadius: "12px" }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </div>
   )
 }

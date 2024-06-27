@@ -5,7 +5,9 @@ import { MdOutlineImportExport,
     MdDesignServices,
     MdOutlineAgriculture } from "react-icons/md";
 
-import { automativeProductsData, foodAndAgricultureProductsData, plasticProductsData } from "@/app/en/data/productsData"
+import { FaSheetPlastic } from "react-icons/fa6";
+
+import { automativeProductsData, foodAndAgricultureProductsData, plasticProductsData } from "./productsData";
 
 
 // About Us
@@ -110,6 +112,15 @@ export const productsData = [
 export const ourServicesData = [
     {
       id: 1,
+      title: "Plastic Products and Production",
+      Icon: FaSheetPlastic,
+      imgSrc:
+        "https://plus.unsplash.com/premium_photo-1682144452272-9e52253e53c5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGxhc3RpYyUyMHByb2R1Y3Rpb258ZW58MHx8MHx8fDA%3D",
+      description:
+        "We manufacture high-quality, durable plastic products using sustainable materials and eco-friendly processes to minimize environmental impact.",
+    },
+    {
+      id: 2,
       title: "Import and Export",
       Icon: MdOutlineImportExport,
       imgSrc:
@@ -118,7 +129,7 @@ export const ourServicesData = [
         "We conduct sustainable trade by delivering products that meet high-quality standards to international markets using methods that minimize environmental impacts.",
     },
     {
-      id: 2,
+      id: 3,
       title: "Health and Medical Services",
       Icon: MdOutlineHealthAndSafety,
       imgSrc:
@@ -127,7 +138,7 @@ export const ourServicesData = [
         "Prioritizing human health, we offer medical products and health services equipped with superior technology, using eco-friendly materials and processes.",
     },
     {
-      id: 3,
+      id: 4,
       title: "Construction and Real Estate",
       Icon: MdConstruction,
       imgSrc:
@@ -136,7 +147,7 @@ export const ourServicesData = [
         "We create sustainable living spaces by developing modern, eco-friendly, and energy-efficient construction projects.",
     },
     {
-      id: 4,
+      id: 5,
       title: "Automotive and Supplier Industry",
       Icon: MdTireRepair,
       imgSrc:
@@ -145,7 +156,7 @@ export const ourServicesData = [
         "Setting ourselves apart in the industry with reliable and quality automotive products, we protect the environment by providing fuel-efficient and low-emission solutions.",
     },
     {
-      id: 5,
+      id: 6,
       title: "Customs Services",
       Icon: MdDesignServices,
       imgSrc:
@@ -154,7 +165,7 @@ export const ourServicesData = [
         "By providing professional and eco-friendly customs services at all stages of international trade, we ensure your transactions are carried out quickly and smoothly.",
     },
     {
-      id: 6,
+      id: 7,
       title: "Food and Agriculture",
       Icon: MdOutlineAgriculture,
       imgSrc:
