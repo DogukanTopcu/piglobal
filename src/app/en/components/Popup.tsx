@@ -20,7 +20,7 @@ const Popup = () => {
     {
       isPopUpOpen ? 
       (
-        <div className='fixed bg-slate-900/20 top-0 w-screen h-screen flex justify-center items-center backdrop-blur z-50'>
+        <div className='fixed bg-slate-900/60 top-0 w-screen h-[calc(100dvh)] flex justify-center items-center z-50'>
           <div
             style={{
               backgroundImage: `url(${data.image})`,
@@ -28,7 +28,7 @@ const Popup = () => {
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
-           className='container bg-[#e9e9e9] bg-blend-darken max-w-[700px] w-[95vw] h-[95vw] max-h-[700px] border-white border-2 flex justify-end items-start'>
+           className='container bg-[#e9e9e9] bg-blend-darken max-w-[500px] w-[95vw] h-[95vw] max-h-[500px] border-white border-2 flex justify-end items-start'>
             <button className='relative top-5 right-5 ' onClick={() => setIsPopUpOpen(false)}>
               <MdOutlineClose style={{color: 'white'}} size={32} className='cursor-pointer invert' />
             </button>
