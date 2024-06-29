@@ -3,6 +3,8 @@ import { contactInfoData } from '../../data/contactData';
 import { FaLocationDot } from 'react-icons/fa6';
 import { FaPhone } from 'react-icons/fa';
 
+import { MdAccessTimeFilled, MdEmail } from "react-icons/md";
+
 const ContactInformation = () => {
     const data = contactInfoData;
   return (
@@ -30,12 +32,14 @@ interface IContactInfoData {
     title: string;
     address: string;
     phone: string;
+    time: string[];
+    email: string,
     otherInfos: string[];
-
 }
+
 const ContactCard = ({ data } : { data : IContactInfoData }) => {
     return (
-        <div className='flex flex-col items-start justify-start gap-4 shadow-xl py-5 px-10 rounded-lg'>
+        <div className='flex flex-col items-start justify-start gap-8 shadow-xl py-12 px-10 rounded-lg'>
             <h1 className='font-bold'>{data.title}</h1>
 
             <div className='flex justify-start items-center gap-4'>
@@ -47,6 +51,26 @@ const ContactCard = ({ data } : { data : IContactInfoData }) => {
             <div className='flex justify-start items-center gap-4'>
                 <FaPhone size={20} />
                 <a href={`tel:+9${data.phone}`}>{data.phone}</a>
+            </div>
+
+            {
+                data.time.length != 0 ? (
+                    <div className='flex justify-start items-center gap-4'>
+                        <MdAccessTimeFilled size={20} />
+                        <div>
+                            {
+                                data.time.map((t, idx) => (
+                                    <p key={idx}>{t}</p>
+                                ))
+                            }
+                        </div>
+                    </div>
+                ) : null
+            }
+
+            <div className='flex justify-start items-center gap-4'>
+                <MdEmail size={20} />
+                <a href={`mailto:${data.email}`}>{data.email}</a>
             </div>
 
             {
