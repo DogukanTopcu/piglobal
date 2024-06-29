@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useContext } from 'react';
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 import { useRouter } from 'next/navigation';
+import { contactInfoData } from '../data/contactData';
 
 const Footer = () => {
     const { screenWidth } = useContext(ScreenSizeContexts);
@@ -24,12 +25,12 @@ const Footer = () => {
                     <div className='flex justify-start items-start gap-4 my-5'>
                         {/* Location */}
                         <FaLocationDot size={36} />
-                        <p className='text-sm'>Batıkent mahallesi 09083 nolu sk. Şehzade evleri C blok kat 5 daire 10 Şehitkaml/Gaziantep</p>
+                        <p className='text-sm'>{contactInfoData[0].address}</p>
                     </div>
                     <div className='flex justify-start items-start gap-4'>
                         {/* Phone */}
                         <FaPhone size={14} />
-                        <a className='text-sm' href="tel:+903423424200">0 (342) 342 42 00</a>
+                        <a className='text-sm' href={`tel:${contactInfoData[0].phone}`}>{contactInfoData[0].phoneAsText}</a>
                     </div>
                 </div>
             </div>

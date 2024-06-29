@@ -31,6 +31,7 @@ interface IContactInfoData {
     title: string;
     address: string;
     phone: string;
+    phoneAsText: string;
     time: string[];
     email: string,
     otherInfos: string[];
@@ -40,18 +41,18 @@ const ContactCard = ({ data } : { data : IContactInfoData }) => {
     return (
         <div className='flex flex-col items-start justify-start gap-8 shadow-xl py-12 px-10 rounded-lg'>
             <h1 className='font-bold'>{data.title}</h1>
-        
+
             <div className='flex justify-start items-center gap-4'>
                 <FaLocationDot size={20} />
                 <address>{data.address}</address>
             </div>
-        
-        
+
+
             <div className='flex justify-start items-center gap-4'>
                 <FaPhone size={20} />
-                <a href={`tel:+9${data.phone}`}>{data.phone}</a>
+                <a href={`tel:+9${data.phone}`}>{data.phoneAsText}</a>
             </div>
-        
+
             {
                 data.time.length != 0 ? (
                     <div className='flex justify-start items-center gap-4'>
@@ -66,12 +67,12 @@ const ContactCard = ({ data } : { data : IContactInfoData }) => {
                     </div>
                 ) : null
             }
-    
+
             <div className='flex justify-start items-center gap-4'>
                 <MdEmail size={20} />
                 <a href={`mailto:${data.email}`}>{data.email}</a>
             </div>
-        
+
             {
                 data.otherInfos.map((o, idx) => {
                     return(

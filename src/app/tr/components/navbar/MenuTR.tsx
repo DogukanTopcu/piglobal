@@ -8,6 +8,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { LanguageButton } from "./NavbarTR";
 import { US } from "country-flag-icons/react/3x2";
 import { tr_to_en_dict } from "@/app/languageSupport";
+import { contactInfoDataTR } from "../../data/contactDataTR";
 
 
 const MenuTR = () => {
@@ -36,6 +37,11 @@ const MenuTR = () => {
               )
             })
           }
+        </div>
+
+        <div className="mx-auto max-w-5xl w-full text-white flex flex-col gap-2">
+          <a className="font-bold text-2xl tracking-wider leading-10" href={`tel:+${contactInfoDataTR[0].phone}`}>{contactInfoDataTR[0].phoneAsText}</a>
+          <a className="text-lg tracking-wide" href={`mailto:${contactInfoDataTR[0].email}`}>{contactInfoDataTR[0].email}</a>
         </div>
 
         <div className="w-full">
