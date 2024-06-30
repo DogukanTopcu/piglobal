@@ -3,6 +3,14 @@ import { ContactHeroDataTR } from '../data/heroDataTR'
 import Hero from '@/app/common/Hero';
 import ContactInformationTR from '../components/contact/ContactInformationTR';
 import ContactFormTR from '../components/contact/ContactFormTR';
+import { Metadata } from 'next';
+
+
+export const metadata : Metadata = {
+  title: "İletişim",
+  description: "Bizimle İletişime Geçin"
+}
+
 
 const Iletisim = () => {
     const data = ContactHeroDataTR;

@@ -5,6 +5,13 @@ import { ContactHeroData } from '../data/heroData'
 import UnderConstruction from '@/app/common/UnderConstruction'
 import ContactInformation from '../components/contact/ContactInformation'
 import ContactForm from '../components/contact/ContactForm'
+import { Metadata } from 'next'
+
+
+export const metadata : Metadata = {
+  title: "Contact",
+  description: "Contact With Us"
+}
 
 const ContactPage = () => {
   const data = ContactHeroData;

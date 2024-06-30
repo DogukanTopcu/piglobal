@@ -2,6 +2,13 @@ import React from 'react'
 import { newsHeroData } from '../../data/heroData'
 import Hero from '../../../common/Hero';
 import UnderConstruction from '@/app/common/UnderConstruction';
+import { Metadata } from 'next';
+
+
+export const metadata : Metadata = {
+  title: "News",
+  description: "Follow Us"
+}
 
 const NewsAnnouncementsEvents = () => {
     const data = newsHeroData;

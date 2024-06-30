@@ -2,6 +2,15 @@ import Hero from '@/app/common/Hero'
 import React from 'react'
 import { AboutUsHeroDataTR } from '../../data/heroDataTR'
 import { aboutUsDataTR } from '../../data/aboutUsDataTR';
+import { Metadata } from 'next';
+
+
+
+export const metadata : Metadata = {
+  title: "Hakkımızda",
+  description: "Küresel ölçekte üretim ve yatırım faaliyetleriyle gücüne güç katan farklı sektörlerdeki markalarımız, tüm iş süreçlerini ekonomi, çevre ve toplum ekseninde yapılandırarak sektörün lideri olma hedefine emin adımlarla ilerliyor."
+}
+
 
 const Hakkimizda = () => {
     const data = aboutUsDataTR;

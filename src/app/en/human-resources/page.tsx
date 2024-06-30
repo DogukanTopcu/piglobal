@@ -3,6 +3,13 @@ import React from 'react'
 import Hero from '../../common/Hero'
 import { HumanResourcesHeroData } from '../data/heroData'
 import UnderConstruction from '@/app/common/UnderConstruction'
+import { Metadata } from 'next'
+
+
+export const metadata : Metadata = {
+  title: "Human Resources",
+  // description: "Gıda ve Tarım Ürünlerimiz"
+}
 
 const HumanResources = () => {
 

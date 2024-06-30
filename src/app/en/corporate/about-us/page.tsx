@@ -2,6 +2,14 @@ import UnderConstruction from "@/app/common/UnderConstruction";
 import Hero from "../../../common/Hero"
 import { AboutUsHeroData } from "../../data/heroData";
 import { aboutUsData } from "../../data/aboutUsData";
+import { Metadata } from "next";
+
+
+export const metadata : Metadata = {
+  title: "About Us",
+  description: "Get To Know Us"
+}
+
 
 const AboutUs = () => {
     const data = aboutUsData;
