@@ -1,4 +1,3 @@
-"use client"
 import React from 'react'
 import Hero from '../../../common/Hero'
 import { OurTechHeroData } from '../../data/heroData'
