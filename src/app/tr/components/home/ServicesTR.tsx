@@ -15,12 +15,18 @@ const ServicesTR = () => {
 
   return (
     <section className="sm:py-24 py-16 text-black">
-      <div className='container max-w-7xl mx-auto flex flex-col sm:gap-16 gap-10 px-6'>
+      <div className='flex flex-col sm:gap-16 gap-10'>
         {/* title */}
         <h1 className='sm:text-4xl text-2xl text-center font-extrabold tracking-wide'>HİZMETLERİMİZ</h1>
 
         {/* Content */}
-        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 h-fit w-full max-w-6xl mx-auto md:gap-20 gap-x-12 gap-y-20">
+        <div className="flex items-center overflow-x-auto snap-x snap-mandatory
+        before:shrink-0 before:w-1/3 
+        after:shrink-0 after:w-1/3
+        after:content-['*'] after:ml-0.5 after:text-transparent
+        py-20 px-20 scroll-px-20
+        h-fit md:gap-20 gap-12">
+
           {items.map((item, idx) => {
             return (
               <ServicesCard key={idx} title={item.title} desc={item.description} img={item.imgSrc} />
@@ -28,6 +34,8 @@ const ServicesTR = () => {
           })}
         </div>
 
+
+        {/* Contact Us Button */}
         <div className="w-full flex flex-col justify-center items-center">
           <h3 className="font-bold leading-10 tracking-wider text-2xl">Tüm Sorularınız İçin</h3>
           <Image src={ArrowIcon} alt="arrow" className="-translate-x-24" />
@@ -51,7 +59,7 @@ const ServicesCard = ({ img, title, desc } : ServiceProps) => {
 
   return (
     <div
-    className="flex flex-col items-center justify-center w-full h-full cursor-pointer group pt-10">
+    className="flex flex-col items-center shrink-0 snap-always snap-center justify-center w-1/4 h-full cursor-pointer group pt-10">
 
       {/* Button Icon */}
       <div className="relative w-full transition-all duration-300 ease group-hover:-translate-y-12 z-30">
@@ -64,6 +72,7 @@ const ServicesCard = ({ img, title, desc } : ServiceProps) => {
       </div>
 
       {/* Image */}
+      <div className="relative w-full flex justify-center items-start">
       <div
         style={{
           backgroundImage: `url(${img})`,
@@ -73,7 +82,7 @@ const ServicesCard = ({ img, title, desc } : ServiceProps) => {
 
         className="w-64 h-44 bg-black
         rounded-xl z-30 shadow-2xl
-        -translate-y-20 group-hover:translate-y-10
+        -translate-y-20 group-hover:translate-y-16
         group-hover:bg-[#25456c] bg-blend-overlay bg-white/0
         transition-all duration-300 
         flex items-center justify-center text-center p-3
@@ -84,12 +93,17 @@ const ServicesCard = ({ img, title, desc } : ServiceProps) => {
           {desc}
         </p>
       </div>
+      </div>
 
       {/* Content */}
-      <h2 className="font-bold text-lg absolute z-20 
-      translate-y-16 group-hover:-translate-y-24
-      transition-all duration-300 ease-out
-      max-w-64 text-center">{title}</h2>
+      <div className="relative w-full flex justify-center items-center">
+        <h2 className="font-bold text-lg absolute z-20
+        translate-y-40 group-hover:translate-y-4
+        transition-all duration-300 ease-out
+        max-w-64 text-center">
+          {title}
+        </h2>
+      </div>
 
       {/* Back Box */}
       <div className="relative z-10 shadow-2xl rounded-xl w-full h-56 border-2 
