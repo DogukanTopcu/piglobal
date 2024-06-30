@@ -24,7 +24,7 @@ const ServicesTR = () => {
         before:shrink-0 before:w-1/3 
         after:shrink-0 after:w-1/3
         after:content-['*'] after:ml-0.5 after:text-transparent
-        py-20 px-20 scroll-px-20
+        py-20 sm:px-20 px-10 sm:scroll-px-20 scroll-px-10
         h-fit md:gap-20 gap-12">
 
           {items.map((item, idx) => {
@@ -59,7 +59,7 @@ const ServicesCard = ({ img, title, desc } : ServiceProps) => {
 
   return (
     <div
-    className="flex flex-col items-center shrink-0 snap-always snap-center justify-center w-1/4 h-full cursor-pointer group pt-10">
+    className="flex flex-col items-center shrink-0 snap-always snap-center justify-center sm:w-1/2 lg:w-1/3 xl:w-1/4 w-full h-full cursor-pointer group pt-10">
 
       {/* Button Icon */}
       <div className="relative w-full transition-all duration-300 ease group-hover:-translate-y-12 z-30">
