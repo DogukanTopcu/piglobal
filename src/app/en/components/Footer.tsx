@@ -1,10 +1,12 @@
 import { ScreenSizeContexts } from '@/contexts/ScreenSizeContext';
 import { logoData, menuData, socialMedias } from '@/app/en/data/data'
 import Image from 'next/image'
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { FaLocationDot, FaPhone } from "react-icons/fa6";
 import { useRouter } from 'next/navigation';
 import { contactInfoData } from '../data/contactData';
+
+import { PiDiamondsFourFill } from "react-icons/pi";
 
 const Footer = () => {
     const { screenWidth } = useContext(ScreenSizeContexts);
@@ -15,8 +17,21 @@ const Footer = () => {
     const socials = socialMedias;
   return (
     <footer className='w-screen pt-12 bg-[#efefef]'>
+        <div className='flex justify-center items-center sm:gap-8 gap-6 mb-16'>
+            <div className='flex justify-center items-center gap-3'>
+                <PiDiamondsFourFill />
+                <h3>Dubai</h3>
+            </div>
+            <div className='flex justify-center items-center gap-3'>
+                <PiDiamondsFourFill />
+                <h3>Gaziantep</h3>
+            </div>
+            <div className='flex justify-center items-center gap-3'>
+                <PiDiamondsFourFill />
+                <h3>İzmir</h3>
+            </div>
+        </div>
         <div className={`container max-w-7xl mx-auto flex ${screenWidth > 1024 ? "flex-row" : "flex-col"} justify-between items-start my-10 px-10 gap-10`}>
-            
             <div className={`max-w-[250px] ${screenWidth > 1024 ? "" : "mx-auto"}`}>
                 {/* Logo and Communication */}
                 <Image src={logoData} alt="logo" className="w-full h-auto rounded-xl mb-10" />
