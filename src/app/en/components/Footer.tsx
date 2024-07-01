@@ -16,7 +16,7 @@ const Footer = () => {
     const allMenuData = menuData.sort((x, y) => x.order > y.order ? 1 : -1);
     const socials = socialMedias;
   return (
-    <footer className='w-screen pt-12 bg-[#efefef]'>
+    <footer className='pt-12 bg-[#efefef]'>
         <div className='flex justify-center items-center sm:gap-8 gap-6 mb-16'>
             <div className='flex justify-center items-center gap-3'>
                 <PiDiamondsFourFill />

@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useContext, useState } from "react";
+import React, { Dispatch, SetStateAction, useContext, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { IconType } from "react-icons";
 import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
@@ -6,12 +6,14 @@ import { ourServicesDataTR } from "../../data/contentDataTR";
 
 import ArrowIcon from "@/images/arrow-icon.png";
 
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
+
 import { FiArrowUpRight } from "react-icons/fi";
 import Image from "next/image";
 
 const ServicesTR = () => {
   const items = ourServicesDataTR;
-  const [open, setOpen] = useState(items[0].id);
+  const ref = useRef<HTMLDivElement>(null);
 
   return (
     <section className="sm:py-24 py-16 text-black">
@@ -20,18 +22,29 @@ const ServicesTR = () => {
         <h1 className='sm:text-4xl text-2xl text-center font-extrabold tracking-wide'>HİZMETLERİMİZ</h1>
 
         {/* Content */}
-        <div className="flex items-center overflow-x-auto snap-x snap-mandatory
+        <div className="flex items-center overflow-x-auto no-scrollbar snap-x snap-mandatory
         before:shrink-0 before:w-1/3 
         after:shrink-0 after:w-1/3
         after:content-['*'] after:ml-0.5 after:text-transparent
         py-20 sm:px-20 px-10 sm:scroll-px-20 scroll-px-10
-        h-fit md:gap-20 gap-12">
+        h-fit md:gap-20 gap-12"
+        ref={ref}>
 
           {items.map((item, idx) => {
             return (
               <ServicesCard key={idx} title={item.title} desc={item.description} img={item.imgSrc} />
             );
           })}
+
+          {/* Icons */}
+          <div className="absolute w-full right-0 flex justify-between items-center sm:px-10 px-4">
+            <button onClick={() => {
+              ref.current!.scrollLeft -= 300;
+            }} className="border-2 border-black rounded-full sm:p-5 p-3 hover:bg-[#25456c]/40 active:bg-[#25456c]/60 transition-all duration-300 z-30"><FaArrowLeft color="black" /></button>
+            <button onClick={() => {
+              ref.current!.scrollLeft += 300;
+            }} className="border-2 border-black rounded-full sm:p-5 p-3 hover:bg-[#25456c]/40 active:bg-[#25456c]/60 transition-all duration-300 z-30"><FaArrowRight /></button>
+          </div>
         </div>
 
 
