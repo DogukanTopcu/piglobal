@@ -40,7 +40,7 @@ const MenuTR = () => {
         </div>
 
         <div className="mx-auto max-w-5xl w-full text-white flex flex-col gap-2">
-          <a className="font-bold text-2xl tracking-wider leading-10" href={`tel:+${contactInfoDataTR[0].phone}`}>{contactInfoDataTR[0].phoneAsText}</a>
+          <a className="font-bold text-2xl tracking-wider leading-10" href={`tel:+${contactInfoDataTR[0].phones[0]}`}>{contactInfoDataTR[0].phonesAsText[0]}</a>
           <a className="text-lg tracking-wide" href={`mailto:${contactInfoDataTR[0].email}`}>{contactInfoDataTR[0].email}</a>
         </div>
 

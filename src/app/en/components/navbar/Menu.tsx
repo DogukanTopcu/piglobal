@@ -40,7 +40,7 @@ const Menu = () => {
         </div>
 
         <div className="mx-auto max-w-5xl w-full text-white flex flex-col gap-2">
-          <a className="font-bold text-2xl tracking-wider leading-10" href={`tel:+${contactInfoData[0].phone}`}>{contactInfoData[0].phoneAsText}</a>
+          <a className="font-bold text-2xl tracking-wider leading-10" href={`tel:+${contactInfoData[0].phones[0]}`}>{contactInfoData[0].phonesAsText[0]}</a>
           <a className="text-lg tracking-wide" href={`mailto:${contactInfoData[0].email}`}>{contactInfoData[0].email}</a>
         </div>
 
