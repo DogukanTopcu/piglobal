@@ -16,7 +16,7 @@ const TwentyFourSeven = () => {
             <div className='grid md:grid-cols-3 grid-cols-1 md:gap-10 gap-5 mb-10'>
                 <div className='md:col-span-2'>
                     <h2 className='text-lg font-light tracking-wider'>As Pi Global Co.</h2>
-                    <p className='mb-8 sm:text-[16px] text-sm'>We are at your service with our pre-sales consultancy service to understand our customers' needs and offer the most appropriate solutions. Our expert team helps our customers make informed and correct decisions by providing comprehensive information about our products and services.</p>
+                    <p className='mb-8 sm:text-[16px] text-sm'>We are at your service with our pre-sales consultancy service to understand our customers&apos; needs and offer the most appropriate solutions. Our expert team helps our customers make informed and correct decisions by providing comprehensive information about our products and services.</p>
                     <div className='grid grid-cols-2 gap-6'>
                         <div className='flex flex-col gap-2 mb-8'>
                             <h3 className='font-bold text-lg'>Quick Support</h3>
@@ -30,7 +30,7 @@ const TwentyFourSeven = () => {
 
                     <div className='flex flex-col gap-2 mb-8'>
                         <h3 className='font-bold text-lg'>Pricing and Payment Options Analysis</h3>
-                        <p className='sm:text-[16px] text-sm'>Taking into account our customers' budget and payment preferences, we conduct a meticulous analysis to determine the most appropriate pricing and payment options.</p>
+                        <p className='sm:text-[16px] text-sm'>Taking into account our customers&apos; budget and payment preferences, we conduct a meticulous analysis to determine the most appropriate pricing and payment options.</p>
                     </div>
                 </div>
                 
