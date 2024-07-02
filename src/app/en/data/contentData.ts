@@ -174,3 +174,12 @@ export const ourServicesData = [
         "We produce and offer natural and healthy food products under the best conditions; we work towards sustainability and efficiency goals in the agriculture sector, developing methods that preserve the soil and natural resources.",
     },
   ];
+
+
+
+export const support_7_24 = {
+  title: "24/7 SUPPORT LINE",
+  btn_title: "24/7 SUPPORT LINE: +90 (545) 819 12 92",
+  phoneNumber: "+905458191292",
+  content: ``
+}

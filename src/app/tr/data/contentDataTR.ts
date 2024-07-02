@@ -173,3 +173,11 @@ export const ourServicesDataTR = [
           "Doğal ve sağlıklı gıda ürünlerini en iyi koşullarda üretir ve sunar; tarım sektöründe sürdürülebilirlik ve verimlilik hedefleri doğrultusunda çalışırız. Toprağı ve doğal kaynakları koruyacak yöntemler geliştiririz.",
       },
   ];
+
+
+export const support_7_24_TR = {
+  title: "7/24 DESTEK HATTIMIZ",
+  btn_title: "7/24 Destek Hattımız: +90 (545) 819 12 92",
+  phoneNumber: "+905458191292",
+  content: ``
+}

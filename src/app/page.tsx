@@ -11,6 +11,7 @@ import OurProducts from "./en/components/home/OurProducts";
 import Services from "./en/components/home/Services"
 import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
 import { NavbarContexts } from "@/contexts/NavbarContext";
+import TwentyFourSeven from "./en/components/home/7_24";
 
 
 
@@ -59,6 +60,7 @@ export default function Home() {
         <AboutUs />
         <OurProducts />
         <Services />
+        <TwentyFourSeven />
         <WhatsApp />
         <Footer />
       </ScreenSizeContexts.Provider>

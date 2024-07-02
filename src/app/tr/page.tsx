@@ -11,6 +11,7 @@ import MenuTR from './components/navbar/MenuTR';
 import BannerTR from './components/BannerTR';
 import PopupTR from './components/PopupTR';
 import NavbarTR from './components/navbar/NavbarTR';
+import YediYirmidortTR from './components/home/7_24TR';
 
 const HomePageTR = () => {
   const [isOpen, setIsOpen] = useState<Boolean>(false);
@@ -51,6 +52,7 @@ const HomePageTR = () => {
         <AboutUsTR />
         <OurProductsTR />
         <ServicesTR />
+        <YediYirmidortTR />
         <WhatsAppTR />
     </main>
   )
