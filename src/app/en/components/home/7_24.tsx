@@ -36,11 +36,11 @@ const TwentyFourSeven = () => {
                 
                 <div
                     style={{
-                        backgroundImage: "url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8NyUyRjI0JTIwc3VwcG9ydHxlbnwwfHwwfHx8MA%3D%3D')",
+                        backgroundImage: "url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
                         backgroundPosition: "center",
                         backgroundSize: "cover",
                     }}
-                    className='w-full md:h-full h-64'
+                    className='w-full md:h-full h-64 bg-[#25456c]/40 bg-blend-overlay'
                 />
             </div>
 
