@@ -43,10 +43,19 @@ const FooterTR = () => {
                         <FaLocationDot size={36} />
                         <p className='text-sm'>{contactInfoDataTR[0].address}</p>
                     </div>
-                    <div className='flex justify-start items-start gap-4'>
-                        {/* Phone */}
-                        <FaPhone size={14} />
-                        <a className='text-sm' href={`tel:${contactInfoDataTR[0].phone}`}>{contactInfoDataTR[0].phoneAsText}</a>
+
+                    <div className='flex flex-col w-full gap-4'>
+                    {
+                        contactInfoDataTR[0].phones.map((p, idx) => {
+                            return (
+                                <div key={idx} className='flex justify-start items-start gap-4'>
+                                    {/* Phone */}
+                                    <FaPhone size={14} />
+                                    <a className='text-sm' href={`tel:${p}`}>{contactInfoDataTR[0].phonesAsText[idx]}</a>
+                                </div>
+                            )
+                        })
+                    }
                     </div>
                 </div>
             </div>

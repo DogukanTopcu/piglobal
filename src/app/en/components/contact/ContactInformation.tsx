@@ -31,8 +31,8 @@ const ContactInformation = () => {
 interface IContactInfoData {
     title: string;
     address: string;
-    phone: string;
-    phoneAsText: string;
+    phones: string[];
+    phonesAsText: string[];
     time: string[];
     email: string,
     otherInfos: string[];
@@ -49,10 +49,16 @@ const ContactCard = ({ data } : { data : IContactInfoData }) => {
             </div>
 
 
-            <div className='flex justify-start items-center gap-4'>
-                <FaPhone size={20} />
-                <a href={`tel:+9${data.phone}`}>{data.phoneAsText}</a>
-            </div>
+            {
+                data.phones.map((p, idx) => {
+                    return (
+                        <div key={idx} className='flex justify-start items-center gap-4'>
+                            <FaPhone size={20} />
+                            <a href={`tel:${p}`}>{data.phonesAsText[idx]}</a>
+                        </div>
+                    )
+                })
+            }
 
             {
                 data.time.length != 0 ? (

@@ -42,10 +42,18 @@ const Footer = () => {
                         <FaLocationDot size={36} />
                         <p className='text-sm'>{contactInfoData[0].address}</p>
                     </div>
-                    <div className='flex justify-start items-start gap-4'>
-                        {/* Phone */}
-                        <FaPhone size={14} />
-                        <a className='text-sm' href={`tel:${contactInfoData[0].phone}`}>{contactInfoData[0].phoneAsText}</a>
+                    <div className='flex flex-col w-full gap-4'>
+                    {
+                        contactInfoData[0].phones.map((p, idx) => {
+                            return (
+                                <div key={idx} className='flex justify-start items-start gap-4'>
+                                    {/* Phone */}
+                                    <FaPhone size={14} />
+                                    <a className='text-sm' href={`tel:${p}`}>{contactInfoData[0].phonesAsText[idx]}</a>
+                                </div>
+                            )
+                        })
+                    }
                     </div>
                 </div>
             </div>
