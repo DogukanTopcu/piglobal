@@ -60,12 +60,12 @@ export const menuDataTR = [
     },
     {
         order: 4,
-        type: 0, // type = 0, means has no subtitle, has a url
+        type: 1, // type = 0, means has no subtitle, has a url
         mainTitle: "İnsan Kaynakları",
-        url: "/tr/insan-kaynaklari",
+        url: "",
 
-        subtitles: [],
-        subtitleUrls: [],
+        subtitles: ["Prensiplerimiz", "İşe Alım", "Staj"],
+        subtitleUrls: ["/tr/insan-kaynaklari/prensiplerimiz", "/tr/insan-kaynaklari/ise-alim", "/tr/insan-kaynaklari/staj"],
 
         subsubtitles: [],
         subsubtitlesUrls: []
@@ -76,8 +76,8 @@ export const menuDataTR = [
         mainTitle: "Kurumsal",
         url: "",
         
-        subtitles: ["Hakkımızda", "Teknolojilerimiz", "Sürdürülebilirlik", "Sosyal Sorumluluk", "Yönetim Kurulu"],
-        subtitleUrls: ["/tr/kurumsal/hakkimizda", "/tr/kurumsal/teknolojilerimiz", "/tr/kurumsal/surdurulebilirlik", "/tr/kurumsal/sosyal-sorumluluk", "/tr/kurumsal/yonetim-kurulu"],
+        subtitles: ["Hakkımızda", "Politikamız", "Sürdürülebilirlik", "Sosyal Sorumluluk", "Yönetim Kurulu"],
+        subtitleUrls: ["/tr/kurumsal/hakkimizda", "/tr/kurumsal/politikamiz", "/tr/kurumsal/surdurulebilirlik", "/tr/kurumsal/sosyal-sorumluluk", "/tr/kurumsal/yonetim-kurulu"],
 
         subsubtitles: [],
         subsubtitlesUrls: []

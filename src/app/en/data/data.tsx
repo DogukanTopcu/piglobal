@@ -60,12 +60,12 @@ export const menuData = [
     },
     {
         order: 4,
-        type: 0, // type = 0, means has no subtitle, has a url
+        type: 1, // type = 0, means has no subtitle, has a url
         mainTitle: "Human Resources",
-        url: "/en/human-resources",
+        url: "",
 
-        subtitles: [],
-        subtitleUrls: [],
+        subtitles: ["Our Principles", "Recruitment", "Internship"],
+        subtitleUrls: ["/en/human-resources/our-principles", "/en/human-resources/recruitment", "/en/human-resources/internship"],
 
         subsubtitles: [],
         subsubtitlesUrls: []
@@ -76,8 +76,8 @@ export const menuData = [
         mainTitle: "Corporate",
         url: "",
         
-        subtitles: ["About Us", "Our Technologies", "Sustainability", "Social Responsibility", "Board Members"],
-        subtitleUrls: ["/en/corporate/about-us", "/en/corporate/our-technologies", "/en/corporate/sustainability", "/en/corporate/social-responsibility", "/en/corporate/board-members"],
+        subtitles: ["About Us", "Our Policy", "Sustainability", "Social Responsibility", "Board Members"],
+        subtitleUrls: ["/en/corporate/about-us", "/en/corporate/our-policy", "/en/corporate/sustainability", "/en/corporate/social-responsibility", "/en/corporate/board-members"],
 
         subsubtitles: [],
         subsubtitlesUrls: []
