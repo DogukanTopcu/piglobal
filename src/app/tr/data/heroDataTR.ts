@@ -14,7 +14,10 @@ export const SustainabilityHeroDataTR = {
 }
 
 
-
+export const SocialResponsibilitiesHeroDataTR  = {
+    title: "Sosyal Sorumluluk",
+    image: ""
+}
 
 
 export const OurPrinciplesHeroDataTR = {
