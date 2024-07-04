@@ -41,9 +41,19 @@ export const galleryHeroData = {
 
 
 
-export const HumanResourcesHeroData = {
-    title: "Human Resources",
-    image: ""
+export const OurPrinciplesHeroData = {
+    title: "Our Principles",
+    image: "https://images.unsplash.com/photo-1688125557676-2fc2577ed5bd?q=80&w=1984&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+}
+
+export const RecruitmentsHeroData = {
+    title: "Recruitment",
+    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+}
+
+export const InternshipHeroData = {
+    title: "Internship",
+    image: "https://images.unsplash.com/photo-1634936564306-8a905be6429a?q=80&w=2142&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 }
 
 
