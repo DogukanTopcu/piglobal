@@ -23,10 +23,10 @@ const Surdurulebilirlik = () => {
           <p className='sm:leading-10 sm:text-xl text-lg font-semibold'>Geleceği Koruyor, Sürdürülebilirliği Benimsiyoruz…</p>
           <br />
           <br />
-          <p className='sm:leading-8 leading-7 sm:text-lg'>Gelecek nesillere daha yaşanabilir bir dünya bırakma hedefiyle, çevre dostu üretim ve tüketim modellerini benimsemekteyiz. "Az Tüket, Daha Fazla Dönüştür" ilkesini benimseyerek, yenilikçi stratejiler geliştiriyor ve süreçlerimizi sürekli olarak optimize ederek döngüsel ekonomiye katkıda bulunuyoruz.</p>
+          <p className='sm:leading-8 leading-7 sm:text-lg'>Gelecek nesillere daha yaşanabilir bir dünya bırakma hedefiyle, çevre dostu üretim ve tüketim modellerini benimsemekteyiz. &quot;Az Tüket, Daha Fazla Dönüştür&quot; ilkesini benimseyerek, yenilikçi stratejiler geliştiriyor ve süreçlerimizi sürekli olarak optimize ederek döngüsel ekonomiye katkıda bulunuyoruz.</p>
           <br />
           <br />
-          <p className='sm:leading-8 leading-7 sm:text-lg'>"Döngüsel Ekonomi İçin Tasarımlar" yönergelerine uygun olarak, ürünlerimizi toplama, ayrıştırma, geri dönüştürme ve yeniden ekonomiye kazandırma süreçlerini titizlikle takip ediyoruz. Bu süreçler sayesinde, mevcut ve yeni geliştirdiğimiz ürünlerimizi rekabetçi kalite ve fiyatlarla potansiyel pazarlara sunuyor ve sürdürülebilir iş modelleri yaratıyoruz.</p>
+          <p className='sm:leading-8 leading-7 sm:text-lg'>&quot;Döngüsel Ekonomi İçin Tasarımlar&quot; yönergelerine uygun olarak, ürünlerimizi toplama, ayrıştırma, geri dönüştürme ve yeniden ekonomiye kazandırma süreçlerini titizlikle takip ediyoruz. Bu süreçler sayesinde, mevcut ve yeni geliştirdiğimiz ürünlerimizi rekabetçi kalite ve fiyatlarla potansiyel pazarlara sunuyor ve sürdürülebilir iş modelleri yaratıyoruz.</p>
           <br />
           <br />
           <p className='sm:leading-8 leading-7 sm:text-lg'>Yenilenebilir kaynaklardan elde edilen veya geri dönüştürülmüş hammaddeleri kullanarak ürettiğimiz esnek ambalaj malzemelerinin karbon ayak izini en aza indirmeyi hedefliyoruz. Bu çalışmalarımızla çevre üzerindeki olumsuz etkilerimizi azaltıyor ve daha sürdürülebilir bir üretim süreci sağlıyoruz.</p>

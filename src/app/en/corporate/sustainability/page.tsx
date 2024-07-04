@@ -22,10 +22,10 @@ const Sustainability = () => {
           <p className='sm:leading-10 sm:text-xl text-lg font-semibold'>Protecting the Future, Embracing Sustainability…</p>
           <br />
           <br />
-          <p className='sm:leading-8 leading-7 sm:text-lg'>With the goal of leaving a more livable world for future generations, we adopt environmentally friendly production and consumption models. Embracing the principle of "Consume Less, Transform More," we develop innovative strategies and continuously optimize our processes to contribute to the circular economy.</p>
+          <p className='sm:leading-8 leading-7 sm:text-lg'>With the goal of leaving a more livable world for future generations, we adopt environmentally friendly production and consumption models. Embracing the principle of &quot;Consume Less, Transform More,&quot; we develop innovative strategies and continuously optimize our processes to contribute to the circular economy.</p>
           <br />
           <br />
-          <p className='sm:leading-8 leading-7 sm:text-lg'>In accordance with the "Designs for Circular Economy" guidelines, we diligently follow the processes of collecting, sorting, recycling, and reintroducing our products into the economy with competitive quality and prices. Through these processes, we create sustainable business models by offering our existing and newly developed products to potential markets.</p>
+          <p className='sm:leading-8 leading-7 sm:text-lg'>In accordance with the &quot;Designs for Circular Economy&quot; guidelines, we diligently follow the processes of collecting, sorting, recycling, and reintroducing our products into the economy with competitive quality and prices. Through these processes, we create sustainable business models by offering our existing and newly developed products to potential markets.</p>
           <br />
           <br />
           <p className='sm:leading-8 leading-7 sm:text-lg'>By using raw materials obtained from renewable sources or recycled materials, we aim to minimize the carbon footprint of the flexible packaging materials we produce. Through these efforts, we reduce our negative impacts on the environment and ensure a more sustainable production process.</p>
