@@ -23,8 +23,6 @@ const ServicesTR = () => {
 
         {/* Content */}
         <div className="flex items-center overflow-x-auto no-scrollbar snap-x snap-mandatory
-        before:shrink-0 before:w-1/3 
-        after:shrink-0 after:w-1/3
         after:content-['*'] after:ml-0.5 after:text-transparent
         py-20 sm:px-20 px-10 sm:scroll-px-20 scroll-px-10
         h-fit md:gap-20 gap-12"
