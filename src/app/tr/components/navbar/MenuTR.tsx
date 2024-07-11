@@ -9,6 +9,7 @@ import { LanguageButton } from "./NavbarTR";
 import { US } from "country-flag-icons/react/3x2";
 import { tr_to_en_dict } from "@/app/languageSupport";
 import { contactInfoDataTR } from "../../data/contactDataTR";
+import Link from "next/link";
 
 
 const MenuTR = () => {
@@ -26,7 +27,7 @@ const MenuTR = () => {
           {
             data.map((d, idx) => {
               return (
-                <Link
+                <BtnLink
                     key={idx}
                     heading = {d.mainTitle}
                     href={d.url}
@@ -45,17 +46,14 @@ const MenuTR = () => {
         </div>
 
         <div className="w-full">
-        <button onClick={() => {
-          location == "/tr" ? router.push("/") : router.push(`${tr_to_en_dict[location]}`);
-          setIsOpen(false);
-        }} 
+        <Link href={location == "/tr" ? "/" : tr_to_en_dict[location]} onClick={() => setIsOpen(false)} 
         className="border-2 text-white 
         flex items-center justify-between w-full
         border-neutral-700 
         p-4">
           <div className="font-bold flex items-center justify-center gap-2"><p className="sm:text-lg text-xs">EN</p><US title="Türkiye" className="w-5" /></div>
           <FiArrowRight size={32} className="text-5xl text-neutral-50" />
-        </button>
+        </Link>
       </div>
 
         <SubsideMenu selected={selected} setSelected={setSelected} subtitles={data[selected] == null ? [] : data[selected].subtitles} subtitleLinks={data[selected] == null ? [] : data[selected].subtitleUrls} />
@@ -71,7 +69,7 @@ interface LinkProps {
   idx: number;
 }
 
-const Link = ({ heading, href, type, setSelected, idx }: LinkProps) => {
+const BtnLink = ({ heading, href, type, setSelected, idx }: LinkProps) => {
     const ref = useRef<HTMLAnchorElement | null>(null);
     const router = useRouter();
     const { setIsOpen } = useContext(NavbarContexts);
@@ -150,7 +148,7 @@ const SubsideMenu = ({ selected, setSelected, subtitles, subtitleLinks } : { sel
       {
         subtitles.map((s, idx) => {
           return (
-            <Link key={idx} heading={s} href={subtitleLinks[idx]} type={0} idx={idx} setSelected={setSelected} />
+            <BtnLink key={idx} heading={s} href={subtitleLinks[idx]} type={0} idx={idx} setSelected={setSelected} />
           )
         })
       }

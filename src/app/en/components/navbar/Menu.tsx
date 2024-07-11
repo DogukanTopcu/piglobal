@@ -1,5 +1,6 @@
 "use client"
 import { useMotionValue, motion } from "framer-motion";
+import Link from "next/link";
 import React, { Dispatch, SetStateAction, useContext, useRef, useState } from "react";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { menuData } from "@/app/en/data/data";
@@ -16,7 +17,7 @@ const Menu = () => {
     const router = useRouter();
     const location = usePathname();
 
-    const [selected, setSelected] = useState(-1);
+    const [selected, setSelected] = useState(-  1);
     const data = menuData.sort((x, y) => x.order > y.order ? 1 : -1);
 
   return (
@@ -26,7 +27,7 @@ const Menu = () => {
           {
             data.map((d, idx) => {
               return (
-                <Link
+                <BtnLink
                     key={idx}
                     heading = {d.mainTitle}
                     href={d.url}
@@ -45,17 +46,14 @@ const Menu = () => {
         </div>
 
       <div className="w-full">
-        <button onClick={() => {
-          location == "/" ? router.push("/tr") : router.push(`${en_to_tr_dict[location]}`);
-          setIsOpen(false);
-        }} 
+        <Link href={location == "/" ? "/tr" : en_to_tr_dict[location]} onClick={() => setIsOpen(false)} 
         className="border-2 text-white 
         flex items-center justify-between w-full
         border-neutral-700 
         p-4">
           <div className="font-bold flex items-center justify-center gap-2"><p className="sm:text-lg text-xs">TR</p><TR title="Türkiye" className="w-5" /></div>
           <FiArrowRight size={32} className="text-5xl text-neutral-50" />
-        </button>
+        </Link>
       </div>
 
         <SubsideMenu selected={selected} setSelected={setSelected} subtitles={data[selected] == null ? [] : data[selected].subtitles} subtitleLinks={data[selected] == null ? [] : data[selected].subtitleUrls} />
@@ -71,7 +69,7 @@ interface LinkProps {
   idx: number;
 }
 
-const Link = ({ heading, href, type, setSelected, idx }: LinkProps) => {
+const BtnLink = ({ heading, href, type, setSelected, idx }: LinkProps) => {
     const ref = useRef<HTMLAnchorElement | null>(null);
     const router = useRouter();
     const { setIsOpen } = useContext(NavbarContexts);
@@ -150,7 +148,7 @@ const SubsideMenu = ({ selected, setSelected, subtitles, subtitleLinks } : { sel
       {
         subtitles.map((s, idx) => {
           return (
-            <Link key={idx} heading={s} href={subtitleLinks[idx]} type={0} idx={idx} setSelected={setSelected} />
+            <BtnLink key={idx} heading={s} href={subtitleLinks[idx]} type={0} idx={idx} setSelected={setSelected} />
           )
         })
       }

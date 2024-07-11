@@ -11,6 +11,8 @@ import MobileViewTR from "./MobileViewTR";
 import { ScreenSizeContexts } from "@/contexts/ScreenSizeContext";
 import { usePathname, useRouter } from "next/navigation";
 import { tr_to_en_dict } from "@/app/languageSupport";
+import Link from "next/link";
+import React from "react";
 
 const NavbarTR = () => {
     const { scrollY, screenWidth } = useContext(ScreenSizeContexts);
@@ -43,7 +45,7 @@ export const LanguageButton = () => {
     const router = useRouter();
     const location = usePathname();
     return (
-        <button onClick={() => location == "/tr" ? router.push("/") : router.push(`${tr_to_en_dict[location]}`)} className="font-bold flex items-center justify-center gap-2"><p className="mix-blend-difference sm:text-lg text-xs">EN</p><US title="United States" className="w-5" /></button>
+        <Link href={location == "/tr" ? "/" : tr_to_en_dict[location]} className="font-bold flex items-center justify-center gap-2"><p className="mix-blend-difference sm:text-lg text-xs">EN</p><US title="United States" className="w-5" /></Link>
     )
 }
 

@@ -5,6 +5,8 @@ import { LanguageButton } from "./NavbarTR";
 import { menuDataTR } from "../../data/dataTR";
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import React from "react";
 
 const WideViewTR = () => {
     const [selected, setSelected] = useState<number | null>(null);
@@ -45,8 +47,8 @@ const FlyoutLink = ({ children, href, type, mainTitle } : { children : ReactNode
     const router = useRouter();
 
     return (
-        <div
-            onClick={() => { type == 0 ? router.push(href) : null}}
+        <Link
+            href={type == 0 ? href : ""}
             onMouseEnter={() => setOpen(true)}
             onMouseLeave={() => setOpen(false)}
             className="relative w-fit h-fit"
@@ -93,7 +95,7 @@ const FlyoutLink = ({ children, href, type, mainTitle } : { children : ReactNode
                     </AnimatePresence>
                 ) : null
             }
-        </div>
+        </Link>
     )
 }
 
@@ -105,7 +107,7 @@ const TypeOneContent = ({ mainTitle, router } : { mainTitle : string, router: Ap
             {
                 data.subtitles.map((sub, idx) => {
                     return (
-                        <li key={idx} className="border-b-2 w-full"><button onClick={() => router.push(data.subtitleUrls[idx])} className="hover:underline hover:border-l-8 border-l-2 border-blue-500 px-6 text-start transition-all duration-300 ease-out w-full">{sub}</button></li>
+                        <li key={idx} className="border-b-2 w-full"><Link href={data.subtitleUrls[idx]} className="hover:underline hover:border-l-8 border-l-2 border-blue-500 px-6 text-start transition-all duration-300 ease-out w-full">{sub}</Link></li>
                     )
                 })
             }
