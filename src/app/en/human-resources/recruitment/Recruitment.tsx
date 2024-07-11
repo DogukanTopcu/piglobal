@@ -47,7 +47,7 @@ const Recruitment = () => {
 const RecruitmentProgress = () => {
   const data = recruitmentProgressData;
   return (
-    <div className='flex flex-wrap items-center justify-center container max-w-4xl mx-auto px-4'>
+    <div className='flex flex-wrap items-center justify-center container max-w-4xl mx-auto px-4 mb-20'>
       {
         data.map((d, idx) => {
           console.log(idx == data.length);
