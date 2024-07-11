@@ -81,10 +81,14 @@ const RecruitmentProgressCard = ({ icon, name, isLast } : { icon: string; name: 
 
       {
         !isLast ? screenWidth > 450 ? (
-          <div className='mr-2.5'>
-            <Icon icon="ic:round-arrow-right" width="80" height="80" style={{color: "#25456c"}} />
+            <div className=''>
+            <Icon icon="ic:round-arrow-right" width="50" height="80" style={{color: "#25456c"}} />
           </div>
-        ) : (<div className='mt-2.5'>next</div>) : null
+        ) : (
+            <div className=''>
+                <Icon icon="iconamoon:arrow-down-2-fill" width="80" height="50"  style={{color: "#25456c"}} />    
+            </div>
+        ) : null
       }
     </div>
   )
