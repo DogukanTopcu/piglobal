@@ -1,18 +1,13 @@
-import React from 'react';
-import UnderConstruction from '@/app/common/UnderConstruction';
+import React from 'react'
 import { Metadata } from 'next';
+import RecruitmentTR from './RecruitmentTR';
 
 
 export const metadata : Metadata = {
   title: "İşe Alım",
+  // description: "Gıda ve Tarım Ürünlerimiz"
 }
 
-const IseAlim = () => {
-  return (
-    <div>
-        <UnderConstruction />
-    </div>
-  )
-}
+const RecruitmentPage = () => <RecruitmentTR />;
 
-export default IseAlim
+export default RecruitmentPage
