@@ -30,7 +30,7 @@ const contentData = `<div class='container max-w-4xl mx-auto my-24 px-4'>
           <p class='sm:leading-8 leading-7 sm:text-lg'>Zorunlu staj yükümlülüğü bulunan üniversite öğrencilerine, yaz dönemi staj programı başvurularını takiben titiz bir seçim süreci ile staj fırsatı sağlıyoruz. Staj süresince öğrenciler, alanlarında deneyimli profesyonellerle çalışarak hem teorik bilgilerini pratiğe dökme hem de iş hayatına dair önemli tecrübeler kazanma imkanı buluyorlar. Ayrıca, staj süresi boyunca düzenlediğimiz eğitim ve seminerlerle öğrencilerin kişisel ve mesleki gelişimlerine katkıda bulunuyoruz.</p>
           <br />
           <br />
-          <p class='sm:leading-8 leading-7 sm:text-lg'>Staj programlarına başvurmak için linke tıklayarak <a class="text-blue-700 underline" href="/tr/iletisim">iletişime</a> geçebilirsiniz.</p>
+          <p class='sm:leading-8 leading-7 sm:text-lg'>Staj programlarına başvurmak için linke tıklayarak <a class="text-blue-700 underline" href="/tr/iletisim">iletişime</a> geçebilir ve başvuru yapabilirsiniz.</p>
         </div>`
 
 export default Staj

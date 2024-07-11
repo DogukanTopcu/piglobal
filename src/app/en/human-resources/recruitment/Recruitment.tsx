@@ -24,6 +24,9 @@ const contentData = `<div class='container max-w-4xl mx-auto my-24 px-4'>
           <br />
           <br />
           <p class='sm:leading-8 leading-7 sm:text-lg'>We extend a job offer to the candidate deemed suitable for the position. Our recruitment process is completed once the candidate accepts the offer and begins their employment.</p>
+          <br />
+          <br />
+          <p class='sm:leading-8 leading-7 sm:text-lg'>You can reach and apply by <a class="text-blue-700 underline" href="/en/contact">contact us</a>.</p>
         </div>`;
 
 const Recruitment = () => {

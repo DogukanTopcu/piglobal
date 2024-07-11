@@ -97,8 +97,7 @@ const SubjectOption = () => {
     const data = ourServicesDataTR;
     return (
         <select name="subject" defaultValue="--Select Subject--" required className='p-4 border-b-2'>
-          <option disabled hidden>--Konu Seçiniz--</option>
-          
+          <option disabled>--Konu Seçiniz--</option>
           {
             data.map((d, idx) => {
                 return (
@@ -106,6 +105,8 @@ const SubjectOption = () => {
                 )
             })
           }
+          <option value="İş Başvurusu">İş Başvurusu</option>
+          <option value="Staj">Staj</option>
         </select>
     )
 }

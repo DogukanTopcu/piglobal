@@ -23,6 +23,9 @@ const contentData = `<div class='container max-w-4xl mx-auto my-24 px-4'>
           <br />
           <br />
           <p class='sm:leading-8 leading-7 sm:text-lg'>Pozisyona uygun bulunan adayımıza iş teklifi sunuyoruz. Teklifi kabul eden adayımızın işe başlamasıyla işe alım sürecimizi tamamlıyoruz.</p>
+          <br />
+          <br />
+          <p class='sm:leading-8 leading-7 sm:text-lg'>Linke tıklayarak <a class="text-blue-700 underline" href="/tr/iletisim">iletişime</a> geçebilir ve başvuru yapabilirsiniz.</p>
         </div>`;
 
 const RecruitmentTR = () => {

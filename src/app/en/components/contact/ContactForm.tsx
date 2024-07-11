@@ -106,6 +106,8 @@ const SubjectOption = () => {
                 )
             })
           }
+          <option value="Recruitment">Recruitment</option>
+          <option value="Internship">Internship</option>
         </select>
     )
 }
