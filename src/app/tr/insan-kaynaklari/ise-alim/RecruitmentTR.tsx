@@ -19,7 +19,7 @@ const contentData = `<div class='container max-w-4xl mx-auto my-24 px-4'>
           <p class='sm:leading-8 leading-7 sm:text-lg'>Başvuran adaylarımızın özgeçmişlerini, belirlenen nitelikler ve iş tanımına göre ilk değerlendirmeye alıyoruz.</p>
           <br />
           <br />
-          <p class='sm:leading-8 leading-7 sm:text-lg'>9 prensibimizden (Güven Ver, Kalpleri Kazan, Sonuç Üret, En İyisi Ol, Müşterini Anla, Geleceği Yakala, Anlam Kat, Rehberlik Et ve Güçlendir) oluşan prensip setimize dayanarak uygun adaylar ile, ilgili bölüm yöneticilerimizle beraber İK ekibi olarak prensip bazlı mülakatlar yapıyoruz.</p>
+          <p class='sm:leading-8 leading-7 sm:text-lg'><a class="text-blue-700 underline" href='/tr/insan-kaynaklari/prensiplerimiz' target='_blank'>9 prensibimizden</a> (Güven Ver, Kalpleri Kazan, Sonuç Üret, En İyisi Ol, Müşterini Anla, Geleceği Yakala, Anlam Kat, Rehberlik Et ve Güçlendir) oluşan prensip setimize dayanarak uygun adaylar ile, ilgili bölüm yöneticilerimizle beraber İK ekibi olarak prensip bazlı mülakatlar yapıyoruz.</p>
           <br />
           <br />
           <p class='sm:leading-8 leading-7 sm:text-lg'>Pozisyona uygun bulunan adayımıza iş teklifi sunuyoruz. Teklifi kabul eden adayımızın işe başlamasıyla işe alım sürecimizi tamamlıyoruz.</p>
