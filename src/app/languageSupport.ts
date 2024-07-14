@@ -1,3 +1,4 @@
+import { automativeProductsSubtitles, automativeTypeData } from "./en/data/automaticeProductsData"
 import { packagingTypeData } from "./en/data/plasticProductsData"
 import { packagingTypeDataTR } from "./tr/data/plasticProductsDataTR"
 
@@ -26,6 +27,13 @@ export const en_to_tr_dict: { [id : string ] : string } = {
 }
 
 packagingTypeData.map((p, idx) => en_to_tr_dict[`/en/products/plastic-products-and-production/${p.url}`] = `/tr/urunlerimiz/plastik-urunler-ve-uretimi/${packagingTypeDataTR[idx].url}`)
+automativeTypeData.map((a, idx) => {
+    en_to_tr_dict[`/en/products/automative-and-sub-industry/${a.url}`] = `/tr/urunlerimiz/otomotiv-ve-yan-sanayi/${packagingTypeDataTR[idx].url}`
+
+    automativeProductsSubtitles.filter((b) => b.category == a.title).map((d) => {
+        en_to_tr_dict[`/en/products/automative-and-sub-industry/${a.url}/${d.url}`] = `/tr/urunlerimiz/otomotiv-ve-yan-sanayi/${packagingTypeDataTR[idx].url}`
+    })
+})
 
 
 
