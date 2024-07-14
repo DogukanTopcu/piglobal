@@ -1,5 +1,5 @@
 import { packagingTypeData } from "./en/data/plasticProductsData"
-import { packagingTypeDataURLTR } from "./tr/data/plasticProductsDataTR"
+import { packagingTypeDataTR } from "./tr/data/plasticProductsDataTR"
 
 export const en_to_tr_dict: { [id : string ] : string } = {
     "/en/corporate/about-us": "/tr/kurumsal/hakkimizda",
@@ -25,7 +25,7 @@ export const en_to_tr_dict: { [id : string ] : string } = {
     "/en/products/automative-and-sub-industry/tires" : "/tr/urunlerimiz/otomotiv-ve-yan-sanayi/tekerlekler",
 }
 
-packagingTypeData.map((p, idx) => en_to_tr_dict[`/en/products/plastic-products-and-production/${p.url}`] = `/tr/urunlerimiz/plastik-urunler-ve-uretimi/${packagingTypeDataURLTR[idx]}`)
+packagingTypeData.map((p, idx) => en_to_tr_dict[`/en/products/plastic-products-and-production/${p.url}`] = `/tr/urunlerimiz/plastik-urunler-ve-uretimi/${packagingTypeDataTR[idx].url}`)
 
 
 
@@ -54,4 +54,4 @@ export const tr_to_en_dict: { [id : string ] : string } = {
 }
 
 
-packagingTypeDataURLTR.map((p, idx) => tr_to_en_dict[`/tr/urunlerimiz/plastik-urunler-ve-uretimi/${p}`] = `/en/products/plastic-products-and-production/${packagingTypeData[idx]}`)
+packagingTypeDataTR.map((p, idx) => tr_to_en_dict[`/tr/urunlerimiz/plastik-urunler-ve-uretimi/${p.url}`] = `/en/products/plastic-products-and-production/${packagingTypeData[idx].url}`)

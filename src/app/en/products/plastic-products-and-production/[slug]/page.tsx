@@ -25,7 +25,7 @@ const PlasticProductSlug = ({ params }: { params: { slug: string } }) => {
         <Hero img={data.image} title={data.title} />
 
         <div className='container max-w-4xl mx-auto my-20'>
-            <h1 className='text-5xl font-bold tracking-wider text-[#25456c] my-8'>{tableType!.title}</h1>
+            <h1 className='sm:text-5xl text-4xl px-2 font-bold tracking-wider text-[#25456c] my-8'>{tableType!.title}</h1>
 
             <div>
             {
