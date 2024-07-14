@@ -83,7 +83,7 @@ const FlyoutLink = ({ children, href, type, mainTitle } : { children : ReactNode
                                 exit={{ opacity: 0, y: 15 }}
                                 style={{ translateX: "-50%" }}
                                 transition={{ duration: 0.3, ease: "easeOut" }}
-                                className="absolute left-1/2 top-12 bg-white text-black py-6 w-72"
+                                className="absolute left-1/2 top-12 bg-white text-black py-6 w-fit text-nowrap"
                             >
                                 <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent" />
                                 <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />
@@ -108,7 +108,11 @@ const TypeOneContent = ({ mainTitle, router } : { mainTitle : string, router: Ap
             {
                 data.subtitles.map((sub, idx) => {
                     return (
-                        <li key={idx} className="border-b-2 w-full"><Link href={data.subtitleUrls[idx]} className="hover:underline hover:border-l-8 border-l-2 border-blue-500 px-6 text-start transition-all duration-300 ease-out w-full">{sub}</Link></li>
+                        <li key={idx} className="border-b-2 w-full hover:border-[]">
+                            <Link href={data.subtitleUrls[idx]} className="hover:underline hover:border-l-8 border-l-2 border-blue-500 px-6 text-start transition-all duration-300 ease-out w-full">
+                            {sub}
+                            </Link>
+                        </li>
                     )
                 })
             }
