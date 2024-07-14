@@ -1,3 +1,6 @@
+import { packagingTypeData } from "./en/data/plasticProductsData"
+import { packagingTypeDataURLTR } from "./tr/data/plasticProductsDataTR"
+
 export const en_to_tr_dict: { [id : string ] : string } = {
     "/en/corporate/about-us": "/tr/kurumsal/hakkimizda",
     "/en/corporate/our-policy": "/tr/kurumsal/politikamiz",
@@ -18,10 +21,11 @@ export const en_to_tr_dict: { [id : string ] : string } = {
 
     "/en/contact": "/tr/iletisim",
 
-    "/en/products/plastic-products-and-production/flexible-packaging-films": "/tr/urunlerimiz/plastik-urunler-ve-uretimi/esnek-ambalaj-filmleri",
     "/en/products/food-and-agriculture/foods": "/tr/urunlerimiz/gida-ve-tarim/gidalar",
-    "/en/products/automative-and-sub-industry/tires" : "/tr/urunlerimiz/otomotiv-ve-yan-sanayi/tekerlekler"
+    "/en/products/automative-and-sub-industry/tires" : "/tr/urunlerimiz/otomotiv-ve-yan-sanayi/tekerlekler",
 }
+
+packagingTypeData.map((p, idx) => en_to_tr_dict[`/en/products/plastic-products-and-production/${p.url}`] = `/tr/urunlerimiz/plastik-urunler-ve-uretimi/${packagingTypeDataURLTR[idx]}`)
 
 
 
@@ -45,7 +49,9 @@ export const tr_to_en_dict: { [id : string ] : string } = {
 
     "/tr/iletisim": "/en/contact",
 
-    "/tr/urunlerimiz/plastik-urunler-ve-uretimi/esnek-ambalaj-filmleri": "/en/products/plastic-products-and-production/flexible-packaging-films",
     "/tr/urunlerimiz/gida-ve-tarim/gidalar": "/en/products/food-and-agriculture/foods",
     "/tr/urunlerimiz/otomotiv-ve-yan-sanayi/tekerlekler": "/en/products/automative-and-sub-industry/tires"
 }
+
+
+packagingTypeDataURLTR.map((p, idx) => tr_to_en_dict[`/tr/urunlerimiz/plastik-urunler-ve-uretimi/${p}`] = `/en/products/plastic-products-and-production/${packagingTypeData[idx]}`)
