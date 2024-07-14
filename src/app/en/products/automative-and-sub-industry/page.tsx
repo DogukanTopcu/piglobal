@@ -2,7 +2,7 @@ import React from 'react'
 import { automativeAndSubIndustryHeroData } from '../../data/heroData'
 import Hero from '../../../common/Hero';
 import { Metadata } from 'next';
-import { automativeTypeData } from '../../data/automaticeProductsData';
+import { automativeTypeData } from '../../data/automativeProductsData';
 import TypeCard from '@/app/common/TypeCard';
 
 

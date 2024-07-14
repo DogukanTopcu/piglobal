@@ -1,11 +1,11 @@
 import Hero from '@/app/common/Hero'
 import ProductCard from '@/app/common/ProductCard';
-import { automativeProducts, automativeProductsSubtitles } from '@/app/en/data/automativeProductsData'
+import { automativeProductsSubtitlesTR, automativeProductsTR } from '@/app/tr/data/automativeProductsDataTR';
 import React from 'react'
 
-const AutomativeSubSlug = ({ params }: { params: { subslug: string } }) => {
-    const category = automativeProductsSubtitles.find((f) => f.url == params.subslug);
-    const data = automativeProducts.filter((a) => a.categoryName == category!.name);
+const AutomativeSubSlugTR = ({ params }: { params: { subslug: string } }) => {
+  const category = automativeProductsSubtitlesTR.find((f) => f.url == params.subslug);
+    const data = automativeProductsTR.filter((a) => a.categoryName == category!.name);
   return (
     <div>
         <Hero title={category!.name} img={category!.img} />
@@ -23,8 +23,8 @@ const AutomativeSubSlug = ({ params }: { params: { subslug: string } }) => {
                 title={d.productName} 
                 desc={d.desc} 
                 brochure={d.brochure} 
-                url={`./tire/${category!.url}/${d.url}`} 
-                btnName='Download Brochure'
+                url={`./lastik/${category!.url}/${d.url}`} 
+                btnName='Broşürü İndir' 
               />
               </>
             );
@@ -35,4 +35,4 @@ const AutomativeSubSlug = ({ params }: { params: { subslug: string } }) => {
   )
 }
 
-export default AutomativeSubSlug
+export default AutomativeSubSlugTR

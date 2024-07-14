@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react'
 
-const ProductCard = ({ img, url, title, desc, brochure } : { img: string; url: string; title: string; desc: string; brochure: string }) => {
+const ProductCard = ({ img, url, title, desc, brochure, btnName } : { img: string; url: string; title: string; desc: string; brochure: string; btnName: string; }) => {
   return (
     <div className='flex flex-col items-center justify-center w-full border-2 rounded-xl group'>
         <Link
@@ -30,7 +30,7 @@ const ProductCard = ({ img, url, title, desc, brochure } : { img: string; url: s
             text-white font-semibold tracking-wide text-lg
             rounded-b-xl'
         >
-            Download Brochure
+            {btnName}
         </Link>
         
     </div>

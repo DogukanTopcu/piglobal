@@ -1,5 +1,6 @@
-import { automativeProductsSubtitles, automativeTypeData } from "./en/data/automaticeProductsData"
+import { automativeProductsSubtitles, automativeTypeData } from "./en/data/automativeProductsData"
 import { packagingTypeData } from "./en/data/plasticProductsData"
+import { automativeProductsSubtitlesTR, automativeTypeDataTR } from "./tr/data/automativeProductsDataTR"
 import { packagingTypeDataTR } from "./tr/data/plasticProductsDataTR"
 
 export const en_to_tr_dict: { [id : string ] : string } = {
@@ -23,15 +24,14 @@ export const en_to_tr_dict: { [id : string ] : string } = {
     "/en/contact": "/tr/iletisim",
 
     "/en/products/food-and-agriculture/foods": "/tr/urunlerimiz/gida-ve-tarim/gidalar",
-    "/en/products/automative-and-sub-industry/tires" : "/tr/urunlerimiz/otomotiv-ve-yan-sanayi/tekerlekler",
 }
 
 packagingTypeData.map((p, idx) => en_to_tr_dict[`/en/products/plastic-products-and-production/${p.url}`] = `/tr/urunlerimiz/plastik-urunler-ve-uretimi/${packagingTypeDataTR[idx].url}`)
 automativeTypeData.map((a, idx) => {
-    en_to_tr_dict[`/en/products/automative-and-sub-industry/${a.url}`] = `/tr/urunlerimiz/otomotiv-ve-yan-sanayi/${packagingTypeDataTR[idx].url}`
+    en_to_tr_dict[`/en/products/automative-and-sub-industry/${a.url}`] = `/tr/urunlerimiz/otomotiv-ve-yan-sanayi/${automativeTypeDataTR[idx].url}`
 
     automativeProductsSubtitles.filter((b) => b.category == a.title).map((d) => {
-        en_to_tr_dict[`/en/products/automative-and-sub-industry/${a.url}/${d.url}`] = `/tr/urunlerimiz/otomotiv-ve-yan-sanayi/${packagingTypeDataTR[idx].url}`
+        en_to_tr_dict[`/en/products/automative-and-sub-industry/${a.url}/${d.url}`] = `/tr/urunlerimiz/otomotiv-ve-yan-sanayi/${automativeTypeDataTR[idx].url}/${d.toTR}`
     })
 })
 
@@ -58,8 +58,15 @@ export const tr_to_en_dict: { [id : string ] : string } = {
     "/tr/iletisim": "/en/contact",
 
     "/tr/urunlerimiz/gida-ve-tarim/gidalar": "/en/products/food-and-agriculture/foods",
-    "/tr/urunlerimiz/otomotiv-ve-yan-sanayi/tekerlekler": "/en/products/automative-and-sub-industry/tires"
 }
 
 
 packagingTypeDataTR.map((p, idx) => tr_to_en_dict[`/tr/urunlerimiz/plastik-urunler-ve-uretimi/${p.url}`] = `/en/products/plastic-products-and-production/${packagingTypeData[idx].url}`)
+
+automativeTypeDataTR.map((a, idx) => {
+    tr_to_en_dict[`/tr/urunlerimiz/otomotiv-ve-yan-sanayi/${a.url}`] = `/en/products/automative-and-sub-industry/${automativeTypeData[idx].url}`
+
+    automativeProductsSubtitlesTR.filter((b) => b.category == a.title).map((d) => {
+        tr_to_en_dict[`/tr/urunlerimiz/otomotiv-ve-yan-sanayi/${a.url}/${d.url}`] = `/en/products/automative-and-sub-industry/${automativeTypeData[idx].url}/${d.toEng}`
+    })
+})
