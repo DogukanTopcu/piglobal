@@ -1,20 +1,20 @@
 import Hero from '@/app/common/Hero';
 import ProductCard2 from '@/app/common/ProductCard2';
-import { foodProducts, foodTypeData } from '@/app/en/data/foodProductsData';
+import { foodProductsTR, foodTypeDataTR } from '@/app/tr/data/foodProductsDataTR';
 import { Metadata } from 'next';
 import React from 'react'
 
 
 export const metadata : Metadata = {
-    title: "Food and Agriculture",
-    description: "Food and Agriculture Products"
+    title: "Gıda ve Tarım",
+    description: "Gıda ve Tarım Ürünlerimiz"
   }
 
-const FoodsSlug = ({ params }: { params: { slug: string } }) => {
+const GidaSlugTR = ({ params }: { params: { slug: string } }) => {
 
-    const foodType = foodTypeData.find((t) => t.url == params.slug);
+    const foodType = foodTypeDataTR.find((t) => t.url == params.slug);
 
-    const products = foodProducts.filter((p) => p.type == foodType!.title);
+    const products = foodProductsTR.filter((p) => p.type == foodType!.title);
     
     metadata.title = foodType!.title;
     metadata.description = foodType!.title;
@@ -46,4 +46,4 @@ const FoodsSlug = ({ params }: { params: { slug: string } }) => {
   )
 }
 
-export default FoodsSlug
+export default GidaSlugTR

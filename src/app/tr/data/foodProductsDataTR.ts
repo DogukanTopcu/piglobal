@@ -17,10 +17,10 @@ export const foodTypeDataTR = [
     },
     {
         order: 3,
-        title: "Meyeler",
+        title: "Meyveler",
         img: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        url: "meyeler",
-        heroDataName: "Meyeler",
+        url: "meyveler",
+        heroDataName: "Meyveler",
         heroDataImg: "https://images.unsplash.com/photo-1488459716781-31db52582fe9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
@@ -49,7 +49,7 @@ export const foodProductsTR = [
         type: "Yağlar",
         productName: "Zeytinyağı",
         desc: "En kaliteli zeytinlerden üretilmiş, saf ve doğal zeytinyağı.",
-        img: "",
+        img: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?q=80&w=2036&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         url: "zeytinyagi",
     },
     {
@@ -57,7 +57,7 @@ export const foodProductsTR = [
         type: "Yağlar",
         productName: "Ayçiçek Yağı",
         desc: "Yemekleriniz için ideal, hafif ve sağlıklı ayçiçek yağı.",
-        img: "",
+        img: "https://i0.wp.com/kumarmetal.com/wp-content/uploads/2022/04/sunflower-oil-properties-and-manufacture-1.png?w=1200&ssl=1",
         url: "aycicek-yagi",
     },
     {
@@ -65,7 +65,7 @@ export const foodProductsTR = [
         type: "Kuruyemişler ve Çekirdekler",
         productName: "Kaju",
         desc: "Taptaze ve çıtır kajular, atıştırmalıklarınız için mükemmel bir seçim.",
-        img: "",
+        img: "https://images.unsplash.com/photo-1509912760195-4f6cfd8cce2c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         url: "kaju",
     },
     {
@@ -73,7 +73,7 @@ export const foodProductsTR = [
         type: "Kuruyemişler ve Çekirdekler",
         productName: "Antep Fıstığı",
         desc: "En kaliteli Antep fıstıkları, lezzetli ve besleyici.",
-        img: "",
+        img: "https://images.unsplash.com/photo-1614061810671-e6f5ff055104?q=80&w=2133&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         url: "antep-fistigi",
     },
     {
@@ -81,7 +81,7 @@ export const foodProductsTR = [
         type: "Kuruyemişler ve Çekirdekler",
         productName: "Ceviz",
         desc: "Doğal ve lezzetli cevizler, sağlıklı atıştırmalıklar için birebir.",
-        img: "",
+        img: "https://images.unsplash.com/photo-1542850571-9769604b077d?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         url: "ceviz",
     },
     {
@@ -89,7 +89,7 @@ export const foodProductsTR = [
         type: "Kuruyemişler ve Çekirdekler",
         productName: "Çekirdek Çeşitleri",
         desc: "Çeşitli taptaze çekirdekler, her damak zevkine uygun.",
-        img: "",
+        img: "https://images.unsplash.com/photo-1651943999632-39df9b9245c6?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         url: "cekirdek-cesitleri",
     },
     {
@@ -97,7 +97,7 @@ export const foodProductsTR = [
         type: "Meyveler",
         productName: "Limon",
         desc: "Taze ve sulu limonlar, yemeklerinize ve içeceklerinize canlılık katar.",
-        img: "",
+        img: "https://plus.unsplash.com/premium_photo-1674481037651-32a7422b4fc7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         url: "limon",
     },
     {
@@ -105,7 +105,7 @@ export const foodProductsTR = [
         type: "Meyveler",
         productName: "Elma",
         desc: "En taze ve çıtır elmalar, günlük atıştırmalıklarınız için ideal.",
-        img: "",
+        img: "https://images.unsplash.com/photo-1512578659172-63a4634c05ec?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         url: "elma",
     },
     {
@@ -113,7 +113,7 @@ export const foodProductsTR = [
         type: "Meyveler",
         productName: "Portakal",
         desc: "Tatlı ve sulu portakallar, vitamin deposu.",
-        img: "",
+        img: "https://images.unsplash.com/photo-1563822249510-04678c78df85?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         url: "portakal",
     },
     {
@@ -121,7 +121,7 @@ export const foodProductsTR = [
         type: "Meyveler",
         productName: "Mandarin",
         desc: "Kokulu ve tatlı mandarinler, kışın vazgeçilmezi.",
-        img: "",
+        img: "https://images.unsplash.com/photo-1640554736342-2e02fc6071ea?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         url: "mandarin",
     },
     {
@@ -129,7 +129,7 @@ export const foodProductsTR = [
         type: "Meyveler",
         productName: "Üzüm",
         desc: "Taptaze ve sulu üzümler, hem tatlı hem de sağlıklı bir seçenek.",
-        img: "",
+        img: "https://images.unsplash.com/photo-1515778767554-42d4b373f2b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         url: "uzum",
     },
     {
@@ -137,7 +137,7 @@ export const foodProductsTR = [
         type: "Sebzeler ve Bakliyat",
         productName: "Mısır",
         desc: "Taze ve tatlı mısırlar, salatalarınıza ve yemeklerinize lezzet katar.",
-        img: "",
+        img: "https://images.unsplash.com/photo-1692607931390-3a768f3d1a53?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         url: "misir",
     },
     {
@@ -145,7 +145,7 @@ export const foodProductsTR = [
         type: "Sebzeler ve Bakliyat",
         productName: "Mercimek",
         desc: "Yüksek proteinli ve besleyici mercimek, sağlıklı yemekler için.",
-        img: "",
+        img: "https://images.unsplash.com/photo-1672660589379-891ab59588a8?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         url: "mercimek",
     },
     {
@@ -153,7 +153,7 @@ export const foodProductsTR = [
         type: "Sebzeler ve Bakliyat",
         productName: "Domates Salçası",
         desc: "Doğal ve lezzetli domates salçası, yemeklerinize renk ve tat katar.",
-        img: "",
+        img: "https://images.unsplash.com/photo-1683354918366-ad5c9aacbf40?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         url: "domates-salcasi",
     },
     {
@@ -161,7 +161,7 @@ export const foodProductsTR = [
         type: "Zeytin Ürünleri",
         productName: "Zeytin",
         desc: "En kaliteli zeytinlerden elde edilen lezzetli zeytinler.",
-        img: "",
+        img: "https://images.unsplash.com/photo-1572777856134-4e658bbf3b78?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         url: "zeytin",
     },
     {
@@ -169,7 +169,7 @@ export const foodProductsTR = [
         type: "Zeytin Ürünleri",
         productName: "Yeşil Zeytin",
         desc: "Taze ve çıtır yeşil zeytinler, kahvaltılarınız için ideal.",
-        img: "",
+        img: "https://images.unsplash.com/photo-1612879988258-0d819c297621?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         url: "yesil-zeytin",
     }
 ]
