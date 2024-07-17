@@ -39,6 +39,14 @@ export const foodTypeData = [
         heroDataName: "Olive Products",
         heroDataImg: "https://images.unsplash.com/photo-1572777856134-4e658bbf3b78?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
+    {
+        order: 6,
+        title: "Fertilizers",
+        img: "https://www.gardendesign.com/pictures/images/900x705Max/site_3/applying-fertilizer-blue-trowel-fertilizing-tomato-plant-shutterstock-com_15275.jpg",
+        url: "fertilizer",
+        heroDataName: "Fertilizers",
+        heroDataImg: "https://www.gardendesign.com/pictures/images/900x705Max/site_3/applying-fertilizer-blue-trowel-fertilizing-tomato-plant-shutterstock-com_15275.jpg",
+    },
 ]
 
 
@@ -172,5 +180,13 @@ export const foodProducts = [
         desc: "Fresh and crunchy green olives, ideal for your breakfasts.",
         img: "https://images.unsplash.com/photo-1612879988258-0d819c297621?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         url: "green-olive",
+    },
+    {
+        order: 1,
+        type: "Fertilizers",
+        productName: "Cocopeat",
+        desc: "CocoPeat, our natural fertilizer, enhances soil quality and promotes healthy plant growth.",
+        img: "https://tuncbotanik.com/uploads/p/p/cocopeat-65-lt-sikistirilmis-torf-kokopeat_1.jpg?v=1670155058",
+        url: "cocopeat",
     }
 ]
