@@ -47,6 +47,14 @@ export const foodTypeDataTR = [
         heroDataName: "Gübreler",
         heroDataImg: "https://www.gardendesign.com/pictures/images/900x705Max/site_3/applying-fertilizer-blue-trowel-fertilizing-tomato-plant-shutterstock-com_15275.jpg",
     },
+    {
+        order: 7,
+        title: "Temel Gıdalar",
+        img: "https://images.unsplash.com/photo-1591981131824-5cce8b273bd0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        url: "temel-gida",
+        heroDataName: "Temel Gıdalar",
+        heroDataImg: "https://images.unsplash.com/photo-1591981131824-5cce8b273bd0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
 ]
 
 
@@ -187,5 +195,13 @@ export const foodProductsTR = [
         desc: "Doğal gübremiz Kokopeat, toprak kalitesini artırır ve sağlıklı bitki büyümesini teşvik eder.",
         img: "https://tuncbotanik.com/uploads/p/p/cocopeat-65-lt-sikistirilmis-torf-kokopeat_1.jpg?v=1670155058",
         url: "koko-peat",
+    },
+    {
+        order: 1,
+        type: "Temel Gıdalar",
+        productName: "Esmer Şeker",
+        desc: " Esmer şeker ürünümüz, 900-1200 IU renk aralığına, 995 IU örnek rengine, %99,2 Pol değerine ve %0,12 nem oranına sahip olup, zengin aromasıyla pişirme ve içeceklerinizi tatlandırmak için mükemmeldir.",
+        img: "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_730,h_913/k%2FPhoto%2FRecipes%2F2024-01-how-to-make-brown-sugar%2Fhow-to-make-brown-sugar-008",
+        url: "esmer-seker",
     }
 ]

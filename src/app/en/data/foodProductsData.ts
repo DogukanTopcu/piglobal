@@ -47,6 +47,14 @@ export const foodTypeData = [
         heroDataName: "Fertilizers",
         heroDataImg: "https://www.gardendesign.com/pictures/images/900x705Max/site_3/applying-fertilizer-blue-trowel-fertilizing-tomato-plant-shutterstock-com_15275.jpg",
     },
+    {
+        order: 7,
+        title: "Staple Foods",
+        img: "https://images.unsplash.com/photo-1591981131824-5cce8b273bd0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        url: "staple-food",
+        heroDataName: "Staple Foods",
+        heroDataImg: "https://images.unsplash.com/photo-1591981131824-5cce8b273bd0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
 ]
 
 
@@ -188,5 +196,13 @@ export const foodProducts = [
         desc: "CocoPeat, our natural fertilizer, enhances soil quality and promotes healthy plant growth.",
         img: "https://tuncbotanik.com/uploads/p/p/cocopeat-65-lt-sikistirilmis-torf-kokopeat_1.jpg?v=1670155058",
         url: "cocopeat",
+    },
+    {
+        order: 1,
+        type: "Staple Foods",
+        productName: "Brown Sugar",
+        desc: "Our brown sugar product, with a color range (IU) of 900-1200, a sample color (IU) of 995, Pol (%) of 99.2, and moisture (%) of 0.12, is rich in flavor and perfect for baking and sweetening beverages.",
+        img: "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_730,h_913/k%2FPhoto%2FRecipes%2F2024-01-how-to-make-brown-sugar%2Fhow-to-make-brown-sugar-008",
+        url: "brown-sugar",
     }
 ]
