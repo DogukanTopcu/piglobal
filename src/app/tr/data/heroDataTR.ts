@@ -92,3 +92,8 @@ export const automativeAndSubIndustryHeroDataTR = {
     title: "Otomotiv ve Yan Sanayi",
     image: "https://images.unsplash.com/photo-1522322512347-a0e57fd1744c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 }
+
+export const pageAndPageProductsHeroDataTR = {
+    title: "Kağıt ve Kağıt Ürünleri",
+    image: "https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?q=80&w=2008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+}
