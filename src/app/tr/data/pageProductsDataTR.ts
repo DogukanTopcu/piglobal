@@ -16,9 +16,9 @@ export const paperProductsTR = [
     {
         order: 1,
         type: "Kağıtlar",
-        productName: "Craft Kağıtlar",
-        desc: "Craft kağıdımız, yüksek kalite ve çok yönlülük sunarak tüm yaratıcı projeleriniz için mükemmeldir.",
-        img: "https://m.media-amazon.com/images/I/71UxyvXl-ML._AC_SL1200_.jpg",
-        url: "craft-kagitlar",
+        productName: "Kraft Kağıtlar",
+        desc: "Kraft kağıdımız, yüksek kalite ve çok yönlülük sunarak tüm yaratıcı projeleriniz için mükemmeldir. Farklı ebat ve gramajlarda isteğinize göre üretim sağlanmaktadır.",
+        img: "https://m.media-amazon.com/images/I/717Li3c2utL._AC_SL1500_.jpg",
+        url: "kraft-kagitlar",
     },
 ]

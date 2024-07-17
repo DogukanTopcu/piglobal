@@ -17,8 +17,8 @@ export const paperProducts = [
         order: 1,
         type: "Papers",
         productName: "Craft Paper",
-        desc: "Our craft paper product is perfect for all your creative projects, offering high quality and versatility.",
-        img: "https://m.media-amazon.com/images/I/71UxyvXl-ML._AC_SL1200_.jpg",
+        desc: "Our craft paper offers high quality and versatility, making it perfect for all your creative projects. Production is provided in different sizes and weights according to your request.",
+        img: "https://m.media-amazon.com/images/I/717Li3c2utL._AC_SL1500_.jpg",
         url: "craft-paper",
     },
 ]
