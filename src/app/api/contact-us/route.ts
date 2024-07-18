@@ -17,6 +17,7 @@ export const POST = async (request: NextRequest, response: NextResponse) => {
             email: data["email"], 
             fullName: data["fullName"], 
             phone: data["phone"], 
+            country: data["country"],
             message: data["message"]
         });
         console.log("mail sended");
@@ -30,7 +31,7 @@ export const POST = async (request: NextRequest, response: NextResponse) => {
 
 
 
-const sendMail = async ({to, subject, email, fullName, phone, message} : {to: string, subject: string, email: string, fullName: string, phone: string, message: string}) => {
+const sendMail = async ({to, subject, email, fullName, phone, country, message} : {to: string, subject: string, email: string, fullName: string, phone: string, country: string; message: string}) => {
     const transport = nodemailer.createTransport({
         service: "gmail",
         auth: {
@@ -53,7 +54,12 @@ const sendMail = async ({to, subject, email, fullName, phone, message} : {to: st
             from: process.env.EMAIL,
             to,
             subject,
-            html: message,
+            html: `
+            Full Name: ${fullName}\n
+            Email: ${email}\n
+            Phone Number: ${phone}\n
+            Country: ${country}\n\n
+            ${message}`,
         });
 
         console.log(sendResult);

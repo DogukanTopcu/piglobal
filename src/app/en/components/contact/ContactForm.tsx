@@ -32,6 +32,7 @@ const ContactForm = () => {
             email: formData.get("email"),
             fullName: formData.get("fullName"),
             phone: formData.get("phone"),
+            country: formData.get("country"),
             message: formData.get("message"),
         }
 
@@ -56,6 +57,7 @@ const ContactForm = () => {
             <CInput type="email" name="email" placeholder="Your Email*" />
             <CInput type="text" name="fullName" placeholder="Your Full Name*" />
             <CInput type="text" name="phone" placeholder="Phone Number*" />
+            <CInput type="text" name="country" placeholder="Country*" />
             
             <textarea 
                 className='w-full p-4 min-h-36 border-b-2'

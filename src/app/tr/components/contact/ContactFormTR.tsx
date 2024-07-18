@@ -31,6 +31,7 @@ const ContactFormTR = () => {
             email: formData.get("email"),
             fullName: formData.get("fullName"),
             phone: formData.get("phone"),
+            country: formData.get("country"),
             message: formData.get("message"),
         }
 
@@ -56,6 +57,7 @@ const ContactFormTR = () => {
             <CInput type="email" name="email" placeholder="E-Mailiniz*" />
             <CInput type="text" name="fullName" placeholder="Tam İsminiz*" />
             <CInput type="text" name="phone" placeholder="Telefon Numarası*" />
+            <CInput type="text" name="country" placeholder="Ülkeniz*" />
             
             <textarea 
                 className='w-full p-4 min-h-36 border-b-2'
