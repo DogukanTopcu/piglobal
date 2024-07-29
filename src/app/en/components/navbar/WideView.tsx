@@ -83,7 +83,7 @@ const FlyoutLink = ({ children, href, type, mainTitle } : { children : ReactNode
                                 exit={{ opacity: 0, y: 15 }}
                                 style={{ translateX: "-50%" }}
                                 transition={{ duration: 0.3, ease: "easeOut" }}
-                                className="absolute left-1/2 top-12 bg-white text-black py-6 w-fit text-nowrap"
+                                className="absolute left-1/2 top-12 bg-white text-black-1 py-6 w-fit text-nowrap"
                             >
                                 <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent" />
                                 <div className="absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white" />

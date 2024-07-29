@@ -1,3 +1,4 @@
+import { User } from "@/models/User.model";
 import { Dispatch, SetStateAction } from "react";
 
 export type TypeNavbarContext = {
@@ -21,4 +22,16 @@ export type ScreenSizeContext = {
 
     screenHeight: number,
     setScreenHeight: Dispatch<SetStateAction<number>>
+}
+
+
+export type AdminContext = {
+  user: User,
+  setUser: Dispatch<SetStateAction<User>>,
+
+  session: String,
+  setSession: Dispatch<SetStateAction<String>>,
+
+  login: ({ email, password } : { email: string, password: string }) => Promise<boolean>,
+  logout: Dispatch<SetStateAction<User>>,
 }
