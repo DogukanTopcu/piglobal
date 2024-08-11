@@ -179,7 +179,7 @@ export const ourServicesData = [
 
 export const support_7_24 = {
   title: "24/7 SUPPORT LINE",
-  btn_title: "24/7 SUPPORT LINE: +90 (545) 819 12 92",
-  phoneNumber: "+905458191292",
+  btn_title: "24/7 SUPPORT LINE: +90 (538) 442 54 64",
+  phoneNumber: "+905384425464",
   content: ``
 }

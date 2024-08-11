@@ -177,7 +177,7 @@ export const ourServicesDataTR = [
 
 export const support_7_24_TR = {
   title: "7/24 DESTEK HATTIMIZ",
-  btn_title: "7/24 Destek Hattımız: +90 (545) 819 12 92",
-  phoneNumber: "+905458191292",
+  btn_title: "7/24 Destek Hattımız: +90 (538) 442 54 64",
+  phoneNumber: "+905384425464",
   content: ``
 }
