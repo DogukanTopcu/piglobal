@@ -24,8 +24,8 @@ const AdminContextState = {
     session: "",
     setSession: () => "",
 
-    login: async () => {
-        
+    login: async ({ email, password } : { email: string, password: string }) => {
+        return true;
     },
     logout: () => {},
 
