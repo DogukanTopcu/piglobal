@@ -100,8 +100,8 @@ export const menuDataTR = [
         mainTitle: "Ürünler",
         url: "",
         
-        subtitles: ["Plastik Ürünler ve Üretimi", "Gıda ve Tarım", "Otomotiv ve Yan Sanayi", "Kağıt ve Kağıt Ürünleri"],
-        subtitleUrls: ["/tr/urunlerimiz/plastik-urunler-ve-uretimi", "/tr/urunlerimiz/gida-ve-tarim", "/tr/urunlerimiz/otomotiv-ve-yan-sanayi", "/tr/urunlerimiz/kagit-ve-kagit-urunleri"],
+        subtitles: ["Plastik Ürünler ve Üretimi", "Gıda ve Tarım", "Otomotiv ve Yan Sanayi", "Kağıt ve Kağıt Ürünleri", "Enerji ve Yakıtlar"],
+        subtitleUrls: ["/tr/urunlerimiz/plastik-urunler-ve-uretimi", "/tr/urunlerimiz/gida-ve-tarim", "/tr/urunlerimiz/otomotiv-ve-yan-sanayi", "/tr/urunlerimiz/kagit-ve-kagit-urunleri", "/tr/urunlerimiz/enerji-ve-yakitlar"],
 
         subsubtitles: [],
         subsubtitlesUrls: []
