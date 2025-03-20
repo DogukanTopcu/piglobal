@@ -97,3 +97,8 @@ export const pageAndPageProductsHeroDataTR = {
     title: "Kağıt ve Kağıt Ürünleri",
     image: "https://images.unsplash.com/photo-1470790376778-a9fbc86d70e2?q=80&w=2008&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 }
+
+export const eneryAndFuelsHeroDataTR = {
+    title: "Enerji ve Yakıtlar",
+    image: "https://images.unsplash.com/photo-1588011930968-eadac80e6a5a?q=80&w=3538&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+}

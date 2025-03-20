@@ -100,8 +100,8 @@ export const menuData = [
         mainTitle: "Products",
         url: "",
         
-        subtitles: ["Plastic Products and Production", "Food and Agriculture", "Automative and Sub-Industry", "Paper and Paper Products"],
-        subtitleUrls: ["/en/products/plastic-products-and-production", "/en/products/food-and-agriculture", "/en/products/automative-and-sub-industry", "/en/products/paper-and-paper-products"],
+        subtitles: ["Plastic Products and Production", "Food and Agriculture", "Automative and Sub-Industry", "Paper and Paper Products", "Energy and Fuels"],
+        subtitleUrls: ["/en/products/plastic-products-and-production", "/en/products/food-and-agriculture", "/en/products/automative-and-sub-industry", "/en/products/paper-and-paper-products", "/en/products/energy-and-fuels"],
 
         subsubtitles: [],
         subsubtitlesUrls: []

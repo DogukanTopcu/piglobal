@@ -1,8 +1,10 @@
 import { automativeProductsSubtitles, automativeTypeData } from "./en/data/automativeProductsData"
+import { energyAndFuelsTypeData } from "./en/data/energyAndFuelsProductsData"
 import { foodTypeData } from "./en/data/foodProductsData"
 import { paperTypeData } from "./en/data/pageProductsData"
 import { packagingTypeData } from "./en/data/plasticProductsData"
 import { automativeProductsSubtitlesTR, automativeTypeDataTR } from "./tr/data/automativeProductsDataTR"
+import { energyAndFuelsTypeDataTR } from "./tr/data/energyAndFuelsProductDataTR"
 import { foodTypeDataTR } from "./tr/data/foodProductsDataTR"
 import { paperTypeDataTR } from "./tr/data/pageProductsDataTR"
 import { packagingTypeDataTR } from "./tr/data/plasticProductsDataTR"
@@ -18,6 +20,7 @@ export const en_to_tr_dict: { [id : string ] : string } = {
     "/en/products/food-and-agriculture": "/tr/urunlerimiz/gida-ve-tarim",
     "/en/products/automative-and-sub-industry": "/tr/urunlerimiz/otomotiv-ve-yan-sanayi",
     "/en/products/paper-and-paper-products": "/tr/urunlerimiz/kagit-ve-kagit-urunleri",
+    "/en/products/energy-and-fuels": "/tr/urunlerimiz/enerji-ve-yakitlar",
 
     "/en/media/news": "/tr/medya/haberler",
     "/en/media/gallery": "/tr/medya/galeri",
@@ -35,6 +38,8 @@ packagingTypeData.map((p, idx) => en_to_tr_dict[`/en/products/plastic-products-a
 foodTypeData.map((p, idx) => en_to_tr_dict[`/en/products/food-and-agriculture/${p.url}`] = `/tr/urunlerimiz/gida-ve-tarim/${foodTypeDataTR[idx].url}`)
 
 paperTypeData.map((p, idx) => en_to_tr_dict[`/en/products/paper-and-paper-products/${p.url}`] = `/tr/urunlerimiz/kagit-ve-kagit-urunleri/${paperTypeDataTR[idx].url}`)
+
+energyAndFuelsTypeData.map((p, idx) => en_to_tr_dict[`/en/products/energy-and-fuels/${p.url}`] = `/tr/urunlerimiz/enerji-ve-yakitlar/${energyAndFuelsTypeDataTR[idx].url}`)
 
 automativeTypeData.map((a, idx) => {
     en_to_tr_dict[`/en/products/automative-and-sub-industry/${a.url}`] = `/tr/urunlerimiz/otomotiv-ve-yan-sanayi/${automativeTypeDataTR[idx].url}`
@@ -57,6 +62,7 @@ export const tr_to_en_dict: { [id : string ] : string } = {
     "/tr/urunlerimiz/gida-ve-tarim": "/en/products/food-and-agriculture",
     "/tr/urunlerimiz/otomotiv-ve-yan-sanayi": "/en/products/automative-and-sub-industry",
     "/tr/urunlerimiz/kagit-ve-kagit-urunleri": "/en/products/paper-and-paper-products",
+    "/tr/urunlerimiz/enerji-ve-yakitlar": "/en/products/energy-and-fuels",
 
     "/tr/medya/haberler": "/en/media/news",
     "/tr/medya/galeri": "/en/media/gallery",
@@ -75,6 +81,8 @@ packagingTypeDataTR.map((p, idx) => tr_to_en_dict[`/tr/urunlerimiz/plastik-urunl
 foodTypeDataTR.map((p, idx) => tr_to_en_dict[`/tr/urunlerimiz/gida-ve-tarim/${p.url}`] = `/en/products/food-and-agriculture/${foodTypeData[idx].url}`)
 
 paperTypeDataTR.map((p, idx) => tr_to_en_dict[`/tr/urunlerimiz/kagit-ve-kagit-urunleri/${p.url}`] = `/en/products/paper-and-paper-products/${paperTypeData[idx].url}`)
+
+energyAndFuelsTypeDataTR.map((p, idx) => tr_to_en_dict[`/tr/urunlerimiz/enerji-ve-yakitlar/${p.url}`] = `/en/products/energy-and-fuels/${energyAndFuelsTypeDataTR[idx].url}`)
 
 automativeTypeDataTR.map((a, idx) => {
     tr_to_en_dict[`/tr/urunlerimiz/otomotiv-ve-yan-sanayi/${a.url}`] = `/en/products/automative-and-sub-industry/${automativeTypeData[idx].url}`
